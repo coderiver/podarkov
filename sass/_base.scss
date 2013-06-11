@@ -3,7 +3,7 @@
 @import "lib/keyframes";
 @import "lib/media";
 @import "lib/ceaser-easing/ceaser";
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&subset=latin,cyrillic-ext);
 // gradients for ie
 $experimental-support-for-svg: true;
 
@@ -11,14 +11,30 @@ $experimental-support-for-svg: true;
 $icons: sprite-map("icons/*.png", $spacing: 10px);
 
 // responsive
-$break-small: 500px;
-$break-large: 1180px;
+$break-280: 280px; 
+$break-320: 320px; 
+$break-480: 480px; 
+$break-640: 640px; 
+$break-768: 768px; 
+$break-1024: 1024px;
 @mixin respond-to($media) {
-  @if $media == pda {
-    @media only screen and (max-width: $break-small) { @content; }
+  @if $media == 280 {
+    @media only screen and (max-width: $break-280) { @content; }
   }
-  @else if $media == wide {
-    @media only screen and (min-width: $break-large) { @content; }
+  @else if $media == 320 {
+    @media only screen and (max-width: $break-320) { @content; }
+  }
+  @else if $media == 480 {
+    @media only screen and (max-width: $break-480) { @content; }
+  }
+  @else if $media == 640 {
+    @media only screen and (max-width: $break-640) { @content; }
+  }
+  @else if $media == 768 {
+    @media only screen and (max-width: $break-768) { @content; }
+  }
+  @else if $media == 1024 {
+    @media only screen and (min-width: $break-1024) { @content; }
   }
 }
 // retina bg
@@ -76,7 +92,7 @@ $break-large: 1180px;
     color: transparent;
 }
 
-%clr{
+@mixin clr{
   *zoom: 1;
   &:after{
     content: ".";
@@ -162,7 +178,15 @@ $break-large: 1180px;
 
 // fonts
 @mixin font {
-    font-weight: normal;
-    font-style: normal;
-    font-family: 'Custom font', sans-serif;
+    font-weight: 400;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+@mixin sb {
+    font-weight: 600;
+}
+@mixin b {
+    font-weight: 700;
+}
+@mixin eb {
+    font-weight: 800;
 }

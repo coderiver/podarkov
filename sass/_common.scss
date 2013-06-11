@@ -46,46 +46,306 @@ table {
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
 body{
-    min-width: 1000px;
-    color: #474747;
+    min-width: 280px;
+    color: #575757;
     @include font;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.4;
 }
 a{
     color:#00919e;
-    &:hover{
-        text-decoration:none
-    }
+    text-decoration: none;
+    // &:hover{
+    //     text-decoration:none
+    // }
 }
 .l-layout {
-    margin: 0 auto -120px;
+    margin: 0 auto -96px;
     position: relative;
     min-height: 100%;
     height: auto !important;
     height: 100%;
 }
+.l-container {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 0 5px;
+    @include clr;
+    @include respond-to(640) {
+       // padding: 0 20px;
+    }
+}
 .push {
-    clear: both;
-    height: 120px;
+    clear: both; 
+    height: 96px;
 }
 .wrapper {
     overflow: hidden;
 }
 .wrap {
-    @extend %clr;
+    @include clr;
 }
 /* ------------------------------------ //END Main styles --------------------------------------- */
  
 /* ----------------------------------------- Header --------------------------------------------- */
+.header {
+    padding-top: 38px;
+    height: 459px;
+    background: #1d8542 url(../img/header-bg.jpg) 50% 0 repeat-x;
+    border-bottom: 1px solid #00662b;
+    @include box-sizing(border-box);
+    @include respond-to(640) {
+        height: auto;
+        padding: 0 0 55px;
+        @include background-size(auto, 100%);
+    }
+    .l-container {
+        @include respond-to(640) {
+            padding: 0;
+        }
+    }
+}
+.logo {
+    margin-bottom: 5%;
+    text-align: center;
+    @include respond-to(640) {
+        position: relative;
+        height: 47px;
+        line-height: 38px;
+        border-bottom: 1px solid #0c984f;
+        background: #176c3c url(../img/logo-bg.jpg) 0 0 repeat;
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            
+        }
+    }
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        @include s(logo);
+        @extend %hide-text;
+        @include respond-to(640) {
+            @include s(logo-small);
+        }
+    }
+}
+.slogan {
+    float: left;
+    width: 50%;
+    color: #e8e5de;
+    font-size: 18px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.45);
+    @include respond-to(768) {
+        font-size: 14px;
+    }
+    @include respond-to(640) {
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+        font-size: 12px;
+    }
+}
+.slogan__title {
+    margin-bottom: 14px;
+    @include sb;
+    font-size: 25px;
+    text-transform: uppercase;
+    @include respond-to(768) {
+        font-size: 20px;
+    }
+    @include respond-to(640) {
+        font-size: 16px;
+    }
+    strong {
+        @include eb;
+        font-size: 29px;
+        @include respond-to(768) {
+            font-size: 24px;
+        }
+        @include respond-to(640) {
+            font-size: 16px;
+        }
+    }
+}
+.slogan__list {
+    margin-bottom: 10%;
+    @include respond-to(640) {
+        margin-bottom: 5%;
+    }
+    li {
+        position: relative;
+        padding-left: 12px;
+        &:before {
+            content: "-";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+.video-wrap {
+    float: right;
+    width: 50%;
+    @include box-sizing(border-box);
+    @include respond-to(640) {
+        float: none;
+        width: 90%;
+        margin: 0 auto 26px;
+    }
+}
+.video {
+    position: relative;
+    width: 87.5%;
+    overflow: hidden;
+    border: 6px solid rgba(13,112,52,.5);
+    @include box-shadow(0 1px 0 rgba(255,255,255,.75), inset 0 0 16px rgba(0,0,0,.76));
+    @include respond-to(640) {
+        width: 100%;
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+.video__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -38px 0 0 -38px;
+    width: 76px;
+    height: 76px;
+    border: 1px solid #00ae2c;
+    @include border-radius(50%);
+    background: #00bc30;
+    @include box-shadow(inset 0 0 0 2px #86f4a2);
+    @include background-image(linear-gradient(bottom, #00bc30 0%, #00d637 100%));
+    &:hover {
+        background: #00d637;
+        @include background-image(linear-gradient(bottom, #00d637 0%, #00bc30 100%));
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -15px 0 0 -8px;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 15px 0 15px 23px;
+        border-color: transparent transparent transparent #ffffff;
+    }
+}
 /* -------------------------------------- //END Header ------------------------------------------ */
 
 /* ------------------------------------- Independent blocks -------------------------------------- */
+.enter-soc {
+    a {
+        position: relative;
+        margin-left: 15px;
+        float: left;
+        width: 165px;
+        height: 42px;
+        line-height: 37px;
+        border: 1px solid #103883;
+        @include border-radius(17px);
+        background: #375999;
+        font-size: 18px;
+        color: #fff;
+        @include clr;
+        @include box-sizing(border-box);
+        padding-right: 24px;
+        text-decoration: none;  
+        text-align: right;
+        @include box-shadow(inset 0 1px 0 rgba(255,255,255,.58));
+        @include background-image(linear-gradient(bottom, #375999 0%, #5081ef 100%));
+        &:first-child {
+            margin-left: 0;
+            @include respond-to(640) {
+                margin: 0 auto 10px;
+            }
+        }
+        &:hover {
+            background: #5081ef;
+            @include background-image(linear-gradient(bottom, #5081ef 0%, #375999 100%));
+        }
+        @include respond-to(768) {
+            float: none;
+            display: block;
+            margin: 0 0 10px 0;
+        }
+        @include respond-to(640) {
+            margin: 0 auto;
+        }
+    }
+    span {
+        float: left;
+        width: 62px;
+        height: 40px;
+        border-right: 1px solid #2b5aa4;
+        @include box-shadow(1px 0 0 rgba(175,198,221,.5));
+        text-align: center;
+    }
+    i {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+.enter-soc__vk {
+    i {
+        @include s(vk);
+    }
+}
+.enter-soc__fb {
+    i {
+        @include s(fb);
+    }
+}
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 /* ----------------------------------------- Footer ---------------------------------------------- */
 .footer {
     position: relative;
-    height: 120px;
+    padding: 17px 0;
+    height: 96px;
+    overflow: hidden;
+    border-top: 1px solid #00662b;
+    @include box-sizing(border-box);
+    background: #3c3c3c url(../img/footer-bg.jpg) 0 0 repeat;
+    color: #b8b8b8;
+    font-size: 11px;
+    .l-container {
+        position: relative;
+    }
+}
+.footer__logo {
+    float: left;
+    margin: 22px 4.5% 0 5.5%;
+    @include s(logo-dark);
+}
+.footer__middle {
+    float: left;
+    padding: 10px 0;
+    padding-left: 4.5%;
+    border-left: 1px solid #656565;
+}
+.footer__nav {
+    margin-bottom: 10px;
+    a {
+        display: inline-block;
+        margin-right: 20px;
+        color: #fff;
+        font-size: 12px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.copyright {
+    position: absolute;
+    bottom: 0;
+    right: 4%;
 }
 /* -------------------------------------- //END Footer ------------------------------------------- */
