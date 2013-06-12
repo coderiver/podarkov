@@ -42,7 +42,7 @@ table {
     border-spacing: 0;
     border-collapse: collapse;
 }
-*{-webkit-text-size-adjust: none; }
+// *{-webkit-text-size-adjust: none; }
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
 body{
@@ -89,125 +89,186 @@ a{
  
 /* ----------------------------------------- Header --------------------------------------------- */
 .header {
-    margin-bottom: 42px;
-    padding-top: 38px;
-    height: 459px;
-    background: #1d8542 url(../img/header-bg.jpg) 50% 0 repeat-x;
+    @include clr;
+    height: 48px;  
     border-bottom: 1px solid #00662b;
-    @include box-sizing(border-box);
-    @include respond-to(640) {
-        height: auto;
-        padding: 0 0 55px;
-        @include background-size(auto, 100%);
-    }
+    @include box-shadow(inset 0 -1px 0 #03a94c);
+    background: #1d8542 url(../img/header-inner-bg.jpg) 0 0 repeat-x;
     .l-container {
-        @include respond-to(640) {
-            padding: 0;
-        }
+        padding: 0;
     }
 }
 .logo {
-    margin-bottom: 5%;
+    float: left;
+    width: 25%;
     text-align: center;
-    @include respond-to(640) {
-        position: relative;
-        height: 47px;
-        line-height: 38px;
-        border-bottom: 1px solid #0c984f;
-        background: #176c3c url(../img/logo-bg.jpg) 0 0 repeat;
-        &:before, &:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 0;
-            border: 1px dashed #006831;
-        }
-        &:before {
-            left: 15px;
-        }
-        &:after {
-            right: 15px;
-        }
+    position: relative;
+    height: 47px;
+    line-height: 38px;
+    border-right: 1px solid #00662b;
+    @include box-shadow(1px 0 0 #50c073);
+    background: #176c3c url(../img/logo-bg.jpg) 0 0 repeat;
+    @include respond-to(768) {
+        width: 195px;
+    }
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: url(../img/logo-border.png) 0 0 repeat;
+    }
+    &:before {
+        left: 15px;
+    }
+    &:after {
+        right: 15px;
     }
     a {
         display: inline-block;
         vertical-align: middle;
-        @include s(logo);
         @extend %hide-text;
-        @include respond-to(640) {
-            @include s(logo-small);
-            &:before, &:after {
-                content: "";
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                width: 0;
-                border: 1px dashed #51a169;
-            }
-            &:before {
-                left: 13px;
-            }
-            &:after {
-                right: 13px;
-            }
-        }
+        @include s(logo-small);
     }
 }
-.login {
+.header__right {
+    float: right;
+    height: 47px;
+    @include clr;
+}
+.header-user {
+    width: 190px;
+    line-height: 47px;
+    padding: 0 5px 0 14px;
     float: left;
-    width: 50%;
-    color: #e8e5de;
-    font-size: 18px;
-    text-shadow: 0 -1px 0 rgba(0,0,0,.45);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-left: 1px solid #50ba72;
+    @include box-shadow(-1px 0 0 #00662b);
+    @include box-sizing(border-box);
     @include respond-to(768) {
-        font-size: 14px;
+        width: 60px;
     }
-    @include respond-to(640) {
-        float: none;
-        width: 90%;
-        margin: 0 auto;
-        font-size: 12px;
-    }
-}
-.login__title {
-    margin-bottom: 14px;
-    @include sb;
-    font-size: 25px;
-    text-transform: uppercase;
-    @include respond-to(768) {
-        font-size: 20px;
-    }
-    @include respond-to(640) {
-        font-size: 16px;
-    }
-    strong {
-        @include eb;
-        font-size: 29px;
-        @include respond-to(768) {
-            font-size: 24px;
-        }
-        @include respond-to(640) {
-            font-size: 16px;
-        }
-    }
-}
-.login__list {
-    margin-bottom: 10%;
-    @include respond-to(640) {
-        margin-bottom: 5%;
-    }
-    li {
-        position: relative;
-        padding-left: 12px;
+    .is-fb-user {
         &:before {
-            content: "-";
-            position: absolute;
-            left: 0;
-            top: 0;
+            @include s(fb-s);
+        }
+    }
+    .is-vk-user {
+        &:before {
+            //@include s(vk-s);
         }
     }
 }
+.header-user__pic {
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+    @include respond-to(640) {
+        display: none;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        right: -8px;
+    }
+    img {
+        display: block;
+        border: 1px solid rgba(0,102,43,.2);
+        @include box-shadow(0 1px 0 rgba(255,255,255,.25));
+    }
+}
+.header-user__link {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 12px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.45);
+    @include respond-to(640) {
+        display: none;
+    }
+}
+
+.header-gift {
+    float: left;
+    width: 61px;
+    height: 32px;
+    line-height: 32px;
+    margin-top: 8px;
+    text-align: center;
+    border-left: 1px solid #00662b;
+    @include box-shadow(inset 1px 0 0 #4eb672);
+    @include respond-to(640) {
+        display: none;
+    }
+}
+
+.header-nav {
+    position: relative;
+    float: left;
+    height: 49px;
+    @include respond-to(640) {
+        display: none;
+    }
+}
+.header-nav.is-active {
+    background: #fefefd;
+    .header-nav__button {
+        height: 41px;
+        background: #fefefd;
+        border-left: 1px solid transparent;
+        @include box-shadow(none);
+        i {
+            @include s(menu-arr-act);
+            margin: -7px 0 0 -5px;
+        }
+    }
+}
+.header-nav__button {
+    position: relative;
+    z-index: 2;
+    width: 48px;
+    height: 32px;
+    line-height: 32px;
+    margin-top: 8px;
+    text-align: center;
+    background: none;
+    border-left: 1px solid #00662b;
+    @include box-shadow(inset 1px 0 0 #4eb672);
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -3px 0 0 -5px;
+        @include s(menu-arr); 
+    }
+}
+.header-nav__list {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 49px;
+    line-height: 1.2;
+    width: 175px;
+    background: #fefefd;
+    border-left: 1px solid #c9c9c9;
+    @include box-shadow(0 0 13px rgba(0,0,0,.23));
+    a {
+        display: block;
+        padding: 0 5px 0 18px;
+        height: 38px;
+        line-height: 38px;
+        font-size: 12px;
+        color: #353535;
+        font-family: Arial, sans-serif;
+        border-bottom: 1px solid #c9c9c9;
+    }
+}
+
 .video-wrap {
     float: right;
     width: 50%;
@@ -265,6 +326,61 @@ a{
 /* -------------------------------------- //END Header ------------------------------------------ */
 
 /* ------------------------------------- Independent blocks -------------------------------------- */
+.login {
+    float: left;
+    width: 50%;
+    color: #e8e5de;
+    font-size: 18px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.45);
+    @include respond-to(768) {
+        font-size: 14px;
+    }
+    @include respond-to(640) {
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+        font-size: 12px;
+    }
+}
+.login__title {
+    margin-bottom: 14px;
+    @include sb;
+    font-size: 25px;
+    text-transform: uppercase;
+    @include respond-to(768) {
+        font-size: 20px;
+    }
+    @include respond-to(640) {
+        font-size: 16px;
+    }
+    strong {
+        @include eb;
+        font-size: 29px;
+        @include respond-to(768) {
+            font-size: 24px;
+        }
+        @include respond-to(640) {
+            font-size: 16px;
+        }
+    }
+}
+.login__list {
+    margin-bottom: 10%;
+    @include respond-to(640) {
+        margin-bottom: 5%;
+    }
+    li {
+        position: relative;
+        padding-left: 12px;
+        &:before {
+            content: "-";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
 .enter-soc {
     @include clr;
     a {
@@ -334,6 +450,7 @@ a{
 .icon_cake {@include s(cake);}
 .icon_string {@include s(string);}
 .icon_mob {@include s(mob);}
+.icon_gift {@include s(gift);}
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 /* ----------------------------------------- Footer ---------------------------------------------- */

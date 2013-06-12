@@ -1,4 +1,70 @@
 @import "base";
+.index {
+    .header {
+        margin-bottom: 42px;
+        padding-top: 38px;
+        height: 459px;
+        background: #1d8542 url(../img/header-bg.jpg) 50% 0 repeat-x;
+        border-bottom: 1px solid #00662b;
+        @include box-sizing(border-box);
+        @include respond-to(640) {
+            height: auto;
+            padding: 0 0 55px;
+            @include background-size(auto, 100%);
+        }
+        .l-container {
+            padding: 0 5px;
+            @include respond-to(640) {
+                padding: 0;
+            }
+        }
+    }
+    .logo {
+        float: none;
+        width: 100%;
+        margin-bottom: 5%;
+        text-align: center;
+        background: none;
+        border: 0;
+        &:before, &:after {
+            display: none;
+        }
+        @include respond-to(768) {
+            width: 100%;
+        }
+        @include respond-to(640) {
+            position: relative;
+            height: 47px;
+            line-height: 38px;
+            border-bottom: 1px solid #0c984f;
+            background: #176c3c url(../img/logo-bg.jpg) 0 0 repeat;
+            &:before, &:after {
+                display: block;
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background: url(../img/logo-border.png) 0 0 repeat;
+            }
+            &:before {
+                left: 15px;
+            }
+            &:after {
+                right: 15px;
+            }
+        }
+        a {
+            display: inline-block;
+            vertical-align: middle;
+            @include s(logo);
+            @extend %hide-text;
+            @include respond-to(640) {
+                @include s(logo-small);
+            }
+        }
+    }
+}
 .step-wrap {
     margin-bottom: 20px;
 }
