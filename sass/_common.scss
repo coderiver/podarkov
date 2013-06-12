@@ -89,6 +89,7 @@ a{
  
 /* ----------------------------------------- Header --------------------------------------------- */
 .header {
+    margin-bottom: 42px;
     padding-top: 38px;
     height: 459px;
     background: #1d8542 url(../img/header-bg.jpg) 50% 0 repeat-x;
@@ -117,7 +118,16 @@ a{
         &:before, &:after {
             content: "";
             position: absolute;
-            
+            top: 0;
+            bottom: 0;
+            width: 0;
+            border: 1px dashed #006831;
+        }
+        &:before {
+            left: 15px;
+        }
+        &:after {
+            right: 15px;
         }
     }
     a {
@@ -127,10 +137,24 @@ a{
         @extend %hide-text;
         @include respond-to(640) {
             @include s(logo-small);
+            &:before, &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 0;
+                border: 1px dashed #51a169;
+            }
+            &:before {
+                left: 13px;
+            }
+            &:after {
+                right: 13px;
+            }
         }
     }
 }
-.slogan {
+.login {
     float: left;
     width: 50%;
     color: #e8e5de;
@@ -146,7 +170,7 @@ a{
         font-size: 12px;
     }
 }
-.slogan__title {
+.login__title {
     margin-bottom: 14px;
     @include sb;
     font-size: 25px;
@@ -168,7 +192,7 @@ a{
         }
     }
 }
-.slogan__list {
+.login__list {
     margin-bottom: 10%;
     @include respond-to(640) {
         margin-bottom: 5%;
@@ -190,8 +214,7 @@ a{
     @include box-sizing(border-box);
     @include respond-to(640) {
         float: none;
-        width: 90%;
-        margin: 0 auto 26px;
+        width: 100%;
     }
 }
 .video {
@@ -201,7 +224,8 @@ a{
     border: 6px solid rgba(13,112,52,.5);
     @include box-shadow(0 1px 0 rgba(255,255,255,.75), inset 0 0 16px rgba(0,0,0,.76));
     @include respond-to(640) {
-        width: 100%;
+        width: 90%;
+        margin: 0 auto 26px;
     }
     img {
         display: block;
@@ -303,6 +327,12 @@ a{
         @include s(fb);
     }
 }
+.icon {
+    display: inline-block;
+}
+.icon_cake {@include s(cake);}
+.icon_string {@include s(string);}
+.icon_mob {@include s(mob);}
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 /* ----------------------------------------- Footer ---------------------------------------------- */
@@ -316,20 +346,40 @@ a{
     background: #3c3c3c url(../img/footer-bg.jpg) 0 0 repeat;
     color: #b8b8b8;
     font-size: 11px;
+    @include respond-to(640) {
+        height: 137px;
+    }
     .l-container {
         position: relative;
+        @include respond-to(640) {
+            position: static;
+        }
     }
 }
 .footer__logo {
     float: left;
     margin: 22px 4.5% 0 5.5%;
     @include s(logo-dark);
+    @include respond-to(640) {
+        position: absolute;
+        top: 31px;
+        left: 50%;
+        margin: 0 0 0 -57px;
+    }
 }
 .footer__middle {
     float: left;
     padding: 10px 0;
     padding-left: 4.5%;
     border-left: 1px solid #656565;
+    @include respond-to(640) {
+        padding: 5px 0;
+        float: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        text-align: center;
+    }
 }
 .footer__nav {
     margin-bottom: 10px;
@@ -341,11 +391,33 @@ a{
         &:hover {
             text-decoration: underline;
         }
+        &:nth-child(2) {
+            @include respond-to(480) {
+                position: absolute;
+                bottom: -66px;
+                left: 50%;
+                margin-left: -87px;
+            }
+        }
+    }
+}
+.footer__contacts {
+    @include respond-to(640) {
+        position: absolute;
+        bottom: -42px;
+        left: 0;
+        width: 100%;
     }
 }
 .copyright {
     position: absolute;
     bottom: 0;
-    right: 4%;
+    right: 4%; 
+    @include respond-to(640) {
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    } 
 }
 /* -------------------------------------- //END Footer ------------------------------------------- */
