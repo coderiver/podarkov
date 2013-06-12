@@ -266,6 +266,7 @@ a{
 
 /* ------------------------------------- Independent blocks -------------------------------------- */
 .enter-soc {
+    @include clr;
     a {
         position: relative;
         margin-left: 15px;
@@ -379,6 +380,7 @@ a{
         top: 0;
         width: 100%;
         text-align: center;
+        border: 0;
     }
 }
 .footer__nav {

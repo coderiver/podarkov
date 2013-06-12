@@ -95,6 +95,8 @@ a { color: #00919e; text-decoration: none; }
 
 /* -------------------------------------- //END Header ------------------------------------------ */
 /* ------------------------------------- Independent blocks -------------------------------------- */
+.enter-soc { *zoom: 1; }
+.enter-soc:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 .enter-soc a { position: relative; margin-left: 15px; float: left; width: 165px; height: 42px; line-height: 37px; border: 1px solid #103883; -webkit-border-radius: 17px; -moz-border-radius: 17px; -ms-border-radius: 17px; -o-border-radius: 17px; border-radius: 17px; background: #375999; font-size: 18px; color: #fff; *zoom: 1; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-right: 24px; text-decoration: none; text-align: right; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.58); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.58); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.58); background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjEwMCUiIHgyPSI1MCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM3NTk5OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzUwODFlZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #375999), color-stop(100%, #5081ef)); background-image: -webkit-linear-gradient(bottom, #375999 0%, #5081ef 100%); background-image: -moz-linear-gradient(bottom, #375999 0%, #5081ef 100%); background-image: -o-linear-gradient(bottom, #375999 0%, #5081ef 100%); background-image: linear-gradient(bottom, #375999 0%, #5081ef 100%); }
 .enter-soc a:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 .enter-soc a:first-child { margin-left: 0; }
@@ -128,7 +130,7 @@ a { color: #00919e; text-decoration: none; }
 @media only screen and (max-width: 640px) { .footer__logo { position: absolute; top: 31px; left: 50%; margin: 0 0 0 -57px; } }
 
 .footer__middle { float: left; padding: 10px 0; padding-left: 4.5%; border-left: 1px solid #656565; }
-@media only screen and (max-width: 640px) { .footer__middle { padding: 5px 0; float: none; position: absolute; top: 0; width: 100%; text-align: center; } }
+@media only screen and (max-width: 640px) { .footer__middle { padding: 5px 0; float: none; position: absolute; top: 0; width: 100%; text-align: center; border: 0; } }
 
 .footer__nav { margin-bottom: 10px; }
 .footer__nav a { display: inline-block; margin-right: 20px; color: #fff; font-size: 12px; }
@@ -204,10 +206,13 @@ a { color: #00919e; text-decoration: none; }
 @media only screen and (max-width: 480px) { .comment__text:before { display: none; } }
 
 .login-section { padding-top: 15px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; margin-top: 39px; height: 195px; border-top: 1px solid #00662b; background: url(../img/login-section-bg.png) 0 0 repeat; -moz-background-size: auto 100%; -webkit-background-size: auto 100%; background-size: auto 100%; }
+.login-section .login { width: 100%; float: none; text-align: center; }
 .login-section .login__title { font-size: 19px; margin-bottom: 36px; }
 @media only screen and (max-width: 768px) { .login-section .login__title { margin-bottom: 11px; } }
-@media only screen and (max-width: 480px) { .login-section .login__title { text-align: center; font-size: 13px; } }
+@media only screen and (max-width: 480px) { .login-section .login__title { font-size: 13px; } }
 .login-section .login__title strong { display: block; }
+.login-section .enter-soc a { display: inline-block; float: none; }
+@media only screen and (max-width: 768px) { .login-section .enter-soc a { display: block; margin: 0 auto 10px; } }
 
 .logo a { font: 0/0 a; text-shadow: none; color: transparent; }
 
