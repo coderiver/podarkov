@@ -1,0 +1,153 @@
+@import "base";
+.l-col-wrap {
+    @include clr;  
+    max-width: 1024px;
+    margin: 0 auto;
+    background: #f4eeec;
+}
+.sidebar {
+    float: left;
+    width: 257px;
+    border-right: 1px solid #aeadad;
+    @include box-sizing(border-box);
+}
+.sidebar__wrap {
+    padding: 0 13px;
+}
+.item {
+    padding: 19px 7%;
+    border-bottom: 1px solid #adadad;
+    @include box-shadow(inset 0 1px 0 rgba(255,255,255,.95));
+}
+.item_header {
+    padding: 11px 6px;
+    @include clr;
+    text-align: center;
+    .btn {
+        float: left;
+        &:last-child {
+            float: right;
+        }
+    }
+    strong {
+        display: inline-block;
+        margin-top: 6px;
+    }
+}
+
+.s-profile {
+    position: relative;
+    padding: 12px 0;
+    text-align: center;
+    color: #323030;
+    font-size: 23px;
+    .close {
+        position: absolute;
+        top: 11px;
+        right: -2px;
+    }
+}
+.s-profile__name {
+    display: block;
+    margin: 0 auto;
+    width: 80%;  
+    @include sb; 
+}
+
+.user-ava {
+    i {
+        display: none;
+        position: absolute;
+        bottom: -2px;
+        right: -3px;
+    }
+}
+.user-ava.is-fb-user {
+    position: relative;
+    i {
+        display: block;
+        @include s(fb-b);
+    }
+}
+.user-ava.is-vk-user {  
+    i {
+        //@include s(vk-b);
+    }
+}
+
+.add {
+    color: #515151;
+    font-size: 12px;
+    @include b;
+    text-transform: uppercase;
+    i, span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    i {
+        @include s(add);
+    }
+    span {
+        margin-left: 5%;
+    }
+}
+
+.balance {
+    color: #000;
+    div {
+        margin-bottom: 10px;
+    }
+    span {
+        display: inline-block;
+        margin-left: 10px;
+        @include b;
+        font-size: 21px;
+    }
+}
+
+.s-tab {
+    @include clr;
+    li {
+        float: right;
+        width: 119px;
+        height: 35px;
+        line-height: 30px;
+        font-size: 11px;
+        text-align: left;  
+        @include b;
+        cursor: pointer;
+        border: 1px solid #adadad;
+        @include box-shadow(inset 0 0 0 1px rgba(255,255,255,.95));
+        @include box-sizing(border-box);
+        @include border-radius(20px);
+        @include background-image(linear-gradient(bottom, #e3e1de 0%, #f8efef 88%, #f8efef 100%));
+        &:first-child {
+            float: left;
+        }
+        &:hover {
+            background: #f8efef;
+        }
+        &:active {
+            background: #f8efef;
+            @include box-shadow(inset 0 2px 4px 0 rgba(0,0,0,.2));
+        }
+        span, i {
+            vertical-align: middle;
+        }
+        .icon {
+            margin: 0 7px 0 18px;
+        }
+    }
+    .is-active {
+        cursor: default;
+        @include box-shadow(inset 0 0 3px rgba(53,53,53,.5));
+        @include background-image(linear-gradient(bottom, #f0ece8, #d5d3d2));
+        &:hover {
+             @include background-image(linear-gradient(bottom, #f0ece8, #d5d3d2));
+        }
+        &:active {
+            @include box-shadow(inset 0 0 3px rgba(53,53,53,.5));
+            @include background-image(linear-gradient(bottom, #f0ece8, #d5d3d2));
+        }
+    }
+}

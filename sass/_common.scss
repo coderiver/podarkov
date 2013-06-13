@@ -100,16 +100,17 @@ a{
 }
 .logo {
     float: left;
-    width: 25%;
+    width: 257px;
     text-align: center;
     position: relative;
     height: 47px;
     line-height: 38px;
-    border-right: 1px solid #00662b;
-    @include box-shadow(1px 0 0 #50c073);
+    border-right: 1px solid #50c073;
+    @include box-shadow(inset -1px 0 0 #00662b);
+    @include box-sizing(border-box);
     background: #176c3c url(../img/logo-bg.jpg) 0 0 repeat;
     @include respond-to(768) {
-        width: 195px;
+        //width: 195px;
     }
     &:before, &:after {
         content: "";
@@ -151,6 +152,9 @@ a{
     @include respond-to(768) {
         width: 60px;
     }
+    @include respond-to(640) {
+        padding: 0;
+    }
     .is-fb-user {
         &:before {
             @include s(fb-s);
@@ -168,18 +172,54 @@ a{
     margin-right: 15px;
     vertical-align: middle;
     @include respond-to(640) {
+        display: block;
+        width: 60px;
+        height: 47px;
+    }
+    span {
         display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -12px 0 0 -10px;
+        @include s(user-pic);
+        @include respond-to(640) {
+            display: block;
+        }
+        i {
+            position: absolute;
+            top: -11px;
+            right: -9px;
+            width: 17px;
+            height: 17px;
+            text-align: center;
+            line-height: 17px;
+            color: #fff;
+            background: #f00;
+            font: bold 11px Arial, sans-serif;
+            @include border-radius(50%);
+            border: 2px solid #06b838;
+        }
     }
     &:before {
         content: "";
-        position: absolute;
+        position: absolute;  
         bottom: -4px;
         right: -8px;
+        @include respond-to(640) {
+           display: none;
+        }
+    }
+    i {
+        position: absolute;
     }
     img {
         display: block;
         border: 1px solid rgba(0,102,43,.2);
         @include box-shadow(0 1px 0 rgba(255,255,255,.25));
+        @include respond-to(640) {
+            display: none;
+        }
     }
 }
 .header-user__link {
@@ -451,6 +491,54 @@ a{
 .icon_string {@include s(string);}
 .icon_mob {@include s(mob);}
 .icon_gift {@include s(gift);}
+.icon_cake2 {@include s(cake2);}
+.icon_friend {@include s(fr);}
+
+.main-col {
+    overflow: hidden;
+}
+
+.btn {
+    display: inline-block;
+    padding: 7px 12px;
+    @include border-radius(4px);
+    text-transform: uppercase;
+    font: bold 10px Arial, sans-serif;
+}
+.btn_gray {
+    background: #e3e0dd;
+    border: 1px solid #a3a3a3;
+    color: #515151;
+    @include text-shadow(0 1px 0 rgba(255,255,255,.75));
+    @include box-shadow(inset 0 0 0 1px rgba(255,255,255,.95));
+    @include background-image(linear-gradient(bottom, #e3e0dd 0%, #f8efef 88.31%, #f8efef 100%));
+    &:hover {
+        @include background-image(linear-gradient(bottom, #f8efef 0%, #f8efef 88.31%, #e3e0dd 100%));
+    }
+    &:active {
+        background: #e3e0dd;
+        @include box-shadow(inset 0 2px 4px 0 rgba(0,0,0,.2));
+    }
+}
+
+.close {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    @include border-radius(4px);
+    background: #d3cbcb;
+    &:hover {
+        background: #b8b2b2;
+    }
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -5px 0 0 -5px;
+        @include s(close);
+    }
+}
+
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 /* ----------------------------------------- Footer ---------------------------------------------- */

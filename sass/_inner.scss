@@ -1,1 +1,68 @@
 @import "base";
+.tab {
+    height: 51px;
+    line-height: 51px;
+    border: 1px solid #adadad;
+    border-left: 0;
+    border-top: 0;
+    background: #efebe7;
+    @include box-sizing(border-box);
+    @include box-shadow(inset 0 0 0 1px rgba(255,255,255,.95));
+    @include background-image(linear-gradient(bottom, #efebe7 0%, #f8efef 88.31%, #f8efef 100%));
+    li {
+        float: left;
+        margin-left: -1px;
+        padding: 0 3%;
+        height: 50px;
+        cursor: pointer;
+        font: bold 11px/50px Arial, sans-serif;
+        text-transform: uppercase;
+        border: 1px solid #adadad;
+        border-top: 0;
+        border-bottom:0;
+        @include box-shadow(inset 0 0 0 1px rgba(255,255,255,.95));
+        text-shadow: 0 1px 0 rgba(255,255,255,.75);
+        &:hover {
+            background: #f8efef;
+        }
+        &:active {
+            background: #f8efef;
+            @include box-shadow(inset 0 2px 4px 0 rgba(0,0,0,.2));
+        }
+    }
+    .is-active {
+        color: #fff;
+        cursor: default;
+        @include box-shadow(inset 0 0 10px rgba(53,53,53,.5));
+        background: #b3afaf url(../img/tab-bg.png) 0 0 repeat;
+        &:hover, &:active {
+            @include box-shadow(inset 0 0 10px rgba(53,53,53,.5));
+            background: #b3afaf url(../img/tab-bg.png) 0 0 repeat;
+        }
+    }
+    .is-new {
+        i {
+            display: block;
+        }
+    }
+    span {
+        position: relative;
+    }
+    i {
+        display: none;
+        position: absolute;
+        top: -17px;
+        right: -20px;
+        width: 17px;
+        color: #fff;
+        height: 17px;
+        font: bold 11px/17px Arial, sans-serif;
+        text-align: center;
+        line-height: 17px;
+        border: 2px solid #f1ebe9;
+        @include border-radius(50%);
+        background: #ff3434;
+        font-style: normal;
+    }
+}
+

@@ -185,6 +185,9 @@ $break-1024: 1024px;
     font-weight: 400;
     font-family: 'Open Sans', Arial, sans-serif;
 }
+@mixin font2 {
+    font-family: Arial, sans-serif;
+}
 @mixin sb {
     font-weight: 600;
 }

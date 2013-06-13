@@ -236,7 +236,6 @@
     display: inline-block;
     @include border-radius(50%);
     border: 5px solid #f1f1f1;
-    overflow: hidden;
     @include box-shadow(0 0 0 1px #ccc);
     img {
         display: block;
