@@ -17,6 +17,7 @@ $break-480: 480px;
 $break-640: 640px; 
 $break-768: 768px; 
 $break-800: 800px; 
+$break-960: 960px; 
 $break-1024: 1024px;
 @mixin respond-to($media) {
   @if $media == 280 {
@@ -37,8 +38,11 @@ $break-1024: 1024px;
   @else if $media == 800 {
     @media only screen and (max-width: $break-800) { @content; }
   }
+  @else if $media == 960 {
+    @media only screen and (max-width: $break-960) { @content; }
+  }
   @else if $media == 1024 {
-    @media only screen and (min-width: $break-1024) { @content; }
+    @media only screen and (max-width: $break-1024) { @content; }
   }
 }
 // retina bg

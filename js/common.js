@@ -6,4 +6,7 @@ $(document).ready(function() {
         $(".js-nav").fadeToggle("fast");
     });
 
+    $('.js-scrolpane').jScrollPane();
+
+
 });

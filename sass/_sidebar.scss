@@ -3,7 +3,7 @@
     @include clr;  
     max-width: 1024px;
     margin: 0 auto;
-    background: #f4eeec;
+    //background: #f4eeec;
 }
 .sidebar {
     float: left;
@@ -13,6 +13,11 @@
 }
 .sidebar__wrap {
     padding: 0 13px;
+    .item {
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
 }
 .item {
     padding: 19px 7%;
@@ -21,8 +26,10 @@
 }
 .item_header {
     padding: 11px 6px;
+    height: 51px;
     @include clr;
     text-align: center;
+    @include box-sizing(border-box);
     .btn {
         float: left;
         &:last-child {
@@ -107,6 +114,7 @@
 
 .s-tab {
     @include clr;
+    margin-top: -4px;
     li {
         float: right;
         width: 119px;
@@ -150,4 +158,50 @@
             @include background-image(linear-gradient(bottom, #f0ece8, #d5d3d2));
         }
     }
+}
+
+.friend-gift {
+    padding: 15px 0;
+}
+.friend-gift__title {
+    display: block;
+    margin-bottom: 28px;
+}
+.friend-gilf__list {
+    padding: 0 7%;
+    li {
+        @include clr;
+        font-size: 11px;  
+        margin-bottom: 20px;
+    }
+    img {
+        float: left;
+        margin-right: 30px;
+    }
+    div {
+        overflow: hidden;
+    }
+    .btn {
+        margin-top: 10px;
+    }
+}  
+
+.last-events {  
+    @include clr;   
+    div {
+        overflow: hidden;
+        color: #9c9796;
+        a {  
+            @include b;
+            color: #9c9796;
+        }
+    }
+    .icon {
+        margin-right: 5px;
+    }
+}
+.last-events__title {
+    float: left;
+    margin-right: 10px;
+    width: 75px;
 }

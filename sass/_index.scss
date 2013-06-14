@@ -1,5 +1,8 @@
 @import "base";
 .index {
+    .l-layout {
+        background: none;
+    }
     .header {
         margin-bottom: 42px;
         padding-top: 38px;
@@ -241,6 +244,9 @@
         display: block;
         @include border-radius(50%);
     }
+}
+.user-ava_dark {
+    border-color: #dcd0cc;
 }
 .user-info {
     padding-top: 12px;
