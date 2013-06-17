@@ -364,7 +364,9 @@
  */
 
 
-
+.js-scrolpane {
+    height: 600px;
+}
 .jspContainer
 {
     overflow: hidden;
@@ -374,6 +376,8 @@
 .jspPane
 {
     position: absolute;
+    width: 100% !important;
+    @include box-sizing(border-box);
 }
 
 .jspVerticalBar

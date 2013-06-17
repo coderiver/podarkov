@@ -381,9 +381,11 @@ a { color: #00919e; text-decoration: none; }
 .is-denger-term .gift-sent__term span:before { display: inline-block; }
 
 /* CSS Styles that are needed by jScrollPane for it to operate correctly.  Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane may not operate correctly without them. */
+.js-scrolpane { height: 600px; }
+
 .jspContainer { overflow: hidden; position: relative; }
 
-.jspPane { position: absolute; }
+.jspPane { position: absolute; width: 100% !important; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .jspVerticalBar { position: absolute; top: 0; right: 0; width: 16px; height: 100%; background: red; }
 

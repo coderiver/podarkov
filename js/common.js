@@ -6,8 +6,7 @@ $(document).ready(function() {
         $(".js-nav").fadeToggle("fast");
     });
 
-// Scrollpane
-    $('.js-scrolpane').jScrollPane();
+
 
 // tabs
 	var tab = $(".js-tab li");
@@ -26,5 +25,7 @@ $(document).ready(function() {
 		}
 	});
 
+// Scrollpane
+    $('.js-scrolpane').jScrollPane();
 
 });
