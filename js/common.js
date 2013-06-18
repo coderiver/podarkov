@@ -25,16 +25,24 @@ $(document).ready(function() {
 		}
 	});
 
-// Scrollpane
-    $('.js-scrolpane').each(function(){
-        var element = $('.js-scrolpane').jScrollPane({
-            autoReinitialise: true,
-            verticalDragMaxHeight: 80,
-            mouseWheelSpeed: 70,
-            verticalGutter: 0,
-        });
+    window.dima = baron({
+        scroller: '.scroller',
+        bar: '.scroller__bar',
+        barOnCls: 'baron'
     });
 
-
-
+    function resize_col() {
+        var main_col = $(".js-main-col");
+        var main_col_width = $(".l-layout").outerWidth() - $(".sidebar").outerWidth();
+        if ($(window).width() < 1024) {
+            main_col.width(main_col_width);
+        }
+        else {
+            main_col.width(767);
+        }
+    }
+    resize_col();
+    $(window).resize(function(event) {
+        resize_col();
+    });
 });

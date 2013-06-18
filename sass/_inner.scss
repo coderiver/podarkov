@@ -424,118 +424,59 @@
     }  
 }
 
-/*
- * CSS Styles that are needed by jScrollPane for it to operate correctly.
- *
- * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
- * may not operate correctly without them.
- */
-
-
-.js-scrolpane {
+.scroller {
     height: 100%;
-    width: 100%;
-    outline: none;
+    overflow-y: scroll;
+    /*-webkit-overflow-scrolling: touch;*/
+    /* uncomment to accelerate scrolling on iOs */
 }
-.jspContainer
-{
-    overflow: hidden;
-    outline: none;
-    position: relative;
+.scroller::-webkit-scrollbar {
+    width: 0;
 }
-
-.jspPane
-{
+.scroller__bar-wrapper {
     position: absolute;
-    width: 100% !important;
-    @include box-sizing(border-box);
-}
-
-.jspVerticalBar
-{
-    position: absolute;
-    top: 0;
-    right: 0;
+    z-index: 3;
+    top: 35px;
+    bottom: 35px;
+    right: 10px;
     width: 8px;
-    height: 100%;
+    border-radius: 5px;
+    pointer-events: none;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        left: -1px;
+        width: 10px;
+        height: 10px;
+        @include border-radius(50%);
+        background: #797979;
+        @include opacity(0.33);
+    }
+    &:before {
+        top: -20px;
+    }
+    &:after {
+        bottom: -20px;
+    }
 }
-
-
-.jspVerticalBar *,
-.jspHorizontalBar *
-{
-    margin: 0;
-    padding: 0;
-}
-
-.jspCap
-{
-    display: none;
-}
-
-.jspHorizontalBar .jspCap
-{
-    float: left;
-}
-
-.jspTrack
-{
-    background: none;
-    position: relative;
-}
-
-.jspDrag
-{
+.scroller__bar {
+    position: absolute;
+    z-index: 1;
+    width: 8px;
+    border-radius: 3px;
     background: #797979;
-    @include opacity(.33);
-    position: relative;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-    @include border-radius(20px);
+    @include opacity(0.33);
+    pointer-events: auto;
 }
-
-.jspHorizontalBar .jspTrack,
-.jspHorizontalBar .jspDrag
-{
-    float: left;
-    height: 100%;
+.scroller__bar:hover,
+.scroller__bar:active {
+    opacity: .8;
 }
-
-.jspArrow
-{
-    background: #50506d;
-    text-indent: -20000px;
-    display: block;
-    cursor: pointer;
+.baron .scroller__bar {
+    //opacity: .6;
 }
-
-.jspArrow.jspDisabled
-{
-    cursor: default;
-    background: #80808d;
-}
-
-.jspVerticalBar .jspArrow
-{
-    height: 16px;
-}
-
-.jspHorizontalBar .jspArrow
-{
-    width: 16px;
-    float: left;
-    height: 100%;
-}
-
-.jspVerticalBar .jspArrow:focus
-{
-    outline: none;
-}
-
-.jspCorner
-{
-    background: #eeeef4;
-    float: left;
-    height: 100%;
+.baron_h .scroller__bar_h {
+    opacity: .6;
+    bottom: 30px;
 }

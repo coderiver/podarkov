@@ -113,6 +113,11 @@ a{
         bottom: 96px;
         left: 50%;
         margin-left: -512px;
+        @include respond-to(1024) {
+            left: 0;
+            margin: 0;
+            right: 0;
+        }
     }
     .sidebar {
         position: absolute;
@@ -136,7 +141,10 @@ a{
     }
     .tab-cont {
         display: none;
-        padding: 3% 0 3% 3.2%;
+        padding: 0;
+    }
+    .gift-sent-wrap {
+        padding: 0 6.5% 0 3%;
     }
 }
 /* ------------------------------------ //END Main styles --------------------------------------- */

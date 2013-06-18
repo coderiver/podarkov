@@ -8,7 +8,7 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
     <script src="js/jquery.tools.min.js"></script>
     <script src="js/jquery.mousewheel.js"></script>
-    <script src="js/jquery.jscrollpane.min.js"></script>
+    <script src="js/baron.min.js"></script>
     <script src="js/common.js"></script>  
     <!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
@@ -64,285 +64,290 @@
                 <a href="#" class="btn btn_gray">ПОПОЛНИТЬ</a>
             </div>
         </aside>
-        <div class="main-col">
+        <div class="main-col js-main-col">
             <ul class="tab js-tab">
                 <li data-tab=".js-tab1"><span>ПОЛУЧЕННЫЕ<i>1</i></span></li>
                 <li data-tab=".js-tab2" class="is-new"><span>ОТПРАВЛЕННЫЕ<i>1</i></span></li>
                 <li data-tab=".js-tab3"><span>ЖЕЛАЕМЫЕ<i>1</i></span></li>
             </ul>
             <div class="tab-cont js-tab1">
-                <div class="js-scrolpane">
-                    <div class="gift-sent-wrap">
-                    <div class="gift-sent is-denger-term">
-                        <div class="gift-sent__left">
-                            <div class="gift-sent__user">
-                                <a href="#" class="user-ava user-ava_dark">
-                                    <img src="http://lorempixel.com/65/65/people" alt="">
-                                </a>
-                                <div class="gift-sent__user-name">
-                                    <span>Получила от вас <span>Анна Заленская</span></span>
-                                    25 мая 2012
+                <div class="scroller">
+                    <div class="container">
+                        <div class="gift-sent-wrap">
+                        <div class="gift-sent is-denger-term">
+                            <div class="gift-sent__left">
+                                <div class="gift-sent__user">
+                                    <a href="#" class="user-ava user-ava_dark">
+                                        <img src="http://lorempixel.com/65/65/people" alt="">
+                                    </a>
+                                    <div class="gift-sent__user-name">
+                                        <span>Получила от вас <span>Анна Заленская</span></span>
+                                        25 мая 2012
+                                    </div>
+                                </div>
+                                <div class="gift-sent__text">
+                                    <p>Дорой Сергей Воннегутов.  С Днем Рождения! Желаю тебе cамого лучшего. Пусть все исполниться что желается. Здоровья счастья всего всего всего!</p>
+                                </div>
+                                <div class="gif-sent__author">
+                                    <a href="#">
+                                        <img src="http://lorempixel.com/32/32/people" alt="">
+                                    </a>
+                                    <a href="#">Никонор Шишечка</a>
                                 </div>
                             </div>
-                            <div class="gift-sent__text">
-                                <p>Дорой Сергей Воннегутов.  С Днем Рождения! Желаю тебе cамого лучшего. Пусть все исполниться что желается. Здоровья счастья всего всего всего!</p>
-                            </div>
-                            <div class="gif-sent__author">
-                                <a href="#">
-                                    <img src="http://lorempixel.com/32/32/people" alt="">
-                                </a>
-                                <a href="#">Никонор Шишечка</a>
+                            <div class="gift-sent__right">
+                                <div class="gift-want">
+                                    <div class="gift-want__img">
+                                        <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                    </div>
+                                    <div class="gift-want__descr">
+                                        <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                    </div>
+                                    <div class="gift-want__footer">
+                                        <span class="gift-want__price">
+                                            <b>250</b> грн
+                                        </span>
+                                        <a href="#" class="btn btn_green">НАПОМНИТЬ</a>
+                                    </div>
+                                    <div class="clip">
+                                        <i></i>
+                                    </div>
+                                    <i class="icon icon_corner icon_boot"></i>
+                                </div>
+                                <div class="gift-sent__term">
+                                    Действие истекает через: <span><b>1</b> день <b>5</b> часов</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="gift-sent__right">
-                            <div class="gift-want">
-                                <div class="gift-want__img">
-                                    <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                        <div class="gift-sent">
+                            <div class="gift-sent__left">
+                                <div class="gift-sent__user">
+                                    <a href="#" class="user-ava user-ava_dark">
+                                        <img src="http://lorempixel.com/65/65/people" alt="">
+                                    </a>
+                                    <div class="gift-sent__user-name">
+                                        <span>Получила от вас <span>Анна Заленская</span></span>
+                                        25 мая 2012
+                                    </div>
                                 </div>
-                                <div class="gift-want__descr">
-                                    <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                <div class="gift-sent__text">
+                                    <p>Дорой Сергей Воннегутов.  С Днем Рождения! Желаю тебе cамого лучшего. Пусть все исполниться что желается. Здоровья счастья всего всего всего!</p>
                                 </div>
-                                <div class="gift-want__footer">
-                                    <span class="gift-want__price">
-                                        <b>250</b> грн
-                                    </span>
-                                    <a href="#" class="btn btn_green">НАПОМНИТЬ</a>
+                                <div class="gif-sent__author">
+                                    <a href="#">
+                                        <img src="http://lorempixel.com/32/32/people" alt="">
+                                    </a>
+                                    <a href="#">Никонор Шишечка</a>
                                 </div>
-                                <div class="clip">
-                                    <i></i>
-                                </div>
-                                <i class="icon icon_corner icon_boot"></i>
                             </div>
-                            <div class="gift-sent__term">
-                                Действие истекает через: <span><b>1</b> день <b>5</b> часов</span>
+                            <div class="gift-sent__right">
+                                <div class="gift-want">
+                                    <div class="gift-want__img">
+                                        <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                    </div>
+                                    <div class="gift-want__descr">
+                                        <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                    </div>
+                                    <div class="gift-want__footer">
+                                        <span class="gift-want__price">
+                                            <b>250</b> грн
+                                        </span>
+                                        <a href="#" class="btn btn_gray">НАПОМНИТЬ</a>
+                                    </div>
+                                    <div class="clip">
+                                        <i></i>
+                                    </div>
+                                    <i class="icon icon_corner icon_gift2"></i>
+                                </div>
+                                <div class="gift-sent__term">
+                                    Действие истекает через: <span><b>1</b> день <b>5</b> часов</span>
+                                </div>
                             </div>
+                        </div>
+                        <div class="gift-sent">
+                            <div class="gift-sent__left">
+                                <div class="gift-sent__user">
+                                    <a href="#" class="user-ava user-ava_dark">
+                                        <img src="http://lorempixel.com/65/65/people" alt="">
+                                    </a>
+                                    <div class="gift-sent__user-name">
+                                        <span>Получила от вас <span>Анна Заленская</span></span>
+                                        25 мая 2012
+                                    </div>
+                                </div>
+                                <div class="gift-sent__text">
+                                    <p>Дорой Сергей Воннегутов.  С Днем Рождения! Желаю тебе cамого лучшего. Пусть все исполниться что желается. Здоровья счастья всего всего всего!</p>
+                                </div>
+                                <div class="gif-sent__author">
+                                    <a href="#">
+                                        <img src="http://lorempixel.com/32/32/people" alt="">
+                                    </a>
+                                    <a href="#">Никонор Шишечка</a>
+                                </div>
+                            </div>
+                            <div class="gift-sent__right">
+                                <div class="gift-want">
+                                    <div class="gift-want__img">
+                                        <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                    </div>
+                                    <div class="gift-want__descr">
+                                        <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                    </div>
+                                    <div class="gift-want__footer">
+                                        <span class="gift-want__price">
+                                            <b>250</b> грн
+                                        </span>
+                                        <a href="#" class="btn btn_gray">НАПОМНИТЬ</a>
+                                    </div>
+                                    <div class="clip">
+                                        <i></i>
+                                    </div>
+                                    <i class="icon icon_corner icon_gift2"></i>
+                                </div>
+                                <div class="gift-sent__term">
+                                    Действие истекает через: <span><b>1</b> день <b>5</b> часов</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gift-sent is-denger-term">
+                            <div class="gift-sent__left">
+                                <div class="gift-sent__user">
+                                    <a href="#" class="user-ava user-ava_dark">
+                                        <img src="http://lorempixel.com/65/65/people" alt="">
+                                    </a>
+                                    <div class="gift-sent__user-name">
+                                        <span>Получила от вас <span>Анна Заленская</span></span>
+                                        25 мая 2012
+                                    </div>
+                                </div>
+                                <div class="gift-sent__text">
+                                    <p>Дорой Сергей Воннегутов.  С Днем Рождения! Желаю тебе cамого лучшего. Пусть все исполниться что желается. Здоровья счастья всего всего всего!</p>
+                                </div>
+                                <div class="gif-sent__author">
+                                    <a href="#">
+                                        <img src="http://lorempixel.com/32/32/people" alt="">
+                                    </a>
+                                    <a href="#">Никонор Шишечка</a>
+                                </div>
+                            </div>
+                            <div class="gift-sent__right">
+                                <div class="gift-want">
+                                    <div class="gift-want__img">
+                                        <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                    </div>
+                                    <div class="gift-want__descr">
+                                        <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                    </div>
+                                    <div class="gift-want__footer">
+                                        <span class="gift-want__price">
+                                            <b>250</b> грн
+                                        </span>
+                                        <a href="#" class="btn btn_green">НАПОМНИТЬ</a>
+                                    </div>
+                                    <div class="clip">
+                                        <i></i>
+                                    </div>
+                                    <i class="icon icon_corner icon_boot"></i>
+                                </div>
+                                <div class="gift-sent__term">
+                                    Действие истекает через: <span><b>1</b> день <b>5</b> часов</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gift-sent">
+                            <div class="gift-sent__left">
+                                <div class="gift-sent__user">
+                                    <a href="#" class="user-ava user-ava_dark">
+                                        <img src="http://lorempixel.com/65/65/people" alt="">
+                                    </a>
+                                    <div class="gift-sent__user-name">
+                                        <span>Получила от вас <span>Анна Заленская</span></span>
+                                        25 мая 2012
+                                    </div>
+                                </div>
+                                <div class="gift-sent__text">
+                                    <p>Дорой Сергей Воннегутов.  С Днем Рождения! Желаю тебе cамого лучшего. Пусть все исполниться что желается. Здоровья счастья всего всего всего!</p>
+                                </div>
+                                <div class="gif-sent__author">
+                                    <a href="#">
+                                        <img src="http://lorempixel.com/32/32/people" alt="">
+                                    </a>
+                                    <a href="#">Никонор Шишечка</a>
+                                </div>
+                            </div>
+                            <div class="gift-sent__right">
+                                <div class="gift-want">
+                                    <div class="gift-want__img">
+                                        <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                    </div>
+                                    <div class="gift-want__descr">
+                                        <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                    </div>
+                                    <div class="gift-want__footer">
+                                        <span class="gift-want__price">
+                                            <b>250</b> грн
+                                        </span>
+                                        <a href="#" class="btn btn_gray">НАПОМНИТЬ</a>
+                                    </div>
+                                    <div class="clip">
+                                        <i></i>
+                                    </div>
+                                    <i class="icon icon_corner icon_gift2"></i>
+                                </div>
+                                <div class="gift-sent__term">
+                                    Действие истекает через: <span><b>1</b> день <b>5</b> часов</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gift-sent">
+                            <div class="gift-sent__left">
+                                <div class="gift-sent__user">
+                                    <a href="#" class="user-ava user-ava_dark">
+                                        <img src="http://lorempixel.com/65/65/people" alt="">
+                                    </a>
+                                    <div class="gift-sent__user-name">
+                                        <span>Получила от вас <span>Анна Заленская</span></span>
+                                        25 мая 2012
+                                    </div>
+                                </div>
+                                <div class="gift-sent__text">
+                                    <p>Дорой Сергей Воннегутов.  С Днем Рождения! Желаю тебе cамого лучшего. Пусть все исполниться что желается. Здоровья счастья всего всего всего!</p>
+                                </div>
+                                <div class="gif-sent__author">
+                                    <a href="#">
+                                        <img src="http://lorempixel.com/32/32/people" alt="">
+                                    </a>
+                                    <a href="#">Никонор Шишечка</a>
+                                </div>
+                            </div>
+                            <div class="gift-sent__right">
+                                <div class="gift-want">
+                                    <div class="gift-want__img">
+                                        <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                    </div>
+                                    <div class="gift-want__descr">
+                                        <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                    </div>
+                                    <div class="gift-want__footer">
+                                        <span class="gift-want__price">
+                                            <b>250</b> грн
+                                        </span>
+                                        <a href="#" class="btn btn_gray">НАПОМНИТЬ</a>
+                                    </div>
+                                    <div class="clip">
+                                        <i></i>
+                                    </div>
+                                    <i class="icon icon_corner icon_gift2"></i>
+                                </div>
+                                <div class="gift-sent__term">
+                                    Действие истекает через: <span><b>1</b> день <b>5</b> часов</span>
+                                </div>
+                            </div>
+                        </div>
                         </div>
                     </div>
-                    <div class="gift-sent">
-                        <div class="gift-sent__left">
-                            <div class="gift-sent__user">
-                                <a href="#" class="user-ava user-ava_dark">
-                                    <img src="http://lorempixel.com/65/65/people" alt="">
-                                </a>
-                                <div class="gift-sent__user-name">
-                                    <span>Получила от вас <span>Анна Заленская</span></span>
-                                    25 мая 2012
-                                </div>
-                            </div>
-                            <div class="gift-sent__text">
-                                <p>Дорой Сергей Воннегутов.  С Днем Рождения! Желаю тебе cамого лучшего. Пусть все исполниться что желается. Здоровья счастья всего всего всего!</p>
-                            </div>
-                            <div class="gif-sent__author">
-                                <a href="#">
-                                    <img src="http://lorempixel.com/32/32/people" alt="">
-                                </a>
-                                <a href="#">Никонор Шишечка</a>
-                            </div>
-                        </div>
-                        <div class="gift-sent__right">
-                            <div class="gift-want">
-                                <div class="gift-want__img">
-                                    <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
-                                </div>
-                                <div class="gift-want__descr">
-                                    <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
-                                </div>
-                                <div class="gift-want__footer">
-                                    <span class="gift-want__price">
-                                        <b>250</b> грн
-                                    </span>
-                                    <a href="#" class="btn btn_gray">НАПОМНИТЬ</a>
-                                </div>
-                                <div class="clip">
-                                    <i></i>
-                                </div>
-                                <i class="icon icon_corner icon_gift2"></i>
-                            </div>
-                            <div class="gift-sent__term">
-                                Действие истекает через: <span><b>1</b> день <b>5</b> часов</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gift-sent">
-                        <div class="gift-sent__left">
-                            <div class="gift-sent__user">
-                                <a href="#" class="user-ava user-ava_dark">
-                                    <img src="http://lorempixel.com/65/65/people" alt="">
-                                </a>
-                                <div class="gift-sent__user-name">
-                                    <span>Получила от вас <span>Анна Заленская</span></span>
-                                    25 мая 2012
-                                </div>
-                            </div>
-                            <div class="gift-sent__text">
-                                <p>Дорой Сергей Воннегутов.  С Днем Рождения! Желаю тебе cамого лучшего. Пусть все исполниться что желается. Здоровья счастья всего всего всего!</p>
-                            </div>
-                            <div class="gif-sent__author">
-                                <a href="#">
-                                    <img src="http://lorempixel.com/32/32/people" alt="">
-                                </a>
-                                <a href="#">Никонор Шишечка</a>
-                            </div>
-                        </div>
-                        <div class="gift-sent__right">
-                            <div class="gift-want">
-                                <div class="gift-want__img">
-                                    <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
-                                </div>
-                                <div class="gift-want__descr">
-                                    <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
-                                </div>
-                                <div class="gift-want__footer">
-                                    <span class="gift-want__price">
-                                        <b>250</b> грн
-                                    </span>
-                                    <a href="#" class="btn btn_gray">НАПОМНИТЬ</a>
-                                </div>
-                                <div class="clip">
-                                    <i></i>
-                                </div>
-                                <i class="icon icon_corner icon_gift2"></i>
-                            </div>
-                            <div class="gift-sent__term">
-                                Действие истекает через: <span><b>1</b> день <b>5</b> часов</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gift-sent is-denger-term">
-                        <div class="gift-sent__left">
-                            <div class="gift-sent__user">
-                                <a href="#" class="user-ava user-ava_dark">
-                                    <img src="http://lorempixel.com/65/65/people" alt="">
-                                </a>
-                                <div class="gift-sent__user-name">
-                                    <span>Получила от вас <span>Анна Заленская</span></span>
-                                    25 мая 2012
-                                </div>
-                            </div>
-                            <div class="gift-sent__text">
-                                <p>Дорой Сергей Воннегутов.  С Днем Рождения! Желаю тебе cамого лучшего. Пусть все исполниться что желается. Здоровья счастья всего всего всего!</p>
-                            </div>
-                            <div class="gif-sent__author">
-                                <a href="#">
-                                    <img src="http://lorempixel.com/32/32/people" alt="">
-                                </a>
-                                <a href="#">Никонор Шишечка</a>
-                            </div>
-                        </div>
-                        <div class="gift-sent__right">
-                            <div class="gift-want">
-                                <div class="gift-want__img">
-                                    <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
-                                </div>
-                                <div class="gift-want__descr">
-                                    <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
-                                </div>
-                                <div class="gift-want__footer">
-                                    <span class="gift-want__price">
-                                        <b>250</b> грн
-                                    </span>
-                                    <a href="#" class="btn btn_green">НАПОМНИТЬ</a>
-                                </div>
-                                <div class="clip">
-                                    <i></i>
-                                </div>
-                                <i class="icon icon_corner icon_boot"></i>
-                            </div>
-                            <div class="gift-sent__term">
-                                Действие истекает через: <span><b>1</b> день <b>5</b> часов</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gift-sent">
-                        <div class="gift-sent__left">
-                            <div class="gift-sent__user">
-                                <a href="#" class="user-ava user-ava_dark">
-                                    <img src="http://lorempixel.com/65/65/people" alt="">
-                                </a>
-                                <div class="gift-sent__user-name">
-                                    <span>Получила от вас <span>Анна Заленская</span></span>
-                                    25 мая 2012
-                                </div>
-                            </div>
-                            <div class="gift-sent__text">
-                                <p>Дорой Сергей Воннегутов.  С Днем Рождения! Желаю тебе cамого лучшего. Пусть все исполниться что желается. Здоровья счастья всего всего всего!</p>
-                            </div>
-                            <div class="gif-sent__author">
-                                <a href="#">
-                                    <img src="http://lorempixel.com/32/32/people" alt="">
-                                </a>
-                                <a href="#">Никонор Шишечка</a>
-                            </div>
-                        </div>
-                        <div class="gift-sent__right">
-                            <div class="gift-want">
-                                <div class="gift-want__img">
-                                    <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
-                                </div>
-                                <div class="gift-want__descr">
-                                    <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
-                                </div>
-                                <div class="gift-want__footer">
-                                    <span class="gift-want__price">
-                                        <b>250</b> грн
-                                    </span>
-                                    <a href="#" class="btn btn_gray">НАПОМНИТЬ</a>
-                                </div>
-                                <div class="clip">
-                                    <i></i>
-                                </div>
-                                <i class="icon icon_corner icon_gift2"></i>
-                            </div>
-                            <div class="gift-sent__term">
-                                Действие истекает через: <span><b>1</b> день <b>5</b> часов</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gift-sent">
-                        <div class="gift-sent__left">
-                            <div class="gift-sent__user">
-                                <a href="#" class="user-ava user-ava_dark">
-                                    <img src="http://lorempixel.com/65/65/people" alt="">
-                                </a>
-                                <div class="gift-sent__user-name">
-                                    <span>Получила от вас <span>Анна Заленская</span></span>
-                                    25 мая 2012
-                                </div>
-                            </div>
-                            <div class="gift-sent__text">
-                                <p>Дорой Сергей Воннегутов.  С Днем Рождения! Желаю тебе cамого лучшего. Пусть все исполниться что желается. Здоровья счастья всего всего всего!</p>
-                            </div>
-                            <div class="gif-sent__author">
-                                <a href="#">
-                                    <img src="http://lorempixel.com/32/32/people" alt="">
-                                </a>
-                                <a href="#">Никонор Шишечка</a>
-                            </div>
-                        </div>
-                        <div class="gift-sent__right">
-                            <div class="gift-want">
-                                <div class="gift-want__img">
-                                    <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
-                                </div>
-                                <div class="gift-want__descr">
-                                    <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
-                                </div>
-                                <div class="gift-want__footer">
-                                    <span class="gift-want__price">
-                                        <b>250</b> грн
-                                    </span>
-                                    <a href="#" class="btn btn_gray">НАПОМНИТЬ</a>
-                                </div>
-                                <div class="clip">
-                                    <i></i>
-                                </div>
-                                <i class="icon icon_corner icon_gift2"></i>
-                            </div>
-                            <div class="gift-sent__term">
-                                Действие истекает через: <span><b>1</b> день <b>5</b> часов</span>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="scroller__bar-wrapper">
+                        <div class="scroller__bar"></div>
                     </div>
                 </div>
             </div>
