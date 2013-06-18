@@ -24,6 +24,9 @@
     border-bottom: 1px solid #adadad;
     @include box-shadow(inset 0 1px 0 rgba(255,255,255,.95));
 }
+.item_mod {
+    @include background-image(linear-gradient(#fff, #f7f5f4));
+}
 .item_header {
     padding: 11px 6px;
     height: 51px;
@@ -209,4 +212,90 @@
     float: left;
     margin-right: 10px;
     width: 75px;
+}
+.date-title {
+    @include clr;
+    padding: 12px 7%;
+    a {
+        float: right;
+        color: #004faf;
+        text-decoration: underline;
+    }
+}
+.friend-list {
+    
+}
+.friend {
+    
+}
+.friend__link {
+    display: block;
+    @include clr;
+    padding: 10px 15px;
+    background: #fff;
+    border-bottom: 1px solid #d6d6d6;
+    &:hover {
+        background: #f7efee;
+    }
+}
+.friend__img {
+    float: left;
+    margin-right: 13px;
+    img {
+        @include border-radius(50%);
+    }
+}
+.friend__info {
+    float: left;
+    width: 117px;
+    line-height: 1.2;
+    font-size: 11px;
+    color: #616161;
+}
+.friend__name {
+    font-size: 12px;
+    @include b;
+    color: #000;
+}
+.friend__date {
+    span {
+        display: block;
+    }
+}
+.friend__event {
+    float: right;
+    width: 53px;
+    color: #0572b0;
+    font-size: 11px;
+    text-align: center;
+    i {
+        display: block;
+        margin: 0 auto;
+    }
+}
+.is-birthday {
+    i {
+        @include s(birthday);
+    }
+}
+.is-wedding {
+    i {
+        @include s(wedding);
+    }
+}
+.is-baby {
+    i {
+        @include s(baby);
+    }
+}
+.is-new-job {
+    i {
+        @include s(job);
+    }
+}
+.is-danger {
+    color: #ff8f8f;
+    i {
+        @include s(danger);
+    }
 }
