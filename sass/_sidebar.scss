@@ -98,7 +98,12 @@
         margin-left: 5%;
     }
 }
-
+.add_mod {
+    font-size: 12px;
+    @include font2;
+    font-weight: normal;
+    text-transform: none;
+}
 .balance {
     color: #000;
     div {

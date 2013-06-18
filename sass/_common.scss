@@ -93,6 +93,8 @@ a{
  
 /* ----------------------------------------- Header --------------------------------------------- */
 .header {
+    position: relative;
+    z-index: 1000;
     @include clr;
     height: 48px;  
     border-bottom: 1px solid #00662b;
@@ -500,7 +502,12 @@ a{
 .icon_case {@include s(case);}
 .icon_boot {@include s(boot);}
 .icon_gift2 {@include s(gift2);}
- 
+.icon_tab1 {@include s(tab1);}
+.icon_tab2 {@include s(tab2);}
+.icon_tab3 {@include s(tab3);}
+.icon_tab4 {@include s(tab4);}
+.icon_tab5 {@include s(tab5);}
+.icon_tab6 {@include s(tab6);}
 .main-col {
     overflow: hidden;
     background: #f7f3e3 url(../img/main-bg.jpg) 0 0 repeat;
@@ -512,6 +519,9 @@ a{
     @include border-radius(4px);
     text-transform: uppercase;
     font: bold 10px Arial, sans-serif;
+}
+.btn_m {
+    font: bold 12px Arial, sans-serif;
 }
 .btn_gray {
     background: #e3e0dd;
@@ -540,6 +550,21 @@ a{
     }
     &:active {
         background: #00d637;
+        @include box-shadow(inset 0 2px 4px 0 rgba(0,0,0,.2));
+    }
+}
+.btn_yellow {
+    border: 1px solid #d37c00;
+    background: #ff9f17;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.4);
+    @include box-shadow(inset 0 1px 0 rgba(255,255,255,.58));
+    @include background-image(linear-gradient(bottom, #ff9f17 0%, #ead200 100%));
+    &:hover {
+        background: #ff9f17;
+    }
+    &:active {
+        background: #ff9f17;
         @include box-shadow(inset 0 2px 4px 0 rgba(0,0,0,.2));
     }
 }

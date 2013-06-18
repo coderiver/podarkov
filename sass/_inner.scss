@@ -34,10 +34,18 @@
         color: #fff;
         cursor: default;
         @include box-shadow(inset 0 0 10px rgba(53,53,53,.5));
-        background: #b3afaf url(../img/tab-bg.png) 0 0 repeat;
-        &:hover, &:active {
+        background-color: #a29e9e;
+        @include background-image(linear-gradient(45deg, #b1adac 25%, transparent 25%, transparent 75%, #b1adac 75%, #b1adac), 
+        linear-gradient(45deg, #b1adac 25%, transparent 25%, transparent 75%, #b1adac 75%, #b1adac));
+        background-size: 2px 2px;
+        background-position:0 0, 1px 1px;
+        &:hover {
             @include box-shadow(inset 0 0 10px rgba(53,53,53,.5));
-            background: #b3afaf url(../img/tab-bg.png) 0 0 repeat;
+            background-color: #a29e9e;
+            @include background-image(linear-gradient(45deg, #b1adac 25%, transparent 25%, transparent 75%, #b1adac 75%, #b1adac), 
+            linear-gradient(45deg, #b1adac 25%, transparent 25%, transparent 75%, #b1adac 75%, #b1adac));
+            background-size: 2px 2px;
+            background-position: 0 0, 1px 1px;
         }
     }
     .is-new {
@@ -65,6 +73,54 @@
         font-style: normal;
     }
 }
+.tab_nav {
+    li {
+        width: 63px;
+        padding: 0;
+        text-align: center;
+        @include box-sizing(border-box);
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        span {
+            display: none;
+            margin: 0;
+        }
+        &:first-child {
+            span {
+                display: inline-block;
+            }
+        }
+    }
+    .is-active {
+        width: auto;
+        padding: 0 2%;
+        background-color: #d68d00;
+        @include background-image(linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), 
+        linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00));
+        background-size: 2px 2px;
+        background-position:0 0, 1px 1px;
+        &:hover {
+            background-color: #d68d00;
+            @include background-image(linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), 
+            linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00));
+            background-size: 2px 2px;
+            background-position:0 0, 1px 1px;
+        }
+        span {
+            display: inline-block;
+            line-height: 1;
+            margin-left: 5px;
+        }
+        .icon_tab1 {@include s(tab1-act);}
+        .icon_tab2 {@include s(tab2-act);}
+        .icon_tab3 {@include s(tab3-act);}
+        .icon_tab4 {@include s(tab4-act);}
+        .icon_tab5 {@include s(tab5-act);}
+        .icon_tab6 {@include s(tab6-act);}
+    }
+}
 .tab-cont {
     display: none;
     padding: 3% 3.2%;
@@ -78,11 +134,16 @@
 .gift-want-wrap {
     @include clr;
 }
+.gift-want-wrap {
+    margin-bottom: 17px;
+    border-bottom: 1px solid #cdc59d;
+    @include box-shadow(0 1px 0 rgba(255,255,255,.5));
+}
 .gift-want {
     float: left;
     position: relative;
     margin: 0 3.1% 2.6% 0;
-    padding: 28px 0 8px;
+    padding: 20px 0 8px;
     width: 46.5%;
     height: 156px;
     @include box-sizing(border-box);
@@ -105,6 +166,7 @@
     
 }
 .gift-want.is-favorite {
+    padding: 28px 0 8px;
     &:before {
         content: "";
         position: absolute;
@@ -129,6 +191,7 @@
     overflow: hidden;
     font-size: 11px;
     padding-right: 10px;
+    line-height: 1.2;
 }
 .gift-want__img {
     position: absolute;
@@ -355,6 +418,11 @@
     }
 }
 
+.gift-wrap {
+    .gift-want {
+        border-color: #a9a69b;
+    }  
+}
 
 /*
  * CSS Styles that are needed by jScrollPane for it to operate correctly.
