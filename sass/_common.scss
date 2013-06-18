@@ -89,12 +89,62 @@ a{
 .wrap {
     @include clr;
 }
+.is-fixed {
+    overflow: hidden;
+    .l-layout {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+    }
+    .footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+    }
+    .l-col-wrap {
+        width: 1024px;
+        position: absolute;
+        top: 49px;
+        bottom: 96px;
+        left: 50%;
+        margin-left: -512px;
+    }
+    .sidebar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .main-col {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 257px;
+    }
+    .tab-cont {
+        position: absolute;
+        top: 52px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .tab-cont {
+        display: none;
+        padding: 3% 0 3% 3.2%;
+    }
+}
 /* ------------------------------------ //END Main styles --------------------------------------- */
  
 /* ----------------------------------------- Header --------------------------------------------- */
 .header {
     position: relative;
-    z-index: 1000;
+    z-index: 100;
     @include clr;
     height: 48px;  
     border-bottom: 1px solid #00662b;

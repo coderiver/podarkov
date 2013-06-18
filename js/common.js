@@ -26,6 +26,15 @@ $(document).ready(function() {
 	});
 
 // Scrollpane
-    $('.js-scrolpane').jScrollPane();
+    $('.js-scrolpane').each(function(){
+        var element = $('.js-scrolpane').jScrollPane({
+            autoReinitialise: true,
+            verticalDragMaxHeight: 80,
+            mouseWheelSpeed: 70,
+            verticalGutter: 0,
+        });
+    });
+
+
 
 });

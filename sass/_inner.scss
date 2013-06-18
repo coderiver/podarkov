@@ -123,7 +123,7 @@
 }
 .tab-cont {
     display: none;
-    padding: 3% 3.2%;
+    padding: 3% 3.2% 3%;
 }
 .tab-cont__title {
     margin-bottom: 21px;
@@ -433,11 +433,14 @@
 
 
 .js-scrolpane {
-    height: 600px;
+    height: 100%;
+    width: 100%;
+    outline: none;
 }
 .jspContainer
 {
     overflow: hidden;
+    outline: none;
     position: relative;
 }
 
@@ -453,20 +456,10 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 16px;
+    width: 8px;
     height: 100%;
-    background: red;
 }
 
-.jspHorizontalBar
-{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 16px;
-    background: red;
-}
 
 .jspVerticalBar *,
 .jspHorizontalBar *
@@ -487,17 +480,19 @@
 
 .jspTrack
 {
-    background: #dde;
+    background: none;
     position: relative;
 }
 
 .jspDrag
 {
-    background: #bbd;
+    background: #797979;
+    @include opacity(.33);
     position: relative;
     top: 0;
     left: 0;
     cursor: pointer;
+    @include border-radius(20px);
 }
 
 .jspHorizontalBar .jspTrack,
