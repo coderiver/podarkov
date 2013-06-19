@@ -139,13 +139,14 @@ a{
         bottom: 0;
         left: 0;
     }
-    .tab-cont {
-        display: none;
-        padding: 0;
-    }
-    .gift-sent-wrap {
-        padding: 0 6.5% 0 3%;
-    }
+    
+    // .gift-sent-wrap {
+    //     padding: 0 6.5% 0 3%;
+    // }
+    // .gift-want-wrap,
+    // .gift-wrap {
+    //     padding: 0 4% 0 3%;
+    // }
 }
 /* ------------------------------------ //END Main styles --------------------------------------- */
  
@@ -569,8 +570,23 @@ a{
 .main-col {
     overflow: hidden;
     background: #f7f3e3 url(../img/main-bg.jpg) 0 0 repeat;
+    @include respond-to(768) {
+        .scroller {
+            width: 100% !important
+        }
+    }
+    .container {
+        padding: 3% 3.2%; 
+    }
 }
-
+.main-col_profile {
+    .container {
+        padding: 3% 0; 
+    }
+    .gift-want-cont {
+        padding: 0 3.2%; 
+    }
+}
 .btn {
     display: inline-block;
     padding: 7px 12px;
@@ -579,6 +595,7 @@ a{
     font: bold 10px Arial, sans-serif;
 }
 .btn_m {
+    padding: 7px 24px;
     font: bold 12px Arial, sans-serif;
 }
 .btn_gray {

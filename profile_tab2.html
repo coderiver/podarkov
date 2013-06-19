@@ -4,17 +4,16 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Profile</title>
+	<title>Profile tab2</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
     <script src="js/jquery.tools.min.js"></script>
-    <script src="js/jquery.mousewheel.js"></script>
     <script src="js/baron.min.js"></script>
     <script src="js/common.js"></script>  
     <!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
     <![endif]-->
 </head>
-<body class="is-fixed">
+<body>
 <div class="l-layout">
     <header class="header">
         <div class="l-container">
@@ -49,29 +48,38 @@
                 <strong>ВАШ КАБИНЕТ</strong>
                 <a href="#" class="btn btn_gray">ВЫЙТИ</a>
             </div>
-            <div class="item s-profile">
-                <a href="#" class="user-ava is-fb-user">
-                    <img src="http://lorempixel.com/112/112/people" alt="">
-                    <i></i>
-                </a>
-                <strong class="s-profile__name">Никонор Шишечка</strong>
-            </div>
-            <div class="item">
-                <a href="#" class="add"><i></i><span>Хочу подарок</span></a>
-            </div>
-            <div class="item balance">
-                <div>БАЛАНС: <span>75</span> грн</div>
-                <a href="#" class="btn btn_gray">ПОПОЛНИТЬ</a>
+            <div class="sidebar-scroll sidebar-scroll_2">
+                <div class="scroller js-baron2">
+                    <div class="container">
+                        <div class="item s-profile">
+                            <a href="#" class="user-ava is-fb-user">
+                                <img src="http://lorempixel.com/112/112/people" alt="">
+                                <i></i>
+                            </a>
+                            <strong class="s-profile__name">Никонор Шишечка</strong>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="add"><i></i><span>Хочу подарок</span></a>
+                        </div>
+                        <div class="item balance">
+                            <div>БАЛАНС: <span>75</span> грн</div>
+                            <a href="#" class="btn btn_gray">ПОПОЛНИТЬ</a>
+                        </div>
+                        <div class="scroller__bar-wrapper">
+                            <div class="scroller__bar"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </aside>
-        <div class="main-col js-main-col">
+        <div class="main-col main-col_profile">
             <ul class="tab js-tab">
-                <li data-tab=".js-tab1"><span>ПОЛУЧЕННЫЕ<i>1</i></span></li>
+                <li data-tab=".js-tab1" class="is-active"><span>ПОЛУЧЕННЫЕ<i>1</i></span></li>
                 <li data-tab=".js-tab2" class="is-new"><span>ОТПРАВЛЕННЫЕ<i>1</i></span></li>
                 <li data-tab=".js-tab3"><span>ЖЕЛАЕМЫЕ<i>1</i></span></li>
             </ul>
-            <div class="tab-cont js-tab1">
-                <div class="scroller">
+            <div class="tab-cont">
+                <div class="scroller js-baron1">
                     <div class="container">
                         <div class="gift-sent-wrap">
                         <div class="gift-sent is-denger-term">
@@ -107,7 +115,7 @@
                                         <span class="gift-want__price">
                                             <b>250</b> грн
                                         </span>
-                                        <a href="#" class="btn btn_green">НАПОМНИТЬ</a>
+                                        <a href="#" class="btn btn_m btn_green">НАПОМНИТЬ</a>
                                     </div>
                                     <div class="clip">
                                         <i></i>
@@ -152,7 +160,7 @@
                                         <span class="gift-want__price">
                                             <b>250</b> грн
                                         </span>
-                                        <a href="#" class="btn btn_gray">НАПОМНИТЬ</a>
+                                        <a href="#" class="btn btn_m btn_gray">НАПОМНИТЬ</a>
                                     </div>
                                     <div class="clip">
                                         <i></i>
@@ -197,7 +205,7 @@
                                         <span class="gift-want__price">
                                             <b>250</b> грн
                                         </span>
-                                        <a href="#" class="btn btn_gray">НАПОМНИТЬ</a>
+                                        <a href="#" class="btn btn_m btn_gray">НАПОМНИТЬ</a>
                                     </div>
                                     <div class="clip">
                                         <i></i>
@@ -242,7 +250,7 @@
                                         <span class="gift-want__price">
                                             <b>250</b> грн
                                         </span>
-                                        <a href="#" class="btn btn_green">НАПОМНИТЬ</a>
+                                        <a href="#" class="btn btn_m btn_green">НАПОМНИТЬ</a>
                                     </div>
                                     <div class="clip">
                                         <i></i>
@@ -287,7 +295,7 @@
                                         <span class="gift-want__price">
                                             <b>250</b> грн
                                         </span>
-                                        <a href="#" class="btn btn_gray">НАПОМНИТЬ</a>
+                                        <a href="#" class="btn btn_m btn_gray">НАПОМНИТЬ</a>
                                     </div>
                                     <div class="clip">
                                         <i></i>
@@ -332,7 +340,7 @@
                                         <span class="gift-want__price">
                                             <b>250</b> грн
                                         </span>
-                                        <a href="#" class="btn btn_gray">НАПОМНИТЬ</a>
+                                        <a href="#" class="btn btn_m btn_gray">НАПОМНИТЬ</a>
                                     </div>
                                     <div class="clip">
                                         <i></i>
@@ -350,68 +358,6 @@
                         <div class="scroller__bar"></div>
                     </div>
                 </div>
-            </div>
-            <div class="tab-cont js-tab3">
-                <div class="tab-cont__title">Вы хотели бы...</div>
-                <ul class="gift-want-wrap">
-                    <li class="gift-want is-favorite">
-                        <div class="gift-want__img">
-                            <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
-                        </div>
-                        <div class="gift-want__descr">
-                            <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
-                        </div>
-                        <div class="gift-want__footer">
-                            <span class="gift-want__price">
-                                <b>250</b> грн
-                            </span>
-                            <span class="gift-want__price-2">за 300 грн</span>
-                            <a href="#" class="link-favorite"><i></i><span>БОЛЬШЕ НЕ ХОЧУ</span></a>
-                        </div>
-                        <div class="clip">
-                            <i></i>
-                        </div>
-                        <i class="icon icon_corner icon_boot"></i>
-                    </li>
-                    <li class="gift-want is-favorite is-free">
-                        <div class="gift-want__img">
-                            <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
-                        </div>
-                        <div class="gift-want__descr">
-                            <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
-                        </div>
-                        <div class="gift-want__footer">
-                            <span class="gift-want__price">
-                                <b>250</b> грн
-                            </span>
-                            <span class="gift-want__price-2">Бесплатно</span>
-                            <a href="#" class="link-favorite"><i></i><span>БОЛЬШЕ НЕ ХОЧУ</span></a>
-                        </div>
-                        <div class="clip">
-                            <i></i>
-                        </div>
-                        <i class="icon icon_corner icon_boot"></i>
-                    </li>
-                    <li class="gift-want is-favorite is-free">
-                        <div class="gift-want__img">
-                            <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
-                        </div>
-                        <div class="gift-want__descr">
-                            <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
-                        </div>
-                        <div class="gift-want__footer">
-                            <span class="gift-want__price">
-                                <b>250</b> грн
-                            </span>
-                            <span class="gift-want__price-2">Бесплатно</span>
-                            <a href="#" class="link-favorite"><i></i><span>БОЛЬШЕ НЕ ХОЧУ</span></a>
-                        </div>
-                        <div class="clip">
-                            <i></i>
-                        </div>
-                        <i class="icon icon_corner icon_boot"></i>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>

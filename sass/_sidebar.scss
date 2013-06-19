@@ -6,10 +6,14 @@
     //background: #f4eeec;
 }
 .sidebar {
+    position: relative;
     float: left;
     width: 257px;
     border-right: 1px solid #aeadad;
     @include box-sizing(border-box);
+    .scroller__bar-wrapper {
+        right: 5px;
+    }
 }
 .sidebar__wrap {
     padding: 0 13px;
@@ -18,6 +22,16 @@
             border-bottom: 0;
         }
     }
+}
+.sidebar-scroll {
+    position: absolute;
+    top: 111px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.sidebar-scroll_2 {
+    top: 52px;
 }
 .item {
     padding: 19px 7%;
