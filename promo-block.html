@@ -1,0 +1,504 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>promo block</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.tools.min.js"></script>
+    <script src="js/baron.min.js"></script>
+    <script src="js/common.js"></script>  
+    <!--[if lt IE 9]> 
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+    <![endif]-->
+</head>
+<body>
+<div class="l-layout">
+    <header class="header">
+        <div class="l-container">
+            <h1 class="logo"><a href="#">Подарков</a></h1>
+            <div class="header__right">
+                <div class="header-user">
+                    <a href="#" class="header-user__pic is-fb-user">
+                        <img src="http://lorempixel.com/32/32/people" alt="">
+                        <span><i>1</i></span>
+                    </a>
+                    <a href="#" class="header-user__link">Никонор Шишечка</a>
+                </div>
+                <a class="header-gift" href="#">
+                    <i class="icon icon_gift"></i>
+                </a>
+                <nav class="header-nav">
+                    <button class="header-nav__button js-key-nav"><i></i></button>
+                    <ul class="header-nav__list js-nav">
+                        <li><a href="#">Полученные</a></li>
+                        <li><a href="#">Отправленные</a></li>
+                        <li><a href="#">Желаемые</a></li>
+                        <li><a href="#">Выйти</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="l-col-wrap l-col-wrap_banner">
+        <div class="banner">
+            <a href="#"><img src="http://lorempixel.com/1024/119/nature" alt=""></a>
+            <button class="close close_banner"><i></i></button>
+        </div>
+        <aside class="sidebar">
+            <div class="item item_header">
+                <ul class="s-tab">
+                    <li class="is-active"><i class="icon icon_cake2"></i><span>СОБЫТИЯ</span></li>
+                    <li><i class="icon icon_friend"></i><span>ДРУЗЬЯ</span></li>
+                </ul>
+            </div>
+            <div class="sidebar-scroll sidebar-scroll_2">
+                <div class="scroller js-baron2">
+                    <div class="container">
+                        <div class="date-title item_mod">
+                            <span>Сегодня</span>
+                        </div>
+                        <ul class="friend-list">
+                            <li class="friend">
+                                <a href="#" class="friend__link">
+                                    <div class="friend__img">
+                                        <img src="http://lorempixel.com/43/43/people" alt="">
+                                    </div>
+                                    <div class="friend__info">
+                                        <strong class="friend__name">Иван Яремный</strong>
+                                        <div class="friend__date">
+                                            Родился ребенок <span>12 Мая</span>
+                                        </div>
+                                    </div>
+                                    <div class="friend__event is-baby">
+                                        <i></i>
+                                        Родился ребенок
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="friend">
+                                <a href="#" class="friend__link">
+                                    <div class="friend__img">
+                                        <img src="http://lorempixel.com/43/43/people" alt="">
+                                    </div>
+                                    <div class="friend__info">
+                                        <strong class="friend__name">Иван Яремный</strong>
+                                        <div class="friend__date">
+                                            Нова работа <span>12 Мая</span>
+                                        </div>
+                                    </div>
+                                    <div class="friend__event is-new-job">
+                                        <i></i>
+                                        Нова работа
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="friend">
+                                <a href="#" class="friend__link">
+                                    <div class="friend__img">
+                                        <img src="http://lorempixel.com/43/43/people" alt="">
+                                    </div>
+                                    <div class="friend__info">
+                                        <strong class="friend__name">Иван Яремный</strong>
+                                        <div class="friend__date">
+                                            День рождения <span>12 Мая</span>
+                                        </div>
+                                    </div>
+                                    <div class="friend__event is-birthday">
+                                        <i></i>
+                                        ДР
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="date-title item_mod">
+                            <span>На неделю вперед</span>
+                            <a href="#">На месяц</a>
+                        </div>
+                        <ul class="friend-list">
+                            <li class="friend">
+                                <a href="#" class="friend__link">
+                                    <div class="friend__img">
+                                        <img src="http://lorempixel.com/43/43/people" alt="">
+                                    </div>
+                                    <div class="friend__info">
+                                        <strong class="friend__name">Иван Яремный</strong>
+                                        <div class="friend__date">
+                                            Свадьба <span>12 Мая</span>
+                                        </div>
+                                    </div>
+                                    <div class="friend__event is-birthday">
+                                        <i></i>
+                                        Свадьба
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="friend">
+                                <a href="#" class="friend__link">
+                                    <div class="friend__img">
+                                        <img src="http://lorempixel.com/43/43/people" alt="">
+                                    </div>
+                                    <div class="friend__info">
+                                        <strong class="friend__name">Иван Яремный</strong>
+                                        <div class="friend__date">
+                                            День рождения <span>12 Мая</span>
+                                        </div>
+                                    </div>
+                                    <div class="friend__event is-birthday">
+                                        <i></i>
+                                        ДР
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="friend">
+                                <a href="#" class="friend__link">
+                                    <div class="friend__img">
+                                        <img src="http://lorempixel.com/43/43/people" alt="">
+                                    </div>
+                                    <div class="friend__info">
+                                        <strong class="friend__name">Иван Яремный</strong>
+                                        <div class="friend__date">
+                                            День рождения <span>12 Мая</span>
+                                        </div>
+                                    </div>
+                                    <div class="friend__event is-birthday">
+                                        <i></i>
+                                        ДР
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="friend">
+                                <a href="#" class="friend__link">
+                                    <div class="friend__img">
+                                        <img src="http://lorempixel.com/43/43/people" alt="">
+                                    </div>
+                                    <div class="friend__info">
+                                        <strong class="friend__name">Иван Яремный</strong>
+                                        <div class="friend__date">
+                                            День рождения <span>12 Мая</span>
+                                        </div>
+                                    </div>
+                                    <div class="friend__event is-birthday">
+                                        <i></i>
+                                        ДР
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="date-title item_mod">
+                            <span>За прошлый месяц</span>
+                        </div>
+                        <ul class="friend-list">
+                            <li class="friend">
+                                <a href="#" class="friend__link">
+                                    <div class="friend__img">
+                                        <img src="http://lorempixel.com/43/43/people" alt="">
+                                    </div>
+                                    <div class="friend__info">
+                                        <strong class="friend__name">Иван Яремный</strong>
+                                        <div class="friend__date">
+                                            День рождения <span>12 Мая</span>
+                                        </div>
+                                    </div>
+                                    <div class="friend__event is-birthday">
+                                        <i></i>
+                                        ДР
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="friend">
+                                <a href="#" class="friend__link">
+                                    <div class="friend__img">
+                                        <img src="http://lorempixel.com/43/43/people" alt="">
+                                    </div>
+                                    <div class="friend__info">
+                                        <strong class="friend__name">Иван Яремный</strong>
+                                        <div class="friend__date">
+                                            День рождения <span>12 Мая</span>
+                                        </div>
+                                    </div>
+                                    <div class="friend__event is-birthday">
+                                        <i></i>
+                                        ДР
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="friend">
+                                <a href="#" class="friend__link">
+                                    <div class="friend__img">
+                                        <img src="http://lorempixel.com/43/43/people" alt="">
+                                    </div>
+                                    <div class="friend__info">
+                                        <strong class="friend__name">Иван Яремный</strong>
+                                        <div class="friend__date">
+                                            День рождения <span>12 Мая</span>
+                                        </div>
+                                    </div>
+                                    <div class="friend__event is-birthday">
+                                        <i></i>
+                                        ДР
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="friend">
+                                <a href="#" class="friend__link">
+                                    <div class="friend__img">
+                                        <img src="http://lorempixel.com/43/43/people" alt="">
+                                    </div>
+                                    <div class="friend__info">
+                                        <strong class="friend__name">Иван Яремный</strong>
+                                        <div class="friend__date">
+                                            День рождения <span>12 Мая</span>
+                                        </div>
+                                    </div>
+                                    <div class="friend__event is-birthday">
+                                        <i></i>
+                                        ДР
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="scroller__bar-wrapper">
+                        <div class="scroller__bar"></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-col">
+            <ul class="tab tab_nav js-tab">
+                <li data-tab=".js-tab1" class="is-active">
+                    <span>ВСЕ ПОДАРКИ<i></i></span>
+                </li>
+                <li data-tab=".js-tab2" class="is-new">
+                    <span class="icon icon_tab1"></span>
+                    <span>Обувь</span>
+                </li>
+                <li data-tab=".js-tab3">
+                    <span class="icon icon_tab2"></span>
+                    <span>Обувь</span>
+                </li>
+                <li data-tab=".js-tab4">
+                    <span class="icon icon_tab3"></span>
+                    <span>Обувь</span>
+                </li>
+                <li data-tab=".js-tab5">
+                    <span class="icon icon_tab4"></span>
+                    <span>Обувь</span>
+                </li>
+                <li data-tab=".js-tab6">
+                    <span class="icon icon_tab5"></span>
+                    <span>Обувь</span>
+                </li>
+                <li data-tab=".js-tab7">
+                    <span class="icon icon_tab6"></span>
+                    <span>Обувь</span>
+                </li>
+            </ul>
+            <div class="tab-cont js-tab1">
+                <div class="scroller js-baron1">
+                    <div class="container">
+                        <div class="tab-cont__title">Аня Зеленская хотела бы...</div>
+                        <ul class="gift-want-wrap gift-want-wrap_mod">
+                            <li class="gift-want is-favorite">
+                                <div class="gift-want__img">
+                                    <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                </div>
+                                <div class="gift-want__descr">
+                                    <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                </div>
+                                <div class="gift-want__footer">
+                                    <span class="gift-want__price">
+                                        <b>250</b> грн
+                                    </span>
+                                    <span class="gift-want__price-2">за 300 грн</span>
+                                    <a href="#" class="btn btn_m btn_yellow">ПОДАРИТЬ</a>
+                                </div>
+                                <div class="clip">
+                                    <i></i>
+                                </div>
+                                <i class="icon icon_corner icon_boot"></i>
+                            </li>
+                            <li class="gift-want is-favorite is-free">
+                                <div class="gift-want__img">
+                                    <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                </div>
+                                <div class="gift-want__descr">
+                                    <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                </div>
+                                <div class="gift-want__footer">
+                                    <span class="gift-want__price">
+                                        <b>250</b> грн
+                                    </span>
+                                    <span class="gift-want__price-2">Бесплатно</span>
+                                    <a href="#" class="btn btn_m btn_yellow">ПОДАРИТЬ</a>
+                                </div>
+                                <div class="clip">
+                                    <i></i>
+                                </div>
+                                <i class="icon icon_corner icon_boot"></i>
+                            </li>
+                            <li class="gift-want is-favorite is-free">
+                                <div class="gift-want__img">
+                                    <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                </div>
+                                <div class="gift-want__descr">
+                                    <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                </div>
+                                <div class="gift-want__footer">
+                                    <span class="gift-want__price">
+                                        <b>250</b> грн
+                                    </span>
+                                    <span class="gift-want__price-2">Бесплатно</span>
+                                    <a href="#" class="btn btn_m btn_yellow">ПОДАРИТЬ</a>
+                                </div>
+                                <div class="clip">
+                                    <i></i>
+                                </div>
+                                <i class="icon icon_corner icon_boot"></i>
+                            </li>
+                        </ul>
+                        <ul class="gift-wrap">
+                            <li class="gift-want">
+                                <div class="gift-want__img">
+                                    <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                </div>
+                                <div class="gift-want__descr">
+                                    <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                </div>
+                                <div class="gift-want__footer">
+                                    <span class="gift-want__price">
+                                        <b>250</b> грн
+                                    </span>
+                                    <span class="gift-want__price-2">за 300 грн</span>
+                                    <a href="#" class="btn btn_m btn_green">ПОДАРИТЬ</a>
+                                </div>
+                                <div class="clip">
+                                    <i></i>
+                                </div>
+                                <i class="icon icon_corner icon_boot"></i>
+                            </li>
+                            <li class="gift-want is-free">
+                                <div class="gift-want__img">
+                                    <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                </div>
+                                <div class="gift-want__descr">
+                                    <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                </div>
+                                <div class="gift-want__footer">
+                                    <span class="gift-want__price">
+                                        <b>250</b> грн
+                                    </span>
+                                    <span class="gift-want__price-2">Бесплатно</span>
+                                    <a href="#" class="btn btn_m btn_green">ПОДАРИТЬ</a>
+                                </div>
+                                <div class="clip">
+                                    <i></i>
+                                </div>
+                                <i class="icon icon_corner icon_boot"></i>
+                            </li>
+                            <li class="gift-want is-free">
+                                <div class="gift-want__img">
+                                    <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                </div>
+                                <div class="gift-want__descr">
+                                    <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                </div>
+                                <div class="gift-want__footer">
+                                    <span class="gift-want__price">
+                                        <b>250</b> грн
+                                    </span>
+                                    <span class="gift-want__price-2">Бесплатно</span>
+                                    <a href="#" class="btn btn_m btn_green">ПОДАРИТЬ</a>
+                                </div>
+                                <div class="clip">
+                                    <i></i>
+                                </div>
+                                <i class="icon icon_corner icon_boot"></i>
+                            </li>
+                            <li class="gift-want">
+                                <div class="gift-want__img">
+                                    <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                </div>
+                                <div class="gift-want__descr">
+                                    <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                </div>
+                                <div class="gift-want__footer">
+                                    <span class="gift-want__price">
+                                        <b>250</b> грн
+                                    </span>
+                                    <span class="gift-want__price-2">за 300 грн</span>
+                                    <a href="#" class="btn btn_m btn_green">ПОДАРИТЬ</a>
+                                </div>
+                                <div class="clip">
+                                    <i></i>
+                                </div>
+                                <i class="icon icon_corner icon_boot"></i>
+                            </li>
+                            <li class="gift-want is-free">
+                                <div class="gift-want__img">
+                                    <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                </div>
+                                <div class="gift-want__descr">
+                                    <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                </div>
+                                <div class="gift-want__footer">
+                                    <span class="gift-want__price">
+                                        <b>250</b> грн
+                                    </span>
+                                    <span class="gift-want__price-2">Бесплатно</span>
+                                    <a href="#" class="btn btn_m btn_green">ПОДАРИТЬ</a>
+                                </div>
+                                <div class="clip">
+                                    <i></i>
+                                </div>
+                                <i class="icon icon_corner icon_boot"></i>
+                            </li>
+                            <li class="gift-want is-free">
+                                <div class="gift-want__img">
+                                    <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                </div>
+                                <div class="gift-want__descr">
+                                    <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                </div>
+                                <div class="gift-want__footer">
+                                    <span class="gift-want__price">
+                                        <b>250</b> грн
+                                    </span>
+                                    <span class="gift-want__price-2">Бесплатно</span>
+                                    <a href="#" class="btn btn_m btn_green">ПОДАРИТЬ</a>
+                                </div>
+                                <div class="clip">
+                                    <i></i>
+                                </div>
+                                <i class="icon icon_corner icon_boot"></i>
+                            </li>
+                        </ul>
+                        <div class="scroller__bar-wrapper">
+                            <div class="scroller__bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="push"></div>
+</div>
+<footer class="footer">
+    <div class="l-container">
+        <a class="footer__logo" href="#"></a>
+        <div class="footer__middle">
+            <nav class="footer__nav">
+                <a href="#">Контакты</a>
+                <a href="#">Правила использования</a>
+                <a href="#">Партнерам</a>
+                <a href="#">О нас</a>
+            </nav>
+            <div class="footer__contacts">Поддержка пользователей: +38 (0 44) 324 57 68</div>
+        </div>
+        <div class="copyright">© 2013 Podarkov</div>
+    </div>
+</footer>
+</body>
+</html>

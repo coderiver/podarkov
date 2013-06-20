@@ -657,6 +657,21 @@ a{
         top: 50%;
         left: 50%;
         margin: -5px 0 0 -5px;
+        @include s(close2);
+    }
+}
+
+.close_banner {
+    right: 10px;
+    top: 7px;
+    z-index: 2;
+    background: #f2f1f1;
+    background: rgba(242,241,241,.45);
+    @include transition(all 200ms linear);
+    &:hover {
+        background: rgba(242,241,241,1);
+    }
+    i {
         @include s(close);
     }
 }

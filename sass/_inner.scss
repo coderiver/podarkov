@@ -1,4 +1,24 @@
 @import "base";
+.l-col-wrap {
+    
+}
+.l-col-wrap_banner {
+    .sidebar,
+    .main-col {
+        top: 119px;
+    }  
+}
+.banner {
+    display: block;
+    height: 119px;
+    overflow: hidden;
+    // @include respond-to(768) {
+    //     display: none;
+    // }
+    img {
+        display: block;
+    }
+}
 .tab {
     height: 51px;
     line-height: 51px;
@@ -94,6 +114,13 @@
                 display: inline-block;
             }
         }
+        &:first-child.is-active {
+            background-color: #a29e9e;
+            @include background-image(linear-gradient(45deg, #b1adac 25%, transparent 25%, transparent 75%, #b1adac 75%, #b1adac), 
+            linear-gradient(45deg, #b1adac 25%, transparent 25%, transparent 75%, #b1adac 75%, #b1adac));
+            background-size: 2px 2px;
+            background-position:0 0, 1px 1px;
+        }
     }
     .is-active {
         width: auto;
@@ -142,6 +169,9 @@
     margin-bottom: 17px;
     border-bottom: 1px solid #cdc59d;
     @include box-shadow(0 1px 0 rgba(255,255,255,.5));
+}
+.gift-want-cont {
+    
 }
 .gift-want {
     float: left;
@@ -222,6 +252,10 @@
     .btn {
         float: right;
     } 
+    div {
+        display: none;
+        margin-top: 10px;
+    }
 }
 .gift-want__price {
     display: inline-block;
@@ -416,6 +450,17 @@
             &:before {
                 display: inline-block;
             }
+        }
+    }
+}
+.is-inactive-term {
+    .gift-want__footer {
+        div {
+            display: block;
+            float: right;
+            color: #fe4646;
+            font-size: 12px;
+            text-transform: uppercase;
         }
     }
 }
