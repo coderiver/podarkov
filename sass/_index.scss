@@ -68,10 +68,20 @@
         }
     }
 }
+.index.is-fixed {
+    overflow: visible;
+    .footer,
+    .l-layout {
+        position: relative;
+    }
+    .l-layout {
+        margin: 0 auto -96px;
+    }
+}
 .step-wrap {
     margin-bottom: 20px;
 }
-.step {
+.step {  
     position: relative;
     float: left;
     margin-left: 1.2%;

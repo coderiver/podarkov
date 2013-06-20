@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Profile tab3</title>
+	<title>My profile</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
     <script src="js/jquery.tools.min.js"></script>
     <script src="js/baron.min.js"></script>
@@ -44,48 +44,27 @@
     <div class="l-col-wrap">
         <aside class="sidebar">
             <div class="item item_header">
-                <a href="#" class="btn btn_gray">НАЗАД</a>
-                <strong>ВАШ КАБИНЕТ</strong>
-                <a href="#" class="btn btn_gray">ВЫЙТИ</a>
+                <ul class="s-tab">
+                    <li><i class="icon icon_cake2"></i><span>СОБЫТИЯ</span></li>
+                    <li class="is-active"><i class="icon icon_friend"></i><span>ДРУЗЬЯ</span></li>
+                </ul>
             </div>
             <div class="sidebar-scroll sidebar-scroll_2">
                 <div class="scroller js-baron2">
                     <div class="container">
-                        <div class="sidebar__wrap">
-                            <div class="item s-profile">
-                                <a href="#" class="user-ava user-ava_dark">
-                                    <img src="http://lorempixel.com/112/112/people" alt="">
-                                    <i></i>
-                                </a>
-                                <button class="close"><i></i></button>
-                                <strong class="s-profile__name">Аня Зеленская</strong>
-                            </div>
-                            <div class="item friend-gift">
-                                <span class="friend-gift__title">ПОДАРКИ:</span>
-                                <ul class="friend-gilf__list">
-                                    <li>
-                                        <a href="#"><img src="http://lorempixel.com/44/44/nature" alt=""></a>
-                                        <div>
-                                            <p>подарил 2 дня назад Иван Серпухов</p>
-                                            <a href="#" class="btn btn_gray">ДОКИНУТЬ</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="http://lorempixel.com/44/44/nature" alt=""></a>
-                                        <div>
-                                            <p>подарил 2 дня назад Иван Серпухов</p>
-                                            <a href="#" class="btn btn_gray">ДОКИНУТЬ</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="item last-events">
-                                <span class="last-events__title">НЕДАВНИЕ СОБЫТИЯ:</span>
-                                <div>
-                                    <a href="#"><i class="icon icon_case"></i>Новая Работа</a>
-                                    <p>31 Октября 2012</p>
-                                </div>
-                            </div>
+                        <div class="item s-profile">
+                            <a href="#" class="user-ava is-fb-user">
+                                <img src="http://lorempixel.com/112/112/people" alt="">
+                                <i></i>
+                            </a>
+                            <strong class="s-profile__name">Никонор Шишечка</strong>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="add"><i></i><span>Хочу подарок</span></a>
+                        </div>
+                        <div class="item balance">
+                            <div>БАЛАНС: <span>75</span> грн</div>
+                            <a href="#" class="btn btn_gray">ПОПОЛНИТЬ</a>
                         </div>
                         <div class="scroller__bar-wrapper">
                             <div class="scroller__bar"></div>
@@ -94,7 +73,7 @@
                 </div>
             </div>
         </aside>
-        <div class="main-col main-col_profile">
+        <div class="main-col">
             <ul class="tab js-tab">
                 <li data-tab=".js-tab1"><span>ПОЛУЧЕННЫЕ<i>1</i></span></li>
                 <li data-tab=".js-tab2" class="is-new"><span>ОТПРАВЛЕННЫЕ<i>1</i></span></li>

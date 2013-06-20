@@ -526,6 +526,10 @@
 .baron {
     .scroller__bar {
         @include opacity(.33);
+        &:hover,
+        &:active {
+            opacity: .8;
+        }
     }
     .scroller__bar-wrapper {
         &:before,
@@ -534,15 +538,9 @@
         }
     }
 }
-.scroller__bar:hover,
-.scroller__bar:active {
-    opacity: .8;
+.baron_h {
+    .scroller__bar_h {
+        opacity: .6;
+        bottom: 30px;
+    }
 }
-.baron .scroller__bar {
-    //opacity: .6;
-}
-.baron_h .scroller__bar_h {
-    opacity: .6;
-    bottom: 30px;
-}
-
