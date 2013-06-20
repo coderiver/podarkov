@@ -33,6 +33,9 @@
 .sidebar-scroll_2 {
     top: 52px;
 }
+.sidebar-scroll_3 {
+    top: 97px;
+}
 .item {
     padding: 19px 7%;
     border-bottom: 1px solid #adadad;
@@ -230,6 +233,12 @@
 .date-title {
     @include clr;
     padding: 12px 7%;
+    border-bottom: 1px solid #c9c9c9;
+    border-top: 1px solid #c9c9c9;
+    @include box-shadow(inset 0 -1px 0 #fefefe);
+    &:first-child {
+        border-top: 0;
+    }
     a {
         float: right;
         color: #004faf;
@@ -240,7 +249,12 @@
     
 }
 .friend {
-    
+    &:last-child {
+        
+        a {
+            border-bottom: 0;
+        }
+    }
 }
 .friend__link {
     display: block;
@@ -312,4 +326,21 @@
     i {
         @include s(danger);
     }
+}
+
+.item_search {
+    position: relative;
+    padding: 9px 11px;
+    .input {
+        padding-right: 30px;
+    } 
+    .btn-search {
+        position: absolute;
+        right: 20px;
+        top: 17px;
+    }
+}
+.btn-search {
+    @include s(glass);
+    @extend %hide-text;
 }

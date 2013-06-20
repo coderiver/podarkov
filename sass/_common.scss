@@ -676,6 +676,25 @@ a{
     }
 }
 
+.input {
+    display: block;
+    padding: 10px 17px;
+    width: 100%;
+    @include box-sizing(border-box);
+    font: 12px normal Arial,sans-serif;
+    border: 1px solid rgba(129,129,129,.45);
+    @include border-radius(4px);
+    background: #fff;
+    @include transition(all 200ms linear);
+    @include box-shadow(inset 0 0 4px rgba(103,103,103,.3));
+    &:focus {
+        @include box-shadow(none);
+    }
+}
+.input_s {
+    padding: 5px;
+}
+
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 /* ----------------------------------------- Footer ---------------------------------------------- */
