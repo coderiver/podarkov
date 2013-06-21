@@ -4,146 +4,96 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Template</title>
+	<title>About</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
     <script src="js/jquery.tools.min.js"></script>
+    <script src="js/baron.min.js"></script>
     <script src="js/common.js"></script>  
     <!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
     <![endif]-->
 </head>
-<body class="index">
+<body class="is-fixed">
 <div class="l-layout">
     <header class="header">
         <div class="l-container">
             <h1 class="logo"><a href="#">Подарков</a></h1>
-            <div class="video-wrap">
-                <div class="video">
-                    <img src="img/video.jpg" alt="">
-                    <a href="#" class="video__play"></a>
+            <div class="header__right">
+                <div class="header-user">
+                    <a href="#" class="header-user__pic is-fb-user">
+                        <img src="http://lorempixel.com/32/32/people" alt="">
+                        <span><i>1</i></span>
+                    </a>
+                    <a href="#" class="header-user__link">Никонор Шишечка</a>
                 </div>
-            </div>
-            <div class="login">
-                <h1 class="login__title"><strong>ПОДАРОКОВ</strong> - это праздник подарков!</h1>
-                <ul class="login__list">
-                    <li>первый пункт доверительного текста</li>
-                    <li>вторая часть доверительного текста</li>
-                    <li>третий но не мнее важный пункт</li>
-                </ul>
-                <div class="enter-soc">
-                    <a href="#" class="enter-soc__vk"><span><i></i></span>Войти</a>
-                    <a href="#" class="enter-soc__fb"><span><i></i></span>Войти</a>
-                </div>
+                <nav class="header-nav">
+                    <button class="header-nav__button js-key-nav"><i></i></button>
+                    <ul class="header-nav__list js-nav">
+                        <li><a href="#">Полученные</a></li>
+                        <li><a href="#">Отправленные</a></li>
+                        <li><a href="#">Желаемые</a></li>
+                        <li><a href="#">Выйти</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
-    <div class="l-container">
-        <div class="wrap step-wrap">
-            <div class="step">
-                <span class="step__counter"><i>1</i></span>
-                <h2 class="step__title">Выберите друга</h2>
-                <div class="step__img">
-                    <img src="img/step1.jpg" alt="">
-                </div>
-                <div class="step__descr">
-                    <i class="icon icon_cake"></i>
-                    <div>Выберите друга просто из списка друзей или посмотрите наступающие события!</div>
-                </div>
-            </div>
-            <div class="step">
-                <span class="step__counter"><i>2</i></span>
-                <h2 class="step__title">Выберите друга</h2>
-                <div class="step__img">
-                    <img src="img/step2.png" alt="">
-                </div>
-                <div class="step__descr">
-                    <i class="icon icon_string"></i>
-                    <div>Выберите друга просто из списка друзей или посмотрите наступающие события!</div>
-                </div>
-            </div>
-            <div class="step">
-                <span class="step__counter"><i>3</i></span>
-                <h2 class="step__title">Выберите друга</h2>
-                <div class="step__img">
-                    <img src="img/step3.png" alt="">
-                </div>
-                <div class="step__descr">
-                    <i class="icon icon_mob"></i>
-                    <div>Выберите друга просто из списка друзей или посмотрите наступающие события!</div>
-                </div>
-            </div>
-        </div>
-        <h2 class="title-border"><span>БРЕНДЫ</span></h2>
-        <div class="partners">
-            <div class="partners__wrap">
-                <a href="#"><img src="img/partn1.png" alt=""></a>
-                <a href="#"><img src="img/partn2.png" alt=""></a>
-                <a href="#"><img src="img/partn3.png" alt=""></a>
-                <a href="#"><img src="img/partn4.png" alt=""></a>
-                <a href="#"><img src="img/partn5.png" alt=""></a>
-                <a href="#"><img src="img/partn6.png" alt=""></a>
-                <a href="#"><img src="img/partn1.png" alt=""></a>
-                <a href="#"><img src="img/partn2.png" alt=""></a>
-                <a href="#"></a>
-            </div>
-            <span>Более 300 брендов с отрудничают с нами!</span>
-        </div>
-        <h2 class="title-border"><span>Отзывы</span></h2>
-        <div class="wrap">
-            <div class="comment">
-                <div class="comment__header">
-                    <a href="#" class="user-ava">
-                        <img src="http://lorempixel.com/91/91/people" alt="">
-                    </a>
-                    <div class="user-info">
-                        <a href="#">Аня Зеленская</a>
-                        <span>менеджер</span>
-                        <span>28 лет</span>
-                    </div>
-                </div>
-                <div class="comment__text">
-                    <p>Это невероятная история! Я отправила моей подруги сертификат и (о святые небеса!) он пришел ей на почту, Вы можете в это поверить!? Прямо на емейл! Это фантастика. Я очень довольна сервисом.</p>
-                </div>
-            </div>
-            <div class="comment">
-                <div class="comment__header">
-                    <a href="#" class="user-ava">
-                        <img src="http://lorempixel.com/91/91/people" alt="">
-                    </a>
-                    <div class="user-info">
-                        <a href="#">Аня Зеленская</a>
-                        <span>менеджер</span>
-                        <span>28 лет</span>
-                    </div>
-                </div>
-                <div class="comment__text">
-                    <p>Это невероятная история! Я отправила моей подруги сертификат и (о святые небеса!) он пришел ей на почту, Вы можете в это поверить!? Прямо на емейл! Это фантастика. Я очень довольна сервисом.</p>
-                </div>
-            </div>
-            <div class="comment">
-                <div class="comment__header">
-                    <a href="#" class="user-ava">
-                        <img src="http://lorempixel.com/91/91/people" alt="">
-                    </a>
-                    <div class="user-info">
-                        <a href="#">Аня Зеленская</a>
-                        <span>менеджер</span>
-                        <span>28 лет</span>
-                    </div>
-                </div>
-                <div class="comment__text">
-                    <p>Это невероятная история! Я отправила моей подруги сертификат и (о святые небеса!) он пришел ей на почту, Вы можете в это поверить!? Прямо на емейл! Это фантастика. Я очень довольна сервисом.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="login-section">
-        <div class="l-container">
-            <div class="login">
-                <h1 class="login__title"><strong>Все еще не уверены ?</strong> ПОПРОБУЙТЕ И УБЕДИТЕСЬ САМИ!</h1>
-                <div class="enter-soc">
-                    <a href="#" class="enter-soc__vk"><span><i></i></span>Войти</a>
-                    <a href="#" class="enter-soc__fb"><span><i></i></span>Войти</a>
+    <div class="l-col-wrap content-page js-main-col">
+        <div class="scroller js-baron2">
+            <div class="container">
+                <h1>О нас</h1>
+                <article class="article article_cols">    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>   
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+                </article>
+                <div class="scroller__bar-wrapper">
+                    <div class="scroller__bar"></div>
                 </div>
             </div>
         </div>

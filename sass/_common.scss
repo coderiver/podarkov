@@ -51,6 +51,12 @@ body{
     @include font;
     font-size: 13px;
     line-height: 1.4;
+    ::selection {
+        background: rgba(0,0,0,.1);
+    }
+    ::-moz-selection {
+        background: rgba(0,0,0,.1);
+    }
 }
 a{
     color:#00919e;

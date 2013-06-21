@@ -33,6 +33,8 @@ table { border-spacing: 0; border-collapse: collapse; }
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
 body { min-width: 280px; color: #575757; font-weight: 400; font-family: 'Open Sans', Arial, sans-serif; font-size: 13px; line-height: 1.4; }
+body ::selection { background: rgba(0, 0, 0, 0.1); }
+body ::-moz-selection { background: rgba(0, 0, 0, 0.1); }
 
 a { color: #00919e; text-decoration: none; }
 
@@ -470,6 +472,20 @@ a { color: #00919e; text-decoration: none; }
 .baron .scroller__bar-wrapper:before, .baron .scroller__bar-wrapper:after { display: block; }
 
 .baron_h .scroller__bar_h { opacity: .6; bottom: 30px; }
+
+.content-page { padding: 21px 0; color: #838182; background: #ede7cc url(../img/main-bg.jpg) repeat; }
+.content-page .container { *zoom: 1; }
+.content-page .container:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.content-page h1 { margin-bottom: 10px; font-size: 32px; font-weight: normal; padding: 0 5%; }
+
+.l-col { width: 50%; float: left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.article { padding: 0 5%; }
+.article p { margin-bottom: 20px; }
+.article h1, .article h2, .article h3, .article h4, .article h5, .article h6 { font-weight: normal; }
+.article h1 { margin-bottom: 10px; font-size: 32px; }
+
+.article_cols { -moz-column-count: 2; -webkit-column-count: 2; column-count: 2; -moz-column-gap: 2rem; -webkit-column-gap: 2rem; column-gap: 2rem; }
 
 .logo a, .index .logo a, .btn-search { font: 0/0 a; text-shadow: none; color: transparent; }
 

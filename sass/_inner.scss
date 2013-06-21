@@ -544,3 +544,44 @@
         bottom: 30px;
     }
 }
+
+.content-page {
+    padding: 21px 0;
+    color: #838182;
+    background: #ede7cc url(../img/main-bg.jpg) repeat;
+    .container {
+        @include clr;
+    }
+    h1 {
+        margin-bottom: 10px;
+        font-size: 32px;
+        font-weight: normal;
+        padding: 0 5%;
+    }
+}
+.l-col {
+    width: 50%;
+    float: left;
+    @include box-sizing(border-box);
+}
+.article {
+    padding: 0 5%;
+    p {
+        margin-bottom: 20px;
+    }
+    h1,h2,h3,h4,h5,h6 {
+        font-weight: normal;
+    }
+    h1 {
+        margin-bottom: 10px;
+        font-size: 32px;
+    }
+}
+.article_cols {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 2rem;
+    -webkit-column-gap: 2rem;
+    column-gap: 2rem;
+}

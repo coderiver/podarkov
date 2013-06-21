@@ -10,7 +10,7 @@ $(document).ready(function() {
 
     function resize_col() {
         var body = $("body");
-        var main_col = $(".main-col");
+        var main_col = $(".js-main-col");
         var main_col_width = $(".l-layout").outerWidth() - $(".sidebar").outerWidth();
         var main_col_width2 = $(".l-col-wrap").outerWidth() - $(".sidebar").outerWidth();
         if ($(window).width() > 768) {
