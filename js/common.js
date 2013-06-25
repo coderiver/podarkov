@@ -32,6 +32,29 @@ $(document).ready(function() {
         baron_init();
     });
 
+// Select list
+    var select = $(".js-select");
+    var select_val = $(".js-select div");
+    var select_list = $(".js-select-list");
+    var select_list_item = $(".js-select-list li");
+    select.click(function(){
+        if ($(this).hasClass("is-active")) {
+            $(this).removeClass("is-active");
+            $(this).parent().find(select_list).slideUp("fast");
+        }
+        else {
+            select.removeClass("is-active");
+            select_list.slideUp();
+            $(this).addClass("is-active");
+            $(this).parent().find(select_list).slideDown("fast");
+        }
+    });
+    select_list_item.click(function(){
+        var text = $(this).html();
+        select_val.html(text);
+        $(this).parent().slideUp();
+        $(this).parent().parent().find(".js-select").removeClass("is-active");
+    });
 // tabs
 	// var tab = $(".js-tab li");
 	// tab.first().addClass("is-active");

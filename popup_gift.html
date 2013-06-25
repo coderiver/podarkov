@@ -1,0 +1,199 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Popup gift</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.tools.min.js"></script>
+    <script src="js/baron.min.js"></script>
+    <script src="js/common.js"></script>  
+    <!--[if lt IE 9]> 
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+    <![endif]-->
+</head>
+<body>
+<div class="l-layout">
+    <header class="header">
+        <div class="l-container">
+            <h1 class="logo"><a href="#">Подарков</a></h1>
+            <div class="header__right">
+                <div class="header-user">
+                    <a href="#" class="header-user__pic is-fb-user">
+                        <img src="http://lorempixel.com/32/32/people" alt="">
+                        <span><i>1</i></span>
+                    </a>
+                    <a href="#" class="header-user__link">Никонор Шишечка</a>
+                </div>
+                <a class="header-gift" href="#">
+                    <i class="icon icon_gift"></i>
+                </a>
+                <nav class="header-nav">
+                    <button class="header-nav__button js-key-nav"><i></i></button>
+                    <ul class="header-nav__list js-nav">
+                        <li><a href="#">Полученные</a></li>
+                        <li><a href="#">Отправленные</a></li>
+                        <li><a href="#">Желаемые</a></li>
+                        <li><a href="#">Выйти</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="l-col-wrap">
+        <aside class="sidebar">
+            <div class="item item_header">
+                <ul class="s-tab">
+                    <li><i class="icon icon_cake2"></i><span>СОБЫТИЯ</span></li>
+                    <li class="is-active"><i class="icon icon_friend"></i><span>ДРУЗЬЯ</span></li>
+                </ul>
+            </div>
+            <div class="sidebar-scroll sidebar-scroll_2">
+                <div class="scroller js-baron2">
+                    <div class="container">
+                        <div class="item s-profile">
+                            <a href="#" class="user-ava is-fb-user">
+                                <img src="http://lorempixel.com/112/112/people" alt="">
+                                <i></i>
+                            </a>
+                            <strong class="s-profile__name">Никонор Шишечка</strong>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="add"><i></i><span>Хочу подарок</span></a>
+                        </div>
+                        <div class="item balance">
+                            <div>БАЛАНС: <span>75</span> грн</div>
+                            <a href="#" class="btn btn_gray">ПОПОЛНИТЬ</a>
+                        </div>
+                        <div class="scroller__bar-wrapper">
+                            <div class="scroller__bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-col js-main-col">
+            <ul class="tab js-tab">
+                <li data-tab=".js-tab1"><span>ПОЛУЧЕННЫЕ<i>1</i></span></li>
+                <li data-tab=".js-tab2" class="is-new"><span>ОТПРАВЛЕННЫЕ<i>1</i></span></li>
+                <li data-tab=".js-tab3" class="is-active"><span>ЖЕЛАЕМЫЕ<i>1</i></span></li>
+            </ul>
+            <div class="tab-cont">
+                <div class="scroller js-baron1">
+                    <div class="container">
+                        <div class="gift-want-cont">
+                            <div class="tab-cont__title">Вы хотели бы...</div>
+                            <ul class="gift-want-wrap">
+                                <li class="gift-want is-favorite">
+                                    <div class="gift-want__img">
+                                        <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                    </div>
+                                    <div class="gift-want__descr">
+                                        <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                    </div>
+                                    <div class="gift-want__footer">
+                                        <span class="gift-want__price">
+                                            <b>250</b> грн
+                                        </span>
+                                        <span class="gift-want__price-2">за 300 грн</span>
+                                        <a href="#" class="link-favorite"><i></i><span>БОЛЬШЕ НЕ ХОЧУ</span></a>
+                                    </div>
+                                    <div class="clip">
+                                        <i></i>
+                                    </div>
+                                    <i class="icon icon_corner icon_boot"></i>
+                                </li>
+                                <li class="gift-want is-favorite is-free">
+                                    <div class="gift-want__img">
+                                        <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                    </div>
+                                    <div class="gift-want__descr">
+                                        <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                    </div>
+                                    <div class="gift-want__footer">
+                                        <span class="gift-want__price">
+                                            <b>250</b> грн
+                                        </span>
+                                        <span class="gift-want__price-2">Бесплатно</span>
+                                        <a href="#" class="link-favorite"><i></i><span>БОЛЬШЕ НЕ ХОЧУ</span></a>
+                                    </div>
+                                    <div class="clip">
+                                        <i></i>
+                                    </div>
+                                    <i class="icon icon_corner icon_boot"></i>
+                                </li>
+                                <li class="gift-want is-favorite is-free">
+                                    <div class="gift-want__img">
+                                        <a href="#"><img src="http://lorempixel.com/91/72/technics" alt=""></a>
+                                    </div>
+                                    <div class="gift-want__descr">
+                                        <p>Умное пространство для умных людей. Вот что такое пространство Библиотека. Плати только за время и больше ничего лишнего не надо.Умное пространство для</p>
+                                    </div>
+                                    <div class="gift-want__footer">
+                                        <span class="gift-want__price">
+                                            <b>250</b> грн
+                                        </span>
+                                        <span class="gift-want__price-2">Бесплатно</span>
+                                        <a href="#" class="link-favorite"><i></i><span>БОЛЬШЕ НЕ ХОЧУ</span></a>
+                                    </div>
+                                    <div class="clip">
+                                        <i></i>
+                                    </div>
+                                    <i class="icon icon_corner icon_boot"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="scroller__bar-wrapper">
+                            <div class="scroller__bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-overlay"></div>
+            <div class="popup">
+                <div class="popup__top">
+                    <div class="popup__left">
+                        <div class="brand-logo">
+                            <img src="img/brand-logo.jpg" alt="logo">
+                        </div>
+                    </div>
+                    <div class="popup__right">
+                        <div class="select">
+                            <div class="select__val js-select">
+                                <div><strong>75</strong> грн</div>
+                            </div>
+                            <ul class="select__list js-select-list">
+                                <li><strong>75</strong> грн</li>
+                                <li><strong>80</strong> грн</li>
+                                <li><strong>90</strong> грн</li>
+                                <li><strong>100</strong> грн</li>
+                            </ul>
+                        </div>
+                        <div class="popup__price">Бесплатно</div>
+                        <a href="#" class="btn btn_big btn_yellow">ДАРИТЬ</a>
+                    </div>
+                </div>
+                <button class="close"><i></i></button>
+            </div>      
+        </div>
+    </div>
+    <div class="push"></div>
+</div>
+<footer class="footer">
+    <div class="l-container">
+        <a class="footer__logo" href="#"></a>
+        <div class="footer__middle">
+            <nav class="footer__nav">
+                <a href="#">Контакты</a>
+                <a href="#">Правила использования</a>
+                <a href="#">Партнерам</a>
+                <a href="#">О нас</a>
+            </nav>
+            <div class="footer__contacts">Поддержка пользователей: +38 (0 44) 324 57 68</div>
+        </div>
+        <div class="copyright">© 2013 Podarkov</div>
+    </div>
+</footer>
+</body>
+</html>

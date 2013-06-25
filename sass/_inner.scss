@@ -585,3 +585,73 @@
     -webkit-column-gap: 2rem;
     column-gap: 2rem;
 }
+
+.popup-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    @include opacity(.5); 
+    z-index: 1000;
+}
+.popup {
+    position: absolute;
+    color: #535353;
+    top: 10px;
+    left: 50%;
+    z-index: 2000;
+    margin-left: -282px;
+    padding: 41px 0;
+    width: 564px;
+    @include box-sizing(border-box);
+    border: 1px solid rgba(0,0,0,.41);
+    @include border-radius(5px);
+    background: #e6e0db;
+    @include box-shadow(0 0 15px rgba(0,0,0,.37), inset 0 0 0 2px rgba(255,255,255,.75));
+    @include background-image(linear-gradient(bottom, #e6e0db 0%, #fff 88.31%, #fff 100%));
+    .close {
+        position: absolute;
+        top: 8px;
+        right: 9px;
+        background: #d5d5d5;
+    }
+}
+.popup__top {
+    border-bottom: 1px solid #c1c1c1;
+    @include clr;
+    @include box-shadow(0 1px 0  rgba(255,255,255,.75));
+    .popup__left {
+        padding-left: 78px;
+    }
+    .popup__right {
+        padding-right: 78px;
+    }
+}
+.popup__left {
+    float: left;
+    width: 260px;
+    @include box-sizing(border-box);
+}
+.popup__right {
+    float: right;
+    width: 230px;
+    @include box-sizing(border-box);
+    .btn_big {
+        width: 100%;
+        text-align: center;
+    }
+}
+.brand-logo {
+    float: left;;
+    img {
+        display: block;
+    }
+}
+
+.popup__price {
+    margin: 9px 0;
+    font-size: 17px;
+    color: #2fa90a;
+}

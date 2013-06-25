@@ -87,7 +87,7 @@ $break-1024: 1024px;
 }
 
 // user-select
-@mixin user-select() {
+@mixin no-select {
      -moz-user-select: none;
   -webkit-user-select: none;
           user-select: none;

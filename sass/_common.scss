@@ -599,10 +599,15 @@ a{
     @include border-radius(4px);
     text-transform: uppercase;
     font: bold 10px Arial, sans-serif;
+    @include box-sizing(border-box);
 }
 .btn_m {
     padding: 7px 24px;
-    font: bold 12px Arial, sans-serif;
+    font-size: 12px;
+}
+.btn_big {
+    font-size: 14px;
+    padding: 12px 30px;
 }
 .btn_gray {
     background: #e3e0dd;
@@ -662,7 +667,7 @@ a{
         position: absolute;
         top: 50%;
         left: 50%;
-        margin: -5px 0 0 -5px;
+        margin: -5px 0 0 -4px;
         @include s(close2);
     }
 }
@@ -699,6 +704,78 @@ a{
 }
 .input_s {
     padding: 5px;
+}
+
+.select {
+    position: relative;
+    z-index: 1000;
+    //width: 157px;
+    height: 43px;
+    .is-active {
+        @include border-radius(4px 4px 0 0);
+        border-bottom: 1px solid transparent;
+        &:after {
+            @include s(arr-select-act);
+        }
+    }
+}
+.select__val {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 30px 0 15px;
+    border: 1px solid #c8c8c8;
+    line-height: 41px;
+    @include border-radius(4px);
+    background: #e3e0dd;
+    font-size: 17px;
+    color: #000;
+    @include box-sizing(border-box);
+    @include box-shadow(inset 0 0 0 1px rgba(255,255,255,.95));
+    @include background-image(linear-gradient(#fbf5f5, #eeedeb));
+    cursor: pointer;
+    @include no-select;
+    &:after {
+        content: "";
+        position: absolute;
+        right: 17px;
+        top: 50%;
+        margin-top: -2px;
+        @include s(arr-select);
+    }
+    strong {
+        @include b;
+        font-size: 21px;
+    }
+    
+}
+.select__list {
+    display: none;
+    position: absolute;
+    top: 43px;
+    left: 0;
+    right: 0;
+    background: #e3e0dd;
+    border: 1px solid #c8c8c8;
+    border-top: 0;
+    font-size: 17px;
+    color: #000;
+    @include border-radius(0 0 4px 4px);
+    @include background-image(linear-gradient(#fbf5f5, #eeedeb));
+    strong {
+        @include b;
+        font-size: 21px;
+    }
+    li {
+        border-top: 1px solid #c8c8c8;
+        padding: 5px 30px 5px 15px;
+        cursor: pointer;
+        &:first-child {
+            border-top: 0;
+        }
+    }
 }
 
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
