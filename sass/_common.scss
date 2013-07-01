@@ -688,12 +688,16 @@ a{
     }
 }
 
+.input-wrap {
+    margin-bottom: 9px;
+}
 .input {
     display: block;
-    padding: 10px 17px;
+    padding: 5px 17px 6px;
     width: 100%;
     @include box-sizing(border-box);
-    font: 12px normal Arial,sans-serif;
+    font: 18px normal 'Open Sans', Arial, sans-serif;
+    @include placeholder(#ccc, 'Open Sans');
     border: 1px solid rgba(129,129,129,.45);
     @include border-radius(4px);
     background: #fff;
@@ -706,7 +710,11 @@ a{
 .input_s {
     padding: 5px;
 }
-
+.textarea {
+    resize: none;
+    height: 145px;
+    max-height: 145px;
+}
 .select {
     position: relative;
     z-index: 1000;
@@ -776,6 +784,93 @@ a{
         &:first-child {
             border-top: 0;
         }
+    }
+}
+
+.clip {
+    position: absolute;
+    &:after,
+    &:before {
+        content: "";
+        position: relative;
+        z-index: 2;
+        display: block;
+        width: 10px;
+        height: 25px;
+        @include box-sizing(border-box);
+        border: 2px solid #edb741;
+    }
+    &:after {
+        border-top: 0;
+        @include border-radius(0 0 5px 5px);
+    }
+    &:before {
+        margin-bottom: -1px;  
+        border-left: 0;
+        border-bottom: 0;
+        @include border-radius(5px 5px 0 0);
+    }
+    i {
+        position: absolute;
+        top: 2px;
+        left: 1px;
+        &:after,
+        &:before {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 25px;
+            @include box-sizing(border-box);
+            border: 2px solid #78706a;
+            @include opacity(.5);
+        }
+        &:after {
+            border-top: 0;
+            box-shadow: 0 1px 1px rgba(0,0,0,.8);
+            @include border-radius(0 0 5px 5px);
+        }
+        &:before {
+            margin-bottom: -1px;
+            border-left: 0;
+            border-top: #000;
+            border-bottom: 0;
+            @include border-radius(5px 5px 0 0);
+        }
+    }
+}
+
+.checkbox {
+    display: block;
+}
+.checkbox__wrap {
+    display: inline-block;
+    position: relative;
+    width: 19px;
+    height: 19px;
+    @include box-sizing(border-box);
+    vertical-align: middle;
+    input, i {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 19px;
+        height: 19px;
+    }
+    input {
+        z-index: 2;
+        @include opacity(0);
+    }
+    i {
+        width: 19px;
+        height: 19px;
+        @include box-sizing(border-box);
+        border: 1px solid #bcbab8;
+        @include border-radius(2px);
+        background: #fff;
+        @include box-shadow(inset 0 0 4px rgba(103,103,103,.3));
+    }
+    span {
+        vertical-align: middle;
     }
 }
 
