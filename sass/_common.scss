@@ -132,12 +132,19 @@ a{
         top: 0;
         bottom: 0;
     }
+    .sidebar_detail {
+        left: 257px;
+        background: #f7efee;
+    }
     .main-col {
         position: absolute;
         right: 0;
         top: 0;
         bottom: 0;
         left: 257px;
+    }
+    .main-col_small {
+        left: 514px;
     }
     .tab-cont {
         position: absolute;

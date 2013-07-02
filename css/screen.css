@@ -58,7 +58,9 @@ a { color: #00919e; text-decoration: none; }
 .is-fixed .l-col-wrap { width: 1024px; position: absolute; top: 49px; bottom: 96px; left: 50%; margin-left: -512px; }
 @media only screen and (max-width: 1024px) { .is-fixed .l-col-wrap { left: 0; margin: 0; right: 0; } }
 .is-fixed .sidebar { position: absolute; left: 0; top: 0; bottom: 0; }
+.is-fixed .sidebar_detail { left: 257px; background: #f7efee; }
 .is-fixed .main-col { position: absolute; right: 0; top: 0; bottom: 0; left: 257px; }
+.is-fixed .main-col_small { left: 514px; }
 .is-fixed .tab-cont { position: absolute; top: 52px; right: 0; bottom: 0; left: 0; }
 
 /* ------------------------------------ //END Main styles --------------------------------------- */
@@ -542,6 +544,8 @@ a { color: #00919e; text-decoration: none; }
 .sidebar { position: relative; float: left; width: 257px; border-right: 1px solid #aeadad; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .sidebar .scroller__bar-wrapper { right: 5px; }
 
+.sidebar_detail .sidebar-scroll { top: 0; }
+
 .sidebar__wrap { padding: 0 13px; }
 .sidebar__wrap .item:last-child { border-bottom: 0; }
 
@@ -618,6 +622,8 @@ a { color: #00919e; text-decoration: none; }
 .date-title:first-child { border-top: 0; }
 .date-title a { float: right; color: #004faf; text-decoration: underline; }
 
+.friend-list .is-active { background: #f7efee; }
+
 .friend:last-child a { border-bottom: 0; }
 
 .friend__link { display: block; *zoom: 1; padding: 10px 15px; background: #fff; border-bottom: 1px solid #d6d6d6; }
@@ -652,6 +658,10 @@ a { color: #00919e; text-decoration: none; }
 .item_search .btn-search { position: absolute; right: 20px; top: 17px; }
 
 .btn-search { background: url('../img/icons-sefecfe9c6c.png') 0 -1305px no-repeat; width: 12px; height: 12px; }
+
+.sidebar-gallery { padding: 19px 0; }
+.sidebar-gallery a { display: block; overflow: hidden; margin-bottom: 8px; }
+.sidebar-gallery img { display: block; width: 100%; height: auto; }
 
 .logo a, .index .logo a, .btn-search { font: 0/0 a; text-shadow: none; color: transparent; }
 

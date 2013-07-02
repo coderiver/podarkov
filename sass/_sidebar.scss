@@ -15,6 +15,11 @@
         right: 5px;
     }
 }
+.sidebar_detail {
+    .sidebar-scroll {
+        top: 0;
+    }
+}  
 .sidebar__wrap {
     padding: 0 13px;
     .item {
@@ -246,11 +251,12 @@
     }
 }
 .friend-list {
-    
+    .is-active {
+        background: #f7efee;
+    }
 }
 .friend {
     &:last-child {
-        
         a {
             border-bottom: 0;
         }
@@ -343,4 +349,17 @@
 .btn-search {
     @include s(glass);
     @extend %hide-text;
+}
+.sidebar-gallery {
+    padding: 19px 0;
+    a {
+        display: block;
+        overflow: hidden;
+        margin-bottom: 8px;
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 }
