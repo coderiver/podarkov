@@ -30,6 +30,18 @@
         top: 8px;
         right: 9px;
         background: #d5d5d5;
+        &:hover {
+            background: #b8b2b2;
+        }
+    }
+}
+.popup.is-favorite {
+    &:before {
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 0;
+        @include s(favorite2);
     }
 }
 .popup__top {
@@ -58,7 +70,7 @@
 }
 .brand-logo {
     float: left;
-    margin-left: 7px;
+    margin-left: 27px;
     img {
         display: block;
     }
@@ -116,14 +128,19 @@
 .popup_mod {
     padding: 0;
     width: 544px;
-    margin: 0;
-    left: 45px;
+    margin: 0 0 0 -272px;
+    left: 50%;
     .popup__top,
     .popup__main {
-        padding: 0 17px 0 24px;
+        padding: 0 17px 28px 24px;
     }
     .popup__main {
         padding-top: 31px;
+        .popup__title {
+            strong {
+                color: #000;
+            }
+        }
     }
     .popup__left {
         float: left;
@@ -133,6 +150,13 @@
     .popup__right {
         float: right;
         width: 340px;
+        .select_width {
+            width: 267px;
+        }
+    }
+    .popup__right_mod {
+        width: 340px;
+        padding-right: 70px;
     }
     .user-ava {
         margin-left: -7px;
@@ -164,11 +188,39 @@
     img {
         border: 7px solid #fff;
         @include border-radius(2px);
-        @include box-shadow(0 0 0 1px rgba(0,0,0,.25));
+        @include box-shadow(0 0 0 1px rgba(0,0,0,.25), 0 2px 5px rgba(0,0,0,.4));
     }
     .clip {
         position: absolute;
         top: -13px;
         left: 15px;
     }
+}
+.popup__select {
+    margin: 15px 0;
+}
+.popup__label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.privacy {
+    margin: 26px 0;
+    font-size: 12px;
+}
+.popup__title {
+    .popup__label {
+        margin-bottom: 0;
+    }
+}
+
+.code {
+    font-size: 12px;
+    color: #3f3f3f;
+    p {
+        margin-bottom: 16px;
+    }
+}
+.code__namber {
+    margin: 4px 0 12px;
+    font-size: 44px;
 }
