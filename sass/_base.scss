@@ -11,7 +11,7 @@ $experimental-support-for-svg: true;
 $icons: sprite-map("icons/*.png", $spacing: 10px);
 
 // responsive
-$break-280: 280px; 
+$break-280: 260px; 
 $break-320: 320px; 
 $break-480: 480px; 
 $break-640: 640px; 
@@ -20,7 +20,7 @@ $break-800: 800px;
 $break-960: 960px; 
 $break-1024: 1024px;
 @mixin respond-to($media) {
-  @if $media == 280 {
+  @if $media == 260 {
     @media only screen and (max-width: $break-280) { @content; }
   }
   @else if $media == 320 {

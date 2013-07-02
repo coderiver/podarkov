@@ -46,7 +46,7 @@ table {
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
 body{
-    min-width: 280px;
+    min-width: 260px;
     min-height: 735px;
     color: #575757;
     @include font;
@@ -162,6 +162,11 @@ a{
     //     padding: 0 4% 0 3%;
     // }
 }
+.is-with-popup {
+    @include respond-to(640) {
+        //overflow: hidden; 
+    }
+}
 /* ------------------------------------ //END Main styles --------------------------------------- */
  
 /* ----------------------------------------- Header --------------------------------------------- */
@@ -188,8 +193,8 @@ a{
     @include box-shadow(inset -1px 0 0 #00662b);
     @include box-sizing(border-box);
     background: #176c3c url(../img/logo-bg.jpg) 0 0 repeat;
-    @include respond-to(768) {
-        //width: 195px;
+    @include respond-to(320) {
+        width: 73%;
     }
     &:before, &:after {
         content: "";
@@ -216,6 +221,9 @@ a{
     float: right;
     height: 47px;
     @include clr;
+    @include respond-to(320) {
+        width: 27%;
+    }
 }
 .header-user {
     width: 190px;
@@ -233,6 +241,12 @@ a{
     }
     @include respond-to(640) {
         padding: 0;
+    }
+    @include respond-to(320) {
+        border-left: 0;
+        float: none;
+        width: 100%;
+        @include box-shadow(none);
     }
     .is-fb-user {
         &:before {
@@ -254,6 +268,9 @@ a{
         display: block;
         width: 60px;
         height: 47px;
+    }
+    @include respond-to(320) {
+        width: 100%;
     }
     span {
         display: none;
@@ -588,6 +605,7 @@ a{
         .scroller {
             width: 100% !important
         }
+        overflow: visible;
     }
     .container {
         padding: 3% 3.2%; 
@@ -612,6 +630,9 @@ a{
 .btn_m {
     padding: 7px 24px;
     font-size: 12px;
+    @include respond-to(280) {
+        padding: 7px 15px;
+    }
 }
 .btn_big {
     font-size: 14px;

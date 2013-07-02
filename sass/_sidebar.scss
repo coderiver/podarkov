@@ -11,6 +11,9 @@
     width: 257px;
     border-right: 1px solid #aeadad;
     @include box-sizing(border-box);
+    @include respond-to(768) {
+        display: none;
+    }  
     .scroller__bar-wrapper {
         right: 5px;
     }

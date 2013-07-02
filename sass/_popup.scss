@@ -25,6 +25,21 @@
     background: #e6e0db;
     @include box-shadow(0 0 15px rgba(0,0,0,.37), inset 0 0 0 2px rgba(255,255,255,.75));
     @include background-image(linear-gradient(bottom, #e6e0db 0%, #fff 88.31%, #fff 100%));
+    @include respond-to(960) {
+        width: 520px;
+        margin-left: -260px;
+    }
+    @include respond-to(640) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        overflow-y: auto;
+        @include border-radius(0);
+    }
     .close {
         position: absolute;
         top: 8px;
@@ -45,34 +60,58 @@
     }
 }
 .popup__top {
-    padding: 0 30px 23px;
+    padding: 0 5% 23px;
     border-bottom: 1px solid #c1c1c1;
     @include clr;
     @include box-shadow(0 1px 0  rgba(255,255,255,.75));
 }
 .popup__left {
     float: left;
-    padding-right: 40px;
-    width: 300px;
+    padding-right: 8%;
+    width: 60%;
     @include box-sizing(border-box);
+    @include respond-to(480) {
+        float: none;
+        width: 100%;
+    }
 }
 .popup__right {
     float: right;
-    width: 200px;
+    width: 40%;
     @include box-sizing(border-box);
+    @include respond-to(480) {
+        float: none;
+        width: 100%;
+    }
     .btn_big {
         width: 157px;
         text-align: center;
+        @include respond-to(480) {
+            display: block;
+            margin: 0 auto;
+        }
     }
     .select {
         width: 157px;
+        @include respond-to(480) {
+            margin: 10px auto 0;
+            width: 90%;
+        }
     }
 }
 .brand-logo {
     float: left;
     margin-left: 27px;
+    @include respond-to(480) {
+        float: none;
+        margin: 0;
+        text-align: center;
+    }
     img {
         display: block;
+        @include respond-to(480) {
+            display: inline-block;
+        }
     }
 }
 
@@ -80,6 +119,9 @@
     margin: 9px 0;
     font-size: 17px;
     color: #000;
+    @include respond-to(480) {
+        text-align: center;
+    }
     strong {
         @include b;
     }
@@ -88,8 +130,11 @@
     color: #2fa90a;
 }
 .popup__main {
-    padding: 11px 30px 0;
+    padding: 11px 5% 0;
     @include clr;
+    @include respond-to(480) {
+        padding: 15px 17px;
+    }
     .popup__left {
         font-size: 11px;
     }
@@ -130,12 +175,23 @@
     width: 544px;
     margin: 0 0 0 -272px;
     left: 50%;
+    @include respond-to(640) {
+        width: 100%;
+        margin-left: 0;
+        left: 0;
+    }
     .popup__top,
     .popup__main {
         padding: 0 17px 28px 24px;
+        @include respond-to(480) {
+            padding: 15px 17px;
+        }
     }
     .popup__main {
         padding-top: 31px;
+        @include respond-to(480) {
+            padding: 15px 17px;
+        }
         .popup__title {
             strong {
                 color: #000;
@@ -144,27 +200,45 @@
     }
     .popup__left {
         float: left;
-        padding-left: 7px;  
-        width: 161px;
+        padding-left: 1.5%;
+        width: 32%;
+        @include respond-to(480) {
+            width: 100%;
+            margin-left: 0;
+            left: 0;
+        }
     }
     .popup__right {
         float: right;
-        width: 340px;
+        width: 68%;
+        @include respond-to(480) {
+            width: 100%;
+            left: 0;
+        }
         .select_width {
-            width: 267px;
+            width: 100%;
         }
     }
     .popup__right_mod {
-        width: 340px;
-        padding-right: 70px;
+        padding-right: 14%;
+        @include respond-to(480) {
+            padding-right: 0;
+        }
     }
     .user-ava {
         margin-left: -7px;
         border-width: 3px;
+        @include respond-to(480) {
+            float: left;
+            margin-right: 20px;
+        }
     }
     .user-name {
         font-size: 17px;
         margin-bottom: 28px;
+        @include respond-to(480) {
+            margin-bottom: 5px;
+        }
     }
 }
 .popup__title {
@@ -185,15 +259,31 @@
     left: 17px;
     top: -1px;
     @include rotate(-10);
+    @include respond-to(640) {
+        position: static;
+        margin-top: 15px;
+        @include rotate(0);
+    }
+    @include respond-to(480) {
+        text-align: center;
+    }
     img {
         border: 7px solid #fff;
         @include border-radius(2px);
         @include box-shadow(0 0 0 1px rgba(0,0,0,.25), 0 2px 5px rgba(0,0,0,.4));
+        @include respond-to(640) {
+            position: static;
+            border: 0;
+            @include box-shadow(none);
+        }
     }
     .clip {
         position: absolute;
         top: -13px;
         left: 15px;
+        @include respond-to(640) {
+            display: none;
+        }
     }
 }
 .popup__select {
@@ -211,6 +301,9 @@
     .popup__label {
         margin-bottom: 0;
     }
+    @include respond-to(480) {
+        text-align: center;
+    }
 }
 
 .code {
@@ -223,4 +316,9 @@
 .code__namber {
     margin: 4px 0 12px;
     font-size: 44px;
+}
+.popup__event {
+    @include respond-to(480) {
+        margin-bottom: 20px;
+    }
 }

@@ -162,13 +162,18 @@
     font-size: 19px;
     text-shadow: 0 1px 0 #fff;
 }
+
 .gift-want-wrap {
     @include clr;
-}
-.gift-want-wrap {
     margin-bottom: 17px;
     border-bottom: 1px solid #cdc59d;
     @include box-shadow(0 1px 0 rgba(255,255,255,.5));
+    @include respond-to(960) {
+        margin-right: 10px;
+    }
+    @include respond-to(768) {
+        margin-right: 0;
+    }
 }
 .gift-want-cont {
     
@@ -187,6 +192,16 @@
     @include box-shadow(0 0 7px rgba(0,0,0,.39), inset 0 0 0 2px rgba(255,255,255,.75));
     @include background-image(linear-gradient(bottom, #e6e0db 0%, #fff 88.31%, #fff 100%));
     @include respond-to(960) {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px;
+    }
+    @include respond-to(768) {
+        float: left;
+        margin: 0 2% 2% 0;
+        width: 48%;
+    }
+    @include respond-to(640) {
         width: 100%;
         float: none;
         margin: 0 0 20px;
@@ -262,14 +277,24 @@
     margin-right: 4%;
     font-size: 17px;
     color: #000;
+    @include respond-to(768) {
+       font-size: 12px;
+       margin-right: 2%;
+    }
     b {
         @include b;
         font-size: 21px;
+        @include respond-to(768) {
+            font-size: 16px;
+        }
     }
 }
 .gift-want__price-2 {
     font-size: 14px;
     color: 939393;
+    @include respond-to(768) {
+        font-size: 12px;
+    }
 }
 
 .link-favorite {
@@ -538,5 +563,29 @@
     -moz-column-gap: 2rem;
     -webkit-column-gap: 2rem;
     column-gap: 2rem;
+    @include respond-to(768) {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+        -moz-column-gap: 1rem;
+        -webkit-column-gap: 1rem;
+        column-gap: 0;
+    }
 }
 
+.page-nav {
+    display: none;
+    padding: 0 4%;
+    margin-bottom: 7px;
+    @include respond-to(768) {
+        display: block;
+    }
+    a {
+        font-size: 14px;
+        color: #004faf;
+        text-decoration: underline;
+    }
+    @include respond-to(320) {
+        font-size: 11px;
+    }
+}
