@@ -76,15 +76,16 @@ a{
     @include respond-to(1024) {
         background-position: 0 0;
     }
+    @include respond-to(768) {
+       background: #f7f3e3 url(../img/main-bg.jpg) 0 0 repeat;
+    }
 }
 .l-container {
     margin: 0 auto;
     max-width: 1024px;
     padding: 0 5px;
     @include clr;
-    @include respond-to(640) {
-       // padding: 0 20px;
-    }
+    
 }
 .push {
     clear: both; 
@@ -124,6 +125,7 @@ a{
             left: 0;
             margin: 0;
             right: 0;
+            width: 100%;
         }
     }
     .sidebar {

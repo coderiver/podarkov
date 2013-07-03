@@ -206,6 +206,10 @@
         float: none;
         margin: 0 0 20px;
     }
+    @include respond-to(320) {
+        padding-bottom: 20px;
+        height: auto;
+    }
     .clip {
         left: 15px;
         top: -6px;
@@ -216,6 +220,9 @@
 }
 .gift-want.is-favorite {
     padding: 28px 0 8px;
+    @include respond-to(320) {
+        padding-bottom: 20px;
+    }
     &:before {
         content: "";
         position: absolute;
@@ -241,12 +248,25 @@
     font-size: 11px;
     padding-right: 10px;
     line-height: 1.2;
+    @include respond-to(800) {
+        padding-right: 20px;
+    }
+    @include respond-to(320) {
+        margin: 0;
+        padding: 0 10px;
+        height: 54px;
+    }
 }
 .gift-want__img {
     position: absolute;
     top: 6px;
     left: 10px;
     @include rotate(-10);
+    @include respond-to(320) {
+        position: relative;
+        top: -14px;
+        width: 100px;
+    }
     img {
         border: 4px solid #fff;
         @include border-radius(2px);
@@ -260,12 +280,27 @@
     right: 0;
     padding: 0 3% 0 5%;
     @include clr;
+    @include respond-to(320) {
+        position: static;
+        margin-top: 12px;
+    }
     .link-favorite {
         float: right;
         margin-top: 8px;
+        @include respond-to(320) {
+            float: none;
+            display: block;
+            margin-top: 12px;
+        }
     }
     .btn {
         float: right;
+        @include respond-to(320) {
+            display: block;
+            float: none;
+            margin-top: 10px;
+            width: 125px;
+        }
     } 
     div {
         display: none;
@@ -335,28 +370,58 @@
         border-top: 0;
         @include box-shadow(none);
     }
+    @include respond-to(800) {
+        padding: 26px 20px 0;
+    }
+    @include respond-to(480) {
+        padding: 10px;
+    }
 }
 .gift-sent__left {
     float: left;
     padding: 5px 10px 0 0;
     width: 50%;
     @include box-sizing(border-box);
+    @include respond-to(960) {
+        width: 45%;
+    }
+    @include respond-to(800) {
+        float: none;
+        margin-bottom: 20px;
+        width: 100%;
+        padding: 5px 0 0 0;
+    } 
 }
 .gift-sent__right {
     float: right;
     width: 50%;
     @include box-sizing(border-box);
+    @include respond-to(960) {
+        width: 55%;
+    } 
+    @include respond-to(800) {
+        float: none;
+        width: 100%;
+    }  
     .gift-want {
         width: 100%;
         margin: 0 0 16px;
         height: 178px;
         border-color: #a9a69b;
+        @include respond-to(320) {
+            height: auto;
+        }   
     }
     .gift-want__footer {
         padding-top: 16px;
         bottom: 16px;
         border-top: 1px solid #adadad;
         @include box-shadow(inset 0 1px 0 rgba(255,255,255,.95));
+        @include respond-to(320) {
+            border-top: 0;
+            margin-top: 0;
+            @include box-shadow(none);
+        }
     }
 }
 .gift-sent__user {
@@ -398,6 +463,9 @@
     }
 }
 .gift-sent__term {
+    @include respond-to(768) {
+       text-align: center;
+    }
     span {
         display: inline-block;
         margin-left: 10px;
@@ -587,5 +655,121 @@
     }
     @include respond-to(320) {
         font-size: 11px;
+    }
+}
+
+.exited {
+    color: #eff6f0;
+    overflow: auto;
+    .logo {
+        width: 100%;
+        background: url(../img/logo-bg.jpg) 0 0 repeat;
+    }
+    .l-layout {
+        position: static;
+        margin-bottom: -70px;
+        background: url(../img/layout-bg2.jpg) 0 49px repeat-x;
+        @include background-size(35px, 100%);
+    }
+    .gift-want {
+        float: none;
+        margin: 95px auto 0;
+        width: 334px;
+        height: auto;
+        border: 1px solid rgba(0,0,0,.3);
+        @include respond-to(480) {
+            margin-top: 50px;
+            width: 95%;
+        }
+        @include respond-to(320) {
+            
+        }
+    }
+    .gift-want__descr {
+        color: #676767;
+        @include respond-to(480) {
+            height: 90px;
+        }
+        @include respond-to(320) {
+            height: 65px;
+        }
+    }
+    .gift-want__price {
+        b {
+            font-size: 31px;
+            @include respond-to(320) {
+                font-size: 17px;
+            }
+            @include respond-to(320) {
+                font-size: 21px;
+            }
+        }
+    }
+    .gift-want__footer {
+        position: static;
+        @include respond-to(320) {
+            margin: 0;
+        }
+    }
+    .enter-soc,  
+    .gift-want__price {
+        display: inline-block;
+        vertical-align: bottom;
+        @include respond-to(480) {
+            display: block;
+            text-align: center;
+        }
+    }
+    .enter-soc__vk {
+        text-transform: uppercase;
+        font-size: 13px;
+        padding-right: 14px;
+        line-height: 40px;
+    }
+    .footer {
+        position: relative;
+        height: 70px;
+        text-align: center;
+        background: none;
+        border: 0;
+        color: #eff6f0;
+    }
+    .push {
+        height: 70px;
+    }
+    .l-container {
+        padding-bottom: 200px;
+        background: url(../img/letter.png) 50% 142px no-repeat;
+        @include respond-to(480) {
+            background: none;
+        }
+    }
+}
+.exited__user {
+    text-align: center;
+    padding-top: 30px;
+}
+.user-ava_green {
+    border-color: #186939;  
+    @include box-shadow(0 1px 0 rgba(255,255,255,.5));
+    img {
+        
+    }
+}
+.exited__user-info {
+    margin: 0 auto;
+    width: 320px;
+    font-size: 20px;
+    @include respond-to(320) {
+        font-size: 13px;
+        width: 90%;
+    }
+    strong {
+        display: block;
+        @include b;
+        font-size: 23px;
+        @include respond-to(320) {
+            font-size: 21px;
+        }
     }
 }

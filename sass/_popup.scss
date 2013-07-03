@@ -73,6 +73,7 @@
     @include respond-to(480) {
         float: none;
         width: 100%;
+        padding-right: 0;
     }
 }
 .popup__right {
@@ -198,14 +199,26 @@
             }
         }
     }
+    .popup__top {
+        @include respond-to(480) {
+            font-size: 0;
+            .popup__left,
+            .popup__right {
+                float: none;
+                display: inline-block;
+                vertical-align: middle;
+                width: 50%;
+            }  
+        }
+    }
     .popup__left {
         float: left;
         padding-left: 1.5%;
         width: 32%;
         @include respond-to(480) {
             width: 100%;
-            margin-left: 0;
-            left: 0;
+            padding-left: 0;
+            float: none;
         }
     }
     .popup__right {
@@ -213,7 +226,7 @@
         width: 68%;
         @include respond-to(480) {
             width: 100%;
-            left: 0;
+            float: none;
         }
         .select_width {
             width: 100%;
@@ -242,16 +255,7 @@
     }
 }
 .popup__title {
-    padding: 21px 0 0;
-    color: #000;
-    font-size: 19px;
-    span {
-        display: block;
-    }
-    strong {
-        font-weight: 700;
-        font-size: 29px;
-    }
+    
 }
 
 .popup__img {
@@ -266,6 +270,8 @@
     }
     @include respond-to(480) {
         text-align: center;
+        width: 75px;
+        float: left;
     }
     img {
         border: 7px solid #fff;
@@ -275,6 +281,11 @@
             position: static;
             border: 0;
             @include box-shadow(none);
+        }
+        @include respond-to(480) {
+            display: block;
+            width: 100%;
+            height: auto;
         }
     }
     .clip {
@@ -298,17 +309,34 @@
     font-size: 12px;
 }
 .popup__title {
+    padding: 21px 0 0;
+    color: #000;
+    font-size: 19px;
+    span {
+        display: block;
+    }
+    strong {
+        font-weight: 700;
+        font-size: 29px;
+        @include respond-to(480) {
+            font-size: 16px;
+        }
+    }
     .popup__label {
         margin-bottom: 0;
     }
     @include respond-to(480) {
         text-align: center;
+        font-size: 16px;
     }
 }
 
 .code {
     font-size: 12px;
     color: #3f3f3f;
+    @include respond-to(480) {
+        text-align: center;
+    }
     p {
         margin-bottom: 16px;
     }
@@ -316,6 +344,9 @@
 .code__namber {
     margin: 4px 0 12px;
     font-size: 44px;
+    @include respond-to(480) {
+        font-size: 28px;
+    }
 }
 .popup__event {
     @include respond-to(480) {
