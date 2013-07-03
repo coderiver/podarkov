@@ -573,7 +573,7 @@ a { color: #00919e; text-decoration: none; }
 .exited { color: #eff6f0; overflow: auto; }
 .exited .logo { width: 100%; background: url(../img/logo-bg.jpg) 0 0 repeat; }
 .exited .l-layout { position: static; margin-bottom: -70px; background: url(../img/layout-bg2.jpg) 0 49px repeat-x; -moz-background-size: 35px 100%; -webkit-background-size: 35px 100%; background-size: 35px 100%; }
-.exited .gift-want { float: none; margin: 95px auto 0; width: 334px; height: auto; border: 1px solid rgba(0, 0, 0, 0.3); }
+.exited .gift-want { float: none; padding-bottom: 15px; margin: 95px auto 0; width: 334px; height: auto; border: 1px solid rgba(0, 0, 0, 0.3); }
 @media only screen and (max-width: 480px) { .exited .gift-want { margin-top: 50px; width: 95%; } }
 .exited .gift-want__descr { color: #676767; }
 @media only screen and (max-width: 480px) { .exited .gift-want__descr { height: 90px; } }
