@@ -13,7 +13,7 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
     <![endif]-->
 </head>
-<body>
+<body class="is-with-extend-sidebar">
 <div class="l-layout">
     <header class="header">
         <div class="l-container">
@@ -30,7 +30,9 @@
                     <i class="icon icon_gift"></i>
                 </a>
                 <nav class="header-nav">
-                    <button class="header-nav__button js-key-nav"><i></i></button>
+                    <button class="header-nav__button js-key-nav">
+                        <span><i>1</i></span>
+                    </button>
                     <ul class="header-nav__list js-nav">
                         <li><a href="#">Полученные</a></li>
                         <li><a href="#">Отправленные</a></li>
@@ -266,6 +268,10 @@
             </div>
         </aside>
         <aside class="sidebar sidebar_detail">
+            <div class="item item_header">
+                <a href="#" class="btn btn_gray">Назад</a>
+                <a href="#" class="btn btn_green">ВЫБРАТЬ</a>
+            </div>
             <div class="sidebar-scroll">
                 <div class="scroller js-baron3">
                     <div class="container">
@@ -317,7 +323,7 @@
                 </div>
             </div>
         </aside>
-        <div class="main-col js-main-col main-col_small">
+        <div class="main-col js-main-col">
             <ul class="tab tab_nav js-tab">
                 <li data-tab=".js-tab1" class="is-active">
                     <span>ВСЕ ПОДАРКИ<i></i></span>

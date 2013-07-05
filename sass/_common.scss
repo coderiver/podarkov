@@ -150,9 +150,6 @@ a{
         bottom: 0;
         left: 257px;
     }
-    .main-col_small {
-        left: 514px;
-    }
     .tab-cont {
         position: absolute;
         top: 52px;
@@ -177,6 +174,15 @@ a{
         .l-layout {
             background: #e6e0db;
         }
+    }
+}
+.is-with-extend-sidebar {
+    .main-col {
+        left: 514px;
+        right: -257px;
+    }
+    .l-col-wrap {
+        overflow: hidden;
     }
 }
 /* ------------------------------------ //END Main styles --------------------------------------- */
@@ -287,31 +293,6 @@ a{
     // @include respond-to(320) {
     //     width: 100%;
     // }
-    span {
-        display: none;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -12px 0 0 -10px;
-        @include s(user-pic);
-        // @include respond-to(640) {
-        //     display: block;
-        // }
-        i {
-            position: absolute;
-            top: -11px;
-            right: -9px;
-            width: 17px;
-            height: 17px;
-            text-align: center;
-            line-height: 17px;
-            color: #fff;
-            background: #f00;
-            font: bold 11px Arial, sans-serif;
-            @include border-radius(50%);
-            border: 2px solid #06b838;
-        }
-    }
     &:before {
         content: "";
         position: absolute;  
@@ -363,7 +344,7 @@ a{
     float: left;
     height: 49px;
     @include respond-to(640) {
-        //display: none;
+        float: right;
     }
 }
 .header-nav.is-active {
@@ -373,11 +354,13 @@ a{
         background: #fefefd;
         border-left: 1px solid transparent;
         @include box-shadow(none);
-        i {
+        &:before {
             @include s(menu-arr-act);
             margin: -7px 0 0 -5px;
         }
-       
+        @include respond-to(640) {
+            height: 49px;
+        }
     }
 }
 .header-nav__button {
@@ -391,16 +374,48 @@ a{
     background: none;
     border-left: 1px solid #00662b;
     @include box-shadow(inset 1px 0 0 #4eb672);
-     @include respond-to(640) {
+    @include respond-to(640) {
         height: 49px;
         margin: 0;
     }
-    i {
+    @include respond-to(640) {
+        border-left: 0;
+        @include box-shadow(none);
+    }
+    &:before {
+        content: "";
         position: absolute;
         top: 50%;
         left: 50%;
         margin: -3px 0 0 -5px;
         @include s(menu-arr); 
+        @include respond-to(640) {
+            display: none;
+        }
+    }
+    span {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -12px 0 0 -10px;
+        @include s(user-pic);
+        @include respond-to(640) {
+            display: block;
+        }
+        i {
+            position: absolute;
+            top: -11px;
+            right: -9px;
+            width: 17px;
+            height: 17px;
+            text-align: center;
+            color: #fff;
+            background: #f00;
+            font: bold 11px/17px Arial, sans-serif;
+            @include border-radius(50%);
+            border: 2px solid #06b838;
+        }
     }
 }
 .header-nav__list {
