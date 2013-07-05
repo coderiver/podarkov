@@ -105,11 +105,11 @@ $(document).ready(function() {
     
 
 // temp script
-    $(".friend-list li a").click(function(){
-        $(".friend-list li a").removeClass("is-active");
-        $(this).addClass("is-active");
-        $(".sidebar_detail").show();
+    // $(".friend-list li a").click(function(){
+    //     $(".friend-list li a").removeClass("is-active");
+    //     $(this).addClass("is-active");
+    //     $(".sidebar_detail").show();
         
-    });
+    // });
     
 });

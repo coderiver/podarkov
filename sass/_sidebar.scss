@@ -11,8 +11,13 @@
     width: 257px;
     border-right: 1px solid #aeadad;
     @include box-sizing(border-box);
-    @include respond-to(768) {
-        //display: none;
+    @include respond-to(640) {
+        float: none;
+        width: 100%;
+        background: #F2EDE9;
+        .sidebar-scroll {
+            position: static;
+        }
     }  
     .scroller__bar-wrapper {
         right: 5px;
@@ -58,6 +63,9 @@
     @include clr;
     text-align: center;
     @include box-sizing(border-box);
+    @include respond-to(640) {
+        @include background-image(linear-gradient(#fff, #f7f5f4));
+    }
     .btn {
         float: left;
         &:last-child {
@@ -152,8 +160,7 @@
     li {
         float: right;
         width: 119px;
-        height: 35px;
-        line-height: 30px;
+        padding: 8px 0;
         font-size: 11px;
         text-align: left;  
         @include b;

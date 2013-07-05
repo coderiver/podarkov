@@ -270,20 +270,23 @@ a{
             //@include s(vk-s);
         }
     }
+    @include respond-to(640) {
+           display: none;
+    }
 }
 .header-user__pic {
     position: relative;
     display: inline-block;
     margin-right: 15px;
     vertical-align: middle;
-    @include respond-to(640) {
-        display: block;
-        width: 60px;
-        height: 47px;
-    }
-    @include respond-to(320) {
-        width: 100%;
-    }
+    // @include respond-to(640) {
+    //     display: block;
+    //     width: 60px;
+    //     height: 47px;
+    // }
+    // @include respond-to(320) {
+    //     width: 100%;
+    // }
     span {
         display: none;
         position: absolute;
@@ -291,9 +294,9 @@ a{
         left: 50%;
         margin: -12px 0 0 -10px;
         @include s(user-pic);
-        @include respond-to(640) {
-            display: block;
-        }
+        // @include respond-to(640) {
+        //     display: block;
+        // }
         i {
             position: absolute;
             top: -11px;
@@ -314,9 +317,9 @@ a{
         position: absolute;  
         bottom: -4px;
         right: -8px;
-        @include respond-to(640) {
-           display: none;
-        }
+        // @include respond-to(640) {
+        //    display: none;
+        // }
     }
     i {
         position: absolute;
@@ -360,7 +363,7 @@ a{
     float: left;
     height: 49px;
     @include respond-to(640) {
-        display: none;
+        //display: none;
     }
 }
 .header-nav.is-active {
@@ -374,6 +377,7 @@ a{
             @include s(menu-arr-act);
             margin: -7px 0 0 -5px;
         }
+       
     }
 }
 .header-nav__button {
@@ -387,6 +391,10 @@ a{
     background: none;
     border-left: 1px solid #00662b;
     @include box-shadow(inset 1px 0 0 #4eb672);
+     @include respond-to(640) {
+        height: 49px;
+        margin: 0;
+    }
     i {
         position: absolute;
         top: 50%;
@@ -618,6 +626,10 @@ a{
             width: 100% !important
         }
         //overflow: visible;
+    }
+    @include respond-to(640) {
+        float: none;
+        width: 100%;
     }
     .container {
         padding: 3% 3.2%; 
