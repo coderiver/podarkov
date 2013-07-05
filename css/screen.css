@@ -69,6 +69,7 @@ a { color: #00919e; text-decoration: none; }
 
 .is-with-extend-sidebar .main-col { left: 514px; right: -257px; }
 .is-with-extend-sidebar .l-col-wrap { overflow: hidden; }
+.is-with-extend-sidebar .gift-want { float: none; }
 
 /* ------------------------------------ //END Main styles --------------------------------------- */
 /* ----------------------------------------- Header --------------------------------------------- */
