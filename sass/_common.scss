@@ -77,7 +77,9 @@ a{
         background-position: 0 0;
     }
     @include respond-to(768) {
-       background: #f7f3e3 url(../img/main-bg.jpg) 0 0 repeat;
+    }
+    @include respond-to(640) {
+        margin: 0 auto -137px;
     }
 }
 .l-container {
@@ -90,6 +92,9 @@ a{
 .push {
     clear: both; 
     height: 96px;
+    @include respond-to(640) {
+        height: 137px;
+    }
 }
 .wrapper {
     overflow: hidden;
@@ -166,7 +171,12 @@ a{
 }
 .is-with-popup {
     @include respond-to(640) {
-        //overflow: hidden; 
+        .main-col {
+            display: none;
+        }
+        .l-layout {
+            background: #e6e0db;
+        }
     }
 }
 /* ------------------------------------ //END Main styles --------------------------------------- */
@@ -174,7 +184,7 @@ a{
 /* ----------------------------------------- Header --------------------------------------------- */
 .header {
     position: relative;
-    z-index: 100;
+    z-index: 2000;
     @include clr;
     height: 48px;  
     border-bottom: 1px solid #00662b;
@@ -607,7 +617,7 @@ a{
         .scroller {
             width: 100% !important
         }
-        overflow: visible;
+        //overflow: visible;
     }
     .container {
         padding: 3% 3.2%; 

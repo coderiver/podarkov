@@ -40,19 +40,19 @@ $(document).ready(function() {
     select.click(function(){
         if ($(this).hasClass("is-active")) {
             $(this).removeClass("is-active");
-            $(this).parent().find(select_list).slideUp("fast");
+            $(this).parent().find(select_list).hide();
         }
         else {
             select.removeClass("is-active");
-            select_list.slideUp();
+            select_list.hide();
             $(this).addClass("is-active");
-            $(this).parent().find(select_list).slideDown("fast");
+            $(this).parent().find(select_list).show();
         }
     });
     select_list_item.click(function(){
         var text = $(this).html();
         select_val.html(text);
-        $(this).parent().slideUp();
+        $(this).parent().hide();
         $(this).parent().parent().find(".js-select").removeClass("is-active");
     });
 // tabs

@@ -12,7 +12,7 @@
     border-right: 1px solid #aeadad;
     @include box-sizing(border-box);
     @include respond-to(768) {
-        display: none;
+        //display: none;
     }  
     .scroller__bar-wrapper {
         right: 5px;
@@ -76,6 +76,7 @@
     text-align: center;
     color: #323030;
     font-size: 23px;
+    @include box-shadow(none);
     .close {
         position: absolute;
         top: 11px;

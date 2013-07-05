@@ -9,6 +9,9 @@
     background: #000;
     @include opacity(.5); 
     z-index: 1000;
+    @include respond-to(640) {
+        display: none;
+    }
 }
 .popup {
     position: absolute;
@@ -30,15 +33,14 @@
         margin-left: -260px;
     }
     @include respond-to(640) {
-        position: fixed;
+        position: relative;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
         width: 100%;
         margin: 0;
-        overflow-y: auto;
         @include border-radius(0);
+        @include box-shadow(none);
+        border: 0;
     }
     .close {
         position: absolute;

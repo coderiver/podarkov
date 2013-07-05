@@ -153,14 +153,18 @@
 
 .tab-cont {
     //display: none;
-    //padding: 3% 3.2% 3%;  
+    //padding: 3% 3.2% 3%; 
+    @include respond-to(640) {
+        display: none;
+    } 
 }
 
 .tab-cont__title {
     margin-bottom: 21px;
     color: #d37c00;
     font-size: 19px;
-    text-shadow: 0 1px 0 #fff;
+    text-shadow: 0 1px 0 #fff;  
+    
 }
 
 .gift-want-wrap {
@@ -398,11 +402,15 @@
     @include box-sizing(border-box);
     @include respond-to(960) {
         width: 55%;
-    } 
+    }    
     @include respond-to(800) {
         float: none;
+        margin: 0 auto 20px;
+        width: 80%;
+    } 
+    @include respond-to(640) {
         width: 100%;
-    }  
+    }   
     .gift-want {
         width: 100%;
         margin: 0 0 16px;
