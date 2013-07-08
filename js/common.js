@@ -1,16 +1,23 @@
 $(document).ready(function() {
 
 // init variables
-    
+    var tab = $(".js-tab");
+    var nav = $(".js-nav");
+    var select = $(".js-select");
+    var select_val = $(".js-select div");
+    var select_list = $(".js-select-list");
+    var select_list_item = $(".js-select-list li");
+    var body = $("body");
+    var main_col = $(".js-main-col");
+
 // show/hide header nav
     $(".js-key-nav").click(function(){
         $(this).parent().toggleClass("is-active");
-        $(".js-nav").fadeToggle("fast");
+        nav.toggle();
     });
 
+// resize columns
     function resize_col() {
-        var body = $("body");
-        var main_col = $(".js-main-col");
         var main_col_width = $(".l-layout").outerWidth() - $(".js-sidebar").outerWidth();
         var main_col_width2 = $(".l-col-wrap").outerWidth() - $(".js-sidebar").outerWidth();
         if ($(window).width() > 768) {
@@ -27,16 +34,15 @@ $(document).ready(function() {
         }
     }
     resize_col();
+
+// inin functons on resize event
     $(window).resize(function(event) {
         resize_col();
         baron_init();
+        fixed_tab();
     });
 
 // Select list
-    var select = $(".js-select");
-    var select_val = $(".js-select div");
-    var select_list = $(".js-select-list");
-    var select_list_item = $(".js-select-list li");
     select.click(function(){
         if ($(this).hasClass("is-active")) {
             $(this).removeClass("is-active");
@@ -55,22 +61,22 @@ $(document).ready(function() {
         $(this).parent().hide();
         $(this).parent().parent().find(".js-select").removeClass("is-active");
     });
-// tabs
-	// var tab = $(".js-tab li");
-	// tab.first().addClass("is-active");
-	// $(".js-tab1").show();
-	// tab.click(function(){
-	// 	var index = $(this).attr("data-tab");
-	// 	if ($(this).hasClass("is-active")) {
-	// 		return false;
-	// 	}
-	// 	else {
-	// 		tab.removeClass("is-active");
-	// 		$(this).addClass("is-active");
-	// 		$(".tab-cont").hide();
-	// 		$(index).show();
-	// 	}
-	// });
+
+// fixed tabs 
+    function fixed_tab() {
+        var tab_pos = tab.position().top;
+        $(window).scroll(function(){
+            var scroll_pos = $(window).scrollTop();
+            if (tab_pos >= scroll_pos) {
+                tab.removeClass("is-fixed-tab");
+            }
+            else {
+                tab.addClass("is-fixed-tab");
+            }
+            console.log($(window).scrollTop());
+        });
+    }
+    fixed_tab();
 
 // baron scroller
     function baron_init() {
@@ -102,14 +108,5 @@ $(document).ready(function() {
         }
     }
     baron_init();
-    
-
-// temp script
-    // $(".friend-list li a").click(function(){
-    //     $(".friend-list li a").removeClass("is-active");
-    //     $(this).addClass("is-active");
-    //     $(".sidebar_detail").show();
-        
-    // });
     
 });

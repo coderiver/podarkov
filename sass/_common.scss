@@ -443,60 +443,7 @@ a{
     }
 }
 
-.video-wrap {
-    float: right;
-    width: 50%;
-    @include box-sizing(border-box);
-    @include respond-to(640) {
-        float: none;
-        width: 100%;
-    }
-}
-.video {
-    position: relative;
-    width: 87.5%;
-    overflow: hidden;
-    border: 6px solid rgba(13,112,52,.5);
-    @include box-shadow(0 1px 0 rgba(255,255,255,.75), inset 0 0 16px rgba(0,0,0,.76));
-    @include respond-to(640) {
-        width: 90%;
-        margin: 0 auto 26px;
-    }
-    img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-}
-.video__play {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -38px 0 0 -38px;
-    width: 76px;
-    height: 76px;
-    border: 1px solid #00ae2c;
-    @include border-radius(50%);
-    background: #00bc30;
-    @include box-shadow(inset 0 0 0 2px #86f4a2);
-    @include background-image(linear-gradient(bottom, #00bc30 0%, #00d637 100%));
-    &:hover {
-        background: #00d637;
-        @include background-image(linear-gradient(bottom, #00d637 0%, #00bc30 100%));
-    }
-    &:before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -15px 0 0 -8px;
-        width: 0px;
-        height: 0px;
-        border-style: solid;
-        border-width: 15px 0 15px 23px;
-        border-color: transparent transparent transparent #ffffff;
-    }
-}
+
 /* -------------------------------------- //END Header ------------------------------------------ */
 
 /* ------------------------------------- Independent blocks -------------------------------------- */
@@ -637,6 +584,7 @@ a{
 .icon_tab5 {@include s(tab5);}
 .icon_tab6 {@include s(tab6);}
 .main-col {
+    position: relative;
     overflow: hidden;
     background: #f7f3e3 url(../img/main-bg.jpg) 0 0 repeat;
     @include respond-to(768) {
@@ -648,6 +596,7 @@ a{
     @include respond-to(640) {
         float: none;
         width: 100%;
+        position: static;
     }
     .container {
         padding: 3% 3.2%; 
@@ -784,6 +733,7 @@ a{
 }
 .input_s {
     padding: 5px;
+    font-size: 13px;
 }
 .input_big {
     padding: 8px 17px;
@@ -990,6 +940,100 @@ a{
     padding-top: 19px;
 }
 
+.message {
+    position: absolute;
+    z-index: 2000;
+    top: 12px;
+    right: 17px;
+    padding: 10px 20px 10px 0;
+    border: 1px solid #000;
+    @include border-radius(5px);
+    background: #2d2d2d;
+    @include box-sizing(border-box);
+    @include box-shadow(inset 0 0 0 1px rgba(255,255,255,.15));
+    @include background-image(linear-gradient(bottom, #2d2d2d 0%, #5d5d5d 100%));
+    @include clr;
+    @include respond-to(320) {
+        padding-left: 0;
+    }
+}
+.message__icon-wrap {
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    vertical-align: middle;
+    @include respond-to(320) {
+        width: 45px;
+    }
+    i {
+        position: absolute;
+        top: -7px;
+        right: -12px;
+        width: 17px;
+        height: 17px;
+        border: 2px solid #515151;
+        @include border-radius(50%);
+        text-align: center;
+        color: #fff;
+        font: bold 11px/19px Arial, sans-serif;
+    }
+}
+.message__text {
+    display: inline-block;
+    vertical-align: middle;
+    width: 170px;
+    padding-left: 18px;
+    color: #fff;
+    font: 12px/1.4 normal Arial, sans-serif;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.45);
+    border-left: 1px solid #000;
+    @include box-shadow(inset 1px 0 0 rgba(255,255,255,.15));
+    @include respond-to(320) {
+        width: 145px;
+    }
+    span {
+        display: block;
+    }
+}
+.message__icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.message_sent {
+    .message__icon {
+        @include s(sent);
+    }
+}
+.message_gift {
+    .message__icon {
+        @include s(gift);
+    }
+}
+.message_gift-got {
+    .message__text {
+        span {
+            color: #ffc556;
+        }
+    }
+    .message__icon-wrap {
+        i {
+            background: #018b33;
+        }
+    }
+}
+.message_gift-danger {
+    .message__text {
+        span {
+            color: #ffa9a9;
+        }
+    }
+    .message__icon-wrap {
+        i {
+            background: #ff3434;
+        }
+    }
+}
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 /* ----------------------------------------- Footer ---------------------------------------------- */

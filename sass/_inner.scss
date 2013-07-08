@@ -102,7 +102,29 @@
     }
 }
 .tab_simple {
-    
+    @include respond-to(320) {
+        height: auto;
+        border: 0;
+    }
+    li {
+        @include respond-to(320) {
+            float: none;
+            height: auto;
+            border-bottom: 1px solid #adadad;
+            &:first-child {
+                border-top: 1px solid #adadad;
+            }
+        }
+    }
+}
+.is-fixed-tab {
+    @include respond-to(640) {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2000;
+    }
 }
 .tab_nav {
     @include respond-to(768) {
