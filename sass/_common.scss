@@ -72,7 +72,7 @@ a{
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    background: url(../img/layout-bg.jpg) 50% 0 repeat-y;
+    //background: url(../img/layout-bg.jpg) 50% 0 repeat-y;
     @include respond-to(1024) {
         background-position: 0 0;
     }
@@ -83,8 +83,8 @@ a{
     }
 }
 .l-container {
-    margin: 0 auto;
-    //max-width: 1024px;
+    margin: 0 auto; 
+    max-width: 1024px;
     padding: 0 5px;
     @include clr;
     
@@ -168,6 +168,9 @@ a{
 // }
 .is-full-width {
     overflow: hidden;
+    .l-container {
+        max-width: 100%;
+    }
     .l-layout {
         position: absolute;
         top: 0;
@@ -633,15 +636,9 @@ a{
 .icon_gift {@include s(gift);}
 .icon_cake2 {@include s(cake2);}
 .icon_friend {@include s(fr);}
-.icon_case {@include s(case);}
 .icon_boot {@include s(boot);}
 .icon_gift2 {@include s(gift2);}
-.icon_tab1 {@include s(tab1);}
-.icon_tab2 {@include s(tab2);}
-.icon_tab3 {@include s(tab3);}
-.icon_tab4 {@include s(tab4);}
-.icon_tab5 {@include s(tab5);}
-.icon_tab6 {@include s(tab6);}
+
 .main-col {
     position: relative;
     overflow: hidden;

@@ -20,18 +20,24 @@ $(document).ready(function() {
     function resize_col() {
         var main_col_width = $(".l-layout").outerWidth() - $(".js-sidebar").outerWidth();
         var main_col_width2 = $(".l-col-wrap").outerWidth() - $(".js-sidebar").outerWidth();
-        if ($(window).width() > 640) {
-            body.addClass("is-full-width");
+        if ($("body").hasClass("index")) {
+
         }
         else {
-            body.removeClass("is-full-width");
+            if ($(window).width() > 640) {
+                body.addClass("is-full-width");
+            }
+            else {
+                body.removeClass("is-full-width");
+            }
+            if (($(window).width() <= 1024) && ($(window).width() >= 640)) {
+                main_col.width(main_col_width);
+            }
+            else {
+                main_col.removeAttr("style");
+            }
         }
-        if (($(window).width() <= 1024) && ($(window).width() >= 640)) {
-            main_col.width(main_col_width);
-        }
-        else {
-            main_col.removeAttr("style");
-        }
+        
     }
     resize_col();
 

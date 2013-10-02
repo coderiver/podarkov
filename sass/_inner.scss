@@ -17,6 +17,7 @@
     // }
     img {
         display: block;
+        margin: 0 auto;
     }
 }
 .tab {
@@ -26,38 +27,36 @@
     border-left: 0;
     border-top: 0;
     background: #efebe7;
-    overflow: hidden;
+    @include clr;
+    font-size: 0;
+    white-space: nowrap;
     @include box-sizing(border-box);
     @include box-shadow(inset 0 0 0 1px rgba(255,255,255,.95));
     @include background-image(linear-gradient(bottom, #efebe7 0%, #f8efef 88.31%, #f8efef 100%));
     @include respond-to(640) {
         border-top: 1px solid #adadad;
     }
-    li {
-        float: left;
-        margin-left: -1px;
-        padding: 0 3%;
-        height: 50px;
-        cursor: pointer;
-        font: bold 11px/50px Arial, sans-serif;
-        text-transform: uppercase;
-        border: 1px solid #adadad;
-        border-top: 0;
-        border-bottom:0;
-        @include box-shadow(inset 0 0 0 1px rgba(255,255,255,.95));
-        text-shadow: 0 1px 0 rgba(255,255,255,.75);
-        @include respond-to(640) {
-            @include box-shadow(none);
-        }
-        &:hover {
-            background: #f8efef;
-        }
-        &:active {
-            background: #f8efef;
-            @include box-shadow(inset 0 2px 4px 0 rgba(0,0,0,.2));
-        }
+}
+.tab__item {
+    display: inline-block;
+    margin-left: -1px;
+    text-transform: uppercase;
+    border: 1px solid #adadad;
+    border-top: 0;
+    border-bottom:0;
+    @include box-shadow(inset 0 0 0 1px rgba(255,255,255,.95));
+    text-shadow: 0 1px 0 rgba(255,255,255,.75);
+    @include respond-to(640) {
+        @include box-shadow(none);
     }
-    .is-active {
+    &:hover {
+        background: #f8efef;
+    }
+    &:active {
+        background: #f8efef;
+        @include box-shadow(inset 0 2px 4px 0 rgba(0,0,0,.2));
+    }
+    &.is-active {
         color: #fff;
         cursor: default;
         @include box-shadow(inset 0 0 10px rgba(53,53,53,.5));
@@ -74,9 +73,11 @@
             background-size: 2px 2px;
             background-position: 0 0, 1px 1px;
         }
-        
+        a {
+            color: #fff;
+        }
     }
-    .is-new {
+    &.is-new {
         i {
             display: block;
         }
@@ -100,13 +101,23 @@
         background: #ff3434;
         font-style: normal;
     }
+    a {
+        display: block;
+        padding: 0 50px;
+        color: #928e8d;
+        height: 50px;
+        font: bold 11px/50px Arial, sans-serif;
+        @include respond-to(800) {
+            padding: 0 20px;
+        }
+    }
 }
 .tab_simple {
     @include respond-to(320) {
         height: auto;
         border: 0;
     }
-    li {
+    .tab__item {
         @include respond-to(320) {
             float: none;
             height: auto;
@@ -131,11 +142,18 @@
         height: 101px;
         position: relative;
     }
-    li {
-        width: 63px;
+    .tab__item {
+        position: relative;
         padding: 0;
         text-align: center;
         @include box-sizing(border-box); 
+        a {
+            display: block;
+            width: 63px;
+            padding: 0;
+            height: 50px;
+            color: #fff;
+        }
         .icon {
             display: inline-block;
             vertical-align: middle;
@@ -145,8 +163,9 @@
             margin: 0;
         }
         &:first-child {
-            width: auto;
-            padding: 0 2%;
+            @include respond-to(768) {
+                left: 0;
+            }
             span {
                 display: inline-block;
             }
@@ -175,12 +194,6 @@
                 border-bottom: 1px solid #adadad;
             }
         }
-        &:first-child {
-            @include respond-to(768) {
-                left: 0;
-            }
-            
-        }
         &:last-child {
             @include respond-to(768) {
                 right: 0;
@@ -191,41 +204,92 @@
                 border-left: 0;;
             }
         }
-    }
-    .is-active {
-        width: auto;
-        padding: 0 2%;
-        background-color: #d68d00;
-        @include background-image(linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), 
-        linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00));
-        background-size: 2px 2px;
-        background-position:0 0, 1px 1px;
-        &:hover {
+        &.is-active {
+            a {
+                width: 130px;
+            }
             background-color: #d68d00;
             @include background-image(linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), 
             linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00));
             background-size: 2px 2px;
             background-position:0 0, 1px 1px;
+            &:hover {
+                background-color: #d68d00;
+                @include background-image(linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), 
+                linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00));
+                background-size: 2px 2px;
+                background-position:0 0, 1px 1px;
+            }
+            span {
+                display: inline-block;
+                line-height: 1;
+                margin-left: 5px;
+                vertical-align: middle; 
+            }
+            
+            @include respond-to(768) {
+                padding: 0;
+                width: 20%;
+                text-align: left;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            @for $i from 1 through 20 {
+              .icon_tab#{$i} {@include s(tab#{$i}-act);}
+            }
         }
-        span {
-            display: inline-block;
-            line-height: 1;
-            margin-left: 5px;
-            vertical-align: middle; 
+        &.is-other-active {
+            background: #efece8;
+            @include box-shadow(0 1px 0 #fff, inset 0 2px 0 #fff);
+            @include background-image(linear-gradient(top, #efece8, #fff));
         }
-        .icon_tab1 {@include s(tab1-act);}
-        .icon_tab2 {@include s(tab2-act);}
-        .icon_tab3 {@include s(tab3-act);}
-        .icon_tab4 {@include s(tab4-act);}
-        .icon_tab5 {@include s(tab5-act);}
-        .icon_tab6 {@include s(tab6-act);}
-        @include respond-to(768) {
-            padding: 0;
-            width: 20%;
+    }
+}
+@for $i from 1 through 20 {
+  .icon_tab#{$i} {@include s(tab#{$i});} 
+}
+.subtab {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 51px;
+    background: #fff;
+    width: 512px;
+    overflow: hidden;
+    z-index: 100;
+    .subtab__item {
+        float: left;
+        padding: 0 0 0 20px;
+        width: 33.3%;
+        @include box-sizing(border-box);
+        text-align: left;
+        border-bottom: 1px solid #e4e4e4;
+        a {
+            display: block;
+            position: relative;
+            padding-left: 30px;
+            height: 36px;
+            width: 100%;
+            color: #353535;
             text-align: left;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            font-weight: normal;
+            line-height: 36px;
+            text-transform: capitalize;
+            @include box-sizing(border-box);
+            .icon {
+                left: 0;
+                top: 9px;
+                background-color: transparent;
+                border: none;
+            }
+            .icon_tab-s11,
+            .icon_tab-s12 {
+                left: 3px;
+            }
+        }
+        @for $i from 1 through 12 {
+          .icon_tab-s#{$i} {@include s(tab-s#{$i});} 
         }
     }
 }
@@ -306,6 +370,14 @@
         z-index: 2;
         @include rotate(-10);
     }
+    &.is-active {
+        .icon_corner {
+            &:before {
+                border-color: transparent #eea003 transparent transparent;
+            }
+        }
+        
+    }
     
 }
 .gift-want.is-favorite {
@@ -330,6 +402,53 @@
     position: absolute;
     top: 1px;
     right: 1px;
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+    @include border-radius(3px);
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 0 36px 36px 0;
+        border-color: transparent #d4d3cd transparent transparent;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 4px;
+        right: 3px;
+    }
+    @for $i from 1 through 19 {
+        &.icon_badge#{$i} {
+            &:after {
+                @include s(badge#{$i});
+            }
+        }
+    }
+}
+.icon_badge2,
+.icon_badge6,
+.icon_badge9,
+.icon_badge10,
+.icon_badge11,
+.icon_badge12,
+.icon_badge14,
+.icon_badge15,
+.icon_badge16 {
+    &:after {
+        right: 1px;
+    }
+}
+.icon_badge19 {
+    &:after {
+        right: 1px;
+        top: 2px;
+    }
 }
 .gift-want__descr {
     margin-left: 126px;

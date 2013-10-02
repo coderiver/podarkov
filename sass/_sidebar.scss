@@ -231,15 +231,29 @@
     @include clr;   
     div {
         overflow: hidden;
-        color: #9c9796;
+        color: #000;
         a {  
-            @include b;
+            font-weight: bold;
+            font-family: Arial,sans-serif;
+            color: #000;
+        }
+        &.is-inactive {
             color: #9c9796;
+            a {
+                color: #9c9796;
+            }
+            .icon {
+                @include opacity(.5);
+            }
         }
     }
     .icon {
         margin-right: 5px;
     }
+    @for $i from 1 through 12 {
+      .icon_ev-s#{$i} {@include s(ev-s#{$i});}
+    }
+
 }
 .last-events__title {
     float: left;
@@ -270,6 +284,16 @@
     &:last-child {
         a {
             border-bottom: 0;
+        }
+    }
+    &.is-green {
+        .friend__event {
+            color: #24a173;
+        }
+    }
+    &.is-yellow {
+        .friend__event {
+            color: #ff9c00;
         }
     }
 }
@@ -317,33 +341,11 @@
         display: block;
         margin: 0 auto;
     }
-}
-.is-birthday {
-    i {
-        @include s(birthday);
+    @for $i from 1 through 13 {
+      .icon_ev#{$i} {@include s(ev#{$i});}
     }
 }
-.is-wedding {
-    i {
-        @include s(wedding);
-    }
-}
-.is-baby {
-    i {
-        @include s(baby);
-    }
-}
-.is-new-job {
-    i {
-        @include s(job);
-    }
-}
-.is-danger {
-    color: #ff8f8f;
-    i {
-        @include s(danger);
-    }
-}
+
 
 .item_search {
     position: relative;
