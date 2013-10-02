@@ -19,6 +19,9 @@ $break-768: 768px;
 $break-800: 800px; 
 $break-960: 960px; 
 $break-1024: 1024px;
+$break-1100: 1100px;
+$break-1400: 1400px;
+$break-1930: 1930px;
 @mixin respond-to($media) {
   @if $media == 260 {
     @media only screen and (max-width: $break-280) { @content; }
@@ -43,6 +46,15 @@ $break-1024: 1024px;
   }
   @else if $media == 1024 {
     @media only screen and (max-width: $break-1024) { @content; }
+  }
+  @else if $media == 1100 {
+    @media only screen and (min-width: $break-1100) { @content; }
+  }
+  @else if $media == 1400 {
+    @media only screen and (min-width: $break-1400) { @content; }
+  }
+  @else if $media > 1930 {
+    @media only screen and (min-width: $break-1930) { @content; }
   }
 }
 // retina bg

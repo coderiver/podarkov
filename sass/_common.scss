@@ -84,7 +84,7 @@ a{
 }
 .l-container {
     margin: 0 auto;
-    max-width: 1024px;
+    //max-width: 1024px;
     padding: 0 5px;
     @include clr;
     
@@ -102,7 +102,71 @@ a{
 .wrap {
     @include clr;
 }
-.is-fixed {
+// .is-fixed {
+//     overflow: hidden;
+//     .l-layout {
+//         position: absolute;
+//         top: 0;
+//         bottom: 0;
+//         left: 0;
+//         right: 0;
+//         margin: 0;
+//     }
+//     .footer {
+//         position: absolute;
+//         bottom: 0;
+//         right: 0;
+//         left: 0;
+//         z-index: 1000;
+//     }
+//     .l-col-wrap {
+//         width: 1024px;
+//         position: absolute;
+//         top: 49px;
+//         bottom: 96px;
+//         left: 50%;
+//         margin-left: -512px;
+//         @include respond-to(1024) {
+//             left: 0;
+//             margin: 0;
+//             right: 0;
+//             width: 100%;
+//         }
+//     }
+//     .sidebar {
+//         position: absolute;
+//         left: 0;
+//         top: 0;
+//         bottom: 0;
+//     }
+//     .sidebar_detail {
+//         left: 257px;
+//         background: #f7efee;
+//     }
+//     .main-col {
+//         position: absolute;
+//         right: 0;
+//         top: 0;
+//         bottom: 0;
+//         left: 257px;
+//     }
+//     .tab-cont {
+//         position: absolute;
+//         top: 52px;
+//         right: 0;
+//         bottom: 0;
+//         left: 0;
+//     }
+    
+//     // .gift-sent-wrap {
+//     //     padding: 0 6.5% 0 3%;
+//     // }
+//     // .gift-want-wrap,
+//     // .gift-wrap {
+//     //     padding: 0 4% 0 3%;
+//     // }
+// }
+.is-full-width {
     overflow: hidden;
     .l-layout {
         position: absolute;
@@ -120,18 +184,13 @@ a{
         z-index: 1000;
     }
     .l-col-wrap {
-        width: 1024px;
+        width: 100%;
+        max-width: 100%;
         position: absolute;
         top: 49px;
         bottom: 96px;
-        left: 50%;
-        margin-left: -512px;
-        @include respond-to(1024) {
-            left: 0;
-            margin: 0;
-            right: 0;
-            width: 100%;
-        }
+        left: 0;
+        right: 0;
     }
     .sidebar {
         position: absolute;
