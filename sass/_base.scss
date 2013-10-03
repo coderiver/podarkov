@@ -48,7 +48,7 @@ $break-1930: 1930px;
     @media only screen and (max-width: $break-1024) { @content; }
   }
   @else if $media == 1100 {
-    @media only screen and (min-width: $break-1100) { @content; }
+    @media only screen and (max-width: $break-1100) { @content; }
   }
   @else if $media == 1400 {
     @media only screen and (min-width: $break-1400) { @content; }
