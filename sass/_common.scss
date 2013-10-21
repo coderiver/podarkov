@@ -91,7 +91,7 @@ a{
 }
 .push {
     clear: both; 
-    height: 96px;
+    height: 82px;
     @include respond-to(640) {
         height: 137px;
     }
@@ -191,7 +191,7 @@ a{
         max-width: 100%;
         position: absolute;
         top: 49px;
-        bottom: 96px;
+        bottom: 82px;
         left: 0;
         right: 0;
     }
@@ -1095,8 +1095,8 @@ a{
 /* ----------------------------------------- Footer ---------------------------------------------- */
 .footer {
     position: relative;
-    padding: 17px 0;
-    height: 96px;
+    padding: 10px 0;
+    height: 82px;
     overflow: hidden;
     border-top: 1px solid #00662b;
     @include box-sizing(border-box);
@@ -1115,13 +1115,19 @@ a{
 }
 .footer__logo {
     float: left;
-    margin: 22px 4.5% 0 5.5%;
-    @include s(logo-dark);
+    margin: 3px 4.5% 0 4.5%;
+    @include s(footer-logo);
     @include respond-to(640) {
         position: absolute;
         top: 31px;
         left: 50%;
-        margin: 0 0 0 -57px;
+        margin: 0 0 0 -35px;
+    }
+    @include respond-to(480) {
+        margin: 0;
+        left: auto;
+        top: 8px;
+        right: 10px;
     }
 }
 .footer__middle {
@@ -1141,35 +1147,49 @@ a{
 }
 .footer__nav {
     margin-bottom: 10px;
+    @include respond-to(480) {
+        width: 210px;
+        margin-bottom: 0;
+        text-align: left;
+    } 
     a {
         display: inline-block;
         margin-right: 20px;
         color: #fff;
         font-size: 12px;
+        @include respond-to(480) {
+            margin-bottom: 8px;
+        } 
         &:hover {
             text-decoration: underline;
         }
         &:nth-child(2) {
-            @include respond-to(480) {
-                position: absolute;
-                bottom: -66px;
-                left: 50%;
-                margin-left: -87px;
-            }
+            // @include respond-to(480) {
+            //     position: absolute;
+            //     bottom: -66px;
+            //     left: 50%;
+            //     margin-left: -87px;
+            // }
         }
     }
 }
 .footer__contacts {
     @include respond-to(640) {
         position: absolute;
-        bottom: -42px;
+        bottom: -77px;
+        left: 0;
+        width: 100%;
+    }
+    @include respond-to(480) {
+        position: absolute;
+        bottom: -25px;
         left: 0;
         width: 100%;
     }
 }
 .copyright {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     right: 4%; 
     @include respond-to(640) {
         bottom: 5px;

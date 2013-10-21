@@ -55,7 +55,7 @@
             }
             &:before {
                 left: 15px;
-            }
+            } 
             &:after {
                 right: 15px;
             }
@@ -65,13 +65,15 @@
             vertical-align: middle;
             @include s(logo);
             @extend %hide-text;
+            margin-right: 85px;
             @include respond-to(640) {
+                margin-right: 0;
                 @include s(logo-small);
             }
         }
     }
 }
-.index.is-fixed {
+.index.is-fixed { 
     overflow: visible;
     .footer,
     .l-layout {
@@ -82,7 +84,7 @@
     }
 }
 .step-wrap {
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 .step {  
     position: relative;
