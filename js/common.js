@@ -24,13 +24,13 @@ $(document).ready(function() {
 
         }
         else {
-            if ($(window).width() > 768) {
+            if ($(window).width() > 640) {
                 body.addClass("is-full-width");
             }
             else {
                 body.removeClass("is-full-width");
             }
-            if (($(window).width() <= 1024) && ($(window).width() >= 768)) {
+            if (($(window).width() <= 1024) && ($(window).width() >= 640)) {
                 main_col.width(main_col_width);
             }
             else {
