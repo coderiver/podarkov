@@ -46,6 +46,7 @@ $(document).ready(function() {
         resize_col();
         baron_init();
         fixed_tab();
+        //console.log($(window).width());
     });
 
 // Select list
@@ -79,14 +80,14 @@ $(document).ready(function() {
             else {
                 tab.addClass("is-fixed-tab");
             }
-            console.log($(window).scrollTop());
+            //console.log($(window).scrollTop());
         });
     }
     fixed_tab();
 
 // baron scroller
     function baron_init() {
-        if ($(window).width() > 768) {
+        if ($(window).width() >= 640) {
             if ($(".js-baron1").length > 0) {
                 window.dima = baron({
                     scroller: '.js-baron1',
@@ -108,9 +109,11 @@ $(document).ready(function() {
                     barOnCls: 'baron'
                 });
             }
+            console.log(">640");
         }
         else {
-
+           //dima.dispose();
+           console.log("<640");
         }
     }
     baron_init();

@@ -18,6 +18,7 @@ $badge: badge-player,badge-laptop,badge-clothes,badge-shoes,badge-gift,badge-foo
 $break-280: 260px;  
 $break-320: 320px; 
 $break-480: 480px; 
+$break-624: 624px; 
 $break-640: 640px;  
 $break-768: 768px; 
 $break-800: 800px; 
@@ -35,6 +36,9 @@ $break-1930: 1930px;
   }
   @else if $media == 480 {
     @media only screen and (max-width: $break-480) { @content; }
+  }
+    @else if $media == 624 {
+    @media only screen and (max-width: $break-624) { @content; }
   }
   @else if $media == 640 {
     @media only screen and (max-width: $break-640) { @content; }

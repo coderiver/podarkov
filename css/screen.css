@@ -434,7 +434,7 @@ a { color: #00919e; text-decoration: none; }
 .tab:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 @media only screen and (max-width: 640px) { .tab { border-top: 1px solid #adadad; height: 52px; } }
 
-.tab__item { display: inline-block; margin-left: -1px; text-transform: uppercase; border: 1px solid #adadad; border-top: 0; border-bottom: 0; -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.95); -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.95); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.95); text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75); }
+.tab__item { display: inline-block; vertical-align: top; margin-left: -1px; text-transform: uppercase; border: 1px solid #adadad; border-top: 0; border-bottom: 0; -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.95); -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.95); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.95); text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75); }
 @media only screen and (max-width: 640px) { .tab__item { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; } }
 .tab__item:hover { background: #f8efef; }
 .tab__item:active { background: #f8efef; -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2); -moz-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2); box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2); }
@@ -462,14 +462,14 @@ a { color: #00919e; text-decoration: none; }
 @media only screen and (max-width: 768px) { .tab_nav .tab__item:first-child { left: 0; } }
 .tab_nav .tab__item:first-child span { display: inline-block; }
 .tab_nav .tab__item:first-child.is-active { background-color: #a29e9e; background-image: -webkit-linear-gradient(45deg, #b1adac 25%, transparent 25%, transparent 75%, #b1adac 75%, #b1adac), -webkit-linear-gradient(45deg, #b1adac 25%, transparent 25%, transparent 75%, #b1adac 75%, #b1adac); background-image: -moz-linear-gradient(45deg, #b1adac 25%, transparent 25%, transparent 75%, #b1adac 75%, #b1adac), -moz-linear-gradient(45deg, #b1adac 25%, transparent 25%, transparent 75%, #b1adac 75%, #b1adac); background-image: -o-linear-gradient(45deg, #b1adac 25%, transparent 25%, transparent 75%, #b1adac 75%, #b1adac), -o-linear-gradient(45deg, #b1adac 25%, transparent 25%, transparent 75%, #b1adac 75%, #b1adac); background-image: linear-gradient(45deg, #b1adac 25%, transparent 25%, transparent 75%, #b1adac 75%, #b1adac), linear-gradient(45deg, #b1adac 25%, transparent 25%, transparent 75%, #b1adac 75%, #b1adac); background-size: 2px 2px; background-position: 0 0, 1px 1px; }
-.tab_nav .tab__item:last-child { position: absolute; right: 0; top: 0; }
-@media only screen and (max-width: 768px) { .tab_nav .tab__item:last-child { right: 0; } }
+.tab_nav .tab__item:last-child { position: absolute; right: 0; top: 0; border-right: 0; }
+@media only screen and (max-width: 768px) { .tab_nav .tab__item:last-child { right: -1px; } }
 @media only screen and (max-width: 768px) { .tab_nav .tab__item:nth-child(2) { border-left: 0; } }
 .tab_nav .tab__item.is-active { background-color: #d68d00; background-image: -webkit-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), -webkit-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00); background-image: -moz-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), -moz-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00); background-image: -o-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), -o-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00); background-image: linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00); background-size: 2px 2px; background-position: 0 0, 1px 1px; }
 .tab_nav .tab__item.is-active a { width: 130px; }
 .tab_nav .tab__item.is-active:hover { background-color: #d68d00; background-image: -webkit-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), -webkit-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00); background-image: -moz-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), -moz-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00); background-image: -o-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), -o-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00); background-image: linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00); background-size: 2px 2px; background-position: 0 0, 1px 1px; }
 .tab_nav .tab__item.is-active span { display: inline-block; line-height: 1; margin-left: 5px; vertical-align: middle; }
-@media only screen and (max-width: 768px) { .tab_nav .tab__item.is-active { padding: 0; width: 20%; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } }
+@media only screen and (max-width: 768px) { .tab_nav .tab__item.is-active { padding: 0; width: 20%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } }
 .tab_nav .tab__item.is-active .icon_tab-baby { background: url('../img/icons-s37c7457114.png') 0 -1318px no-repeat; width: 26px; height: 27px; }
 .tab_nav .tab__item.is-active .icon_tab-book { background: url('../img/icons-s37c7457114.png') 0 -1553px no-repeat; width: 24px; height: 23px; }
 .tab_nav .tab__item.is-active .icon_tab-car { background: url('../img/icons-s37c7457114.png') 0 -1691px no-repeat; width: 28px; height: 18px; }
@@ -533,7 +533,9 @@ a { color: #00919e; text-decoration: none; }
 .icon_tab-shopping { background: url('../img/icons-s37c7457114.png') 0 -935px no-repeat; width: 23px; height: 24px; }
 
 .subtab { display: none; position: absolute; right: 0; top: 51px; background: #fff; width: 512px; overflow: hidden; z-index: 100; }
+@media only screen and (max-width: 768px) { .subtab { width: 368px; } }
 .subtab .subtab__item { float: left; padding: 0 0 0 20px; width: 33.3%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: left; border-bottom: 1px solid #e4e4e4; }
+@media only screen and (max-width: 768px) { .subtab .subtab__item { padding-left: 10px; } }
 .subtab .subtab__item a { display: block; position: relative; padding-left: 30px; height: 36px; width: 100%; color: #353535; text-align: left; font-weight: normal; line-height: 36px; text-transform: capitalize; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .subtab .subtab__item a .icon { left: 0; top: 9px; background-color: transparent; border: none; }
 .subtab .subtab__item a .icon_tab-s11, .subtab .subtab__item a .icon_tab-s12 { left: 3px; }
@@ -686,7 +688,7 @@ a { color: #00919e; text-decoration: none; }
 .gift-wrap .gift-want { border-color: #a9a69b; }
 
 .scroller { height: 100%; overflow-y: scroll; /*-webkit-overflow-scrolling: touch;*/ /* uncomment to accelerate scrolling on iOs */ }
-@media only screen and (max-width: 768px) { .scroller { overflow: visible; } }
+@media only screen and (max-width: 640px) { .scroller { overflow: visible; } }
 
 .scroller::-webkit-scrollbar { width: 0; }
 
@@ -694,7 +696,7 @@ a { color: #00919e; text-decoration: none; }
 .scroller__bar-wrapper:before, .scroller__bar-wrapper:after { display: none; content: ""; position: absolute; left: -1px; width: 10px; height: 10px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; background: #797979; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=33); opacity: 0.33; }
 .scroller__bar-wrapper:before { top: -20px; }
 .scroller__bar-wrapper:after { bottom: -20px; }
-@media only screen and (max-width: 768px) { .scroller__bar-wrapper { display: none; } }
+@media only screen and (max-width: 624px) { .scroller__bar-wrapper { display: none; } }
 
 .scroller__bar { position: absolute; z-index: 1; width: 8px; border-radius: 3px; background: #797979; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; pointer-events: auto; }
 
