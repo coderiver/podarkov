@@ -112,6 +112,9 @@
         @include respond-to(800) {
             padding: 0 20px;
         }
+        @include respond-to(768) {
+            font-size: 9px;
+        }
         @include respond-to(480) {
             padding: 0 5px;
         }
@@ -216,6 +219,10 @@
         &.is-active {
             a {
                 width: 130px;
+                @include respond-to(768) {
+                    display: block;
+                    width: 100%;
+                }
             }
             background-color: #d68d00;
             @include background-image(linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), 
@@ -294,6 +301,7 @@
             font-weight: normal;
             line-height: 36px;
             text-transform: capitalize;
+            font-size: 11px;
             @include box-sizing(border-box);
             .icon {
                 left: 0;

@@ -446,6 +446,7 @@ a { color: #00919e; text-decoration: none; }
 .tab__item i { display: none; position: absolute; top: -17px; right: -20px; width: 17px; color: #fff; height: 17px; font: bold 11px/17px Arial, sans-serif; text-align: center; line-height: 17px; border: 2px solid #f1ebe9; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; background: #ff3434; font-style: normal; }
 .tab__item a { display: block; padding: 0 50px; color: #928e8d; height: 50px; font: bold 11px/50px Arial, sans-serif; }
 @media only screen and (max-width: 800px) { .tab__item a { padding: 0 20px; } }
+@media only screen and (max-width: 768px) { .tab__item a { font-size: 9px; } }
 @media only screen and (max-width: 480px) { .tab__item a { padding: 0 5px; } }
 
 @media only screen and (max-width: 320px) { .tab_simple { height: auto; border: 0; } }
@@ -467,6 +468,7 @@ a { color: #00919e; text-decoration: none; }
 @media only screen and (max-width: 768px) { .tab_nav .tab__item:nth-child(2) { border-left: 0; } }
 .tab_nav .tab__item.is-active { background-color: #d68d00; background-image: -webkit-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), -webkit-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00); background-image: -moz-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), -moz-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00); background-image: -o-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), -o-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00); background-image: linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00); background-size: 2px 2px; background-position: 0 0, 1px 1px; }
 .tab_nav .tab__item.is-active a { width: 130px; }
+@media only screen and (max-width: 768px) { .tab_nav .tab__item.is-active a { display: block; width: 100%; } }
 .tab_nav .tab__item.is-active:hover { background-color: #d68d00; background-image: -webkit-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), -webkit-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00); background-image: -moz-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), -moz-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00); background-image: -o-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), -o-linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00); background-image: linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00), linear-gradient(45deg, #ec9c00 25%, transparent 25%, transparent 75%, #ec9c00 75%, #ec9c00); background-size: 2px 2px; background-position: 0 0, 1px 1px; }
 .tab_nav .tab__item.is-active span { display: inline-block; line-height: 1; margin-left: 5px; vertical-align: middle; }
 @media only screen and (max-width: 768px) { .tab_nav .tab__item.is-active { padding: 0; width: 20%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } }
@@ -536,7 +538,7 @@ a { color: #00919e; text-decoration: none; }
 @media only screen and (max-width: 768px) { .subtab { width: 368px; } }
 .subtab .subtab__item { float: left; padding: 0 0 0 20px; width: 33.3%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: left; border-bottom: 1px solid #e4e4e4; }
 @media only screen and (max-width: 768px) { .subtab .subtab__item { padding-left: 10px; } }
-.subtab .subtab__item a { display: block; position: relative; padding-left: 30px; height: 36px; width: 100%; color: #353535; text-align: left; font-weight: normal; line-height: 36px; text-transform: capitalize; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.subtab .subtab__item a { display: block; position: relative; padding-left: 30px; height: 36px; width: 100%; color: #353535; text-align: left; font-weight: normal; line-height: 36px; text-transform: capitalize; font-size: 11px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .subtab .subtab__item a .icon { left: 0; top: 9px; background-color: transparent; border: none; }
 .subtab .subtab__item a .icon_tab-s11, .subtab .subtab__item a .icon_tab-s12 { left: 3px; }
 .subtab .subtab__item .icon_tab-small-baby { background: url('../img/icons-s37c7457114.png') 0 -2989px no-repeat; width: 16px; height: 17px; }
