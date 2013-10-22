@@ -9,19 +9,23 @@ $experimental-support-for-svg: true;
 
 // global sprites
 $icons: sprite-map("icons/*.png", $spacing: 10px);
-
-// responsive
-$break-280: 260px; 
+$event: event-birthday,event-wedding,event-new-job,event-baby,event-relocate,event-graduate,event-holiday,event-winner,event-new,event-new-photo,event-want-gift,event-got-gift,event-other;
+$status: status-birthday,status-wedding,status-new,status-new-job,status-baby,status-relocate,status-graduate,status-holiday,status-winner,status-new-photo,status-want-gift,status-got-gift,status-other;
+$tab: tab-baby,tab-book, tab-car,tab-clock,tab-clothes,tab-cosmetics,tab-foliage,tab-food,tab-gift,tab-house,tab-icecream,tab-jewerly,tab-laptop,tab-man,tab-more,tab-plane,tab-player,tab-shoes,tab-toys,tab-shopping;
+$tab_small: tab-small-baby,tab-small-book,tab-small-plane,tab-small-car,tab-small-clock,tab-small-cosmetics,tab-small-house,tab-small-icecream,tab-small-jewerly,tab-small-toys,tab-small-shopping,tab-small-man;
+$badge: badge-player,badge-laptop,badge-clothes,badge-shoes,badge-gift,badge-food,badge-foliage,badge-plane,badge-man,badge-house,badge-baby,badge-book,badge-shopping,badge-clock,badge-car,badge-cosmetics,badge-jewerly,badge-icecream,badge-toys;
+// responsive 
+$break-280: 260px;  
 $break-320: 320px; 
 $break-480: 480px; 
-$break-640: 640px; 
+$break-640: 640px;  
 $break-768: 768px; 
 $break-800: 800px; 
 $break-960: 960px; 
 $break-1024: 1024px;
 $break-1100: 1100px;
 $break-1400: 1400px;
-$break-1930: 1930px;
+$break-1930: 1930px; 
 @mixin respond-to($media) {
   @if $media == 260 {
     @media only screen and (max-width: $break-280) { @content; }

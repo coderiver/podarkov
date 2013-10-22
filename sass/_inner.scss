@@ -242,9 +242,12 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
-            @for $i from 1 through 20 {
-              .icon_tab#{$i} {@include s(tab#{$i}-act);}
-            }
+            // @for $i from 1 through 20 {
+            //   .icon_tab#{$i} {@include s(tab#{$i}-act);}
+            // }
+            @each $i in $tab {
+              .icon_#{$i} {@include s(#{$i}-act);}
+            }  
         }
         &.is-other-active {
             background: #efece8;
@@ -253,9 +256,9 @@
         }
     }
 }
-@for $i from 1 through 20 {
-  .icon_tab#{$i} {@include s(tab#{$i});} 
-}
+@each $i in $tab {
+  .icon_#{$i} {@include s($i);} 
+} 
 .subtab {
     display: none;
     position: absolute;
@@ -295,8 +298,11 @@
                 left: 3px;
             }
         }
-        @for $i from 1 through 12 {
-          .icon_tab-s#{$i} {@include s(tab-s#{$i});} 
+        // @for $i from 1 through 12 {
+        //   .icon_tab-s#{$i} {@include s(tab-s#{$i});} 
+        // }
+        @each $i in $tab_small {
+          .icon_#{$i} {@include s($i);}
         }
     }
 }
@@ -436,28 +442,35 @@
         top: 4px;
         right: 3px;
     }
-    @for $i from 1 through 19 {
-        &.icon_badge#{$i} {
+    // @for $i from 1 through 19 {
+    //     &.icon_badge#{$i} {
+    //         &:after {
+    //             @include s(badge#{$i});
+    //         }
+    //     }
+    // }
+    @each $i in $badge {
+        &.icon_#{$i} {
             &:after {
-                @include s(badge#{$i});
+                @include s($i);
             }
         }
     }
 }
-.icon_badge2,
-.icon_badge6,
-.icon_badge9,
-.icon_badge10,
-.icon_badge11,
-.icon_badge12,
-.icon_badge14,
-.icon_badge15,
-.icon_badge16 {
+.icon_badge-laptop,
+.icon_badge-food,
+.icon_badge-man,
+.icon_badge-house,
+.icon_badge-baby,
+.icon_badge-book,
+.icon_badge-clock,
+.icon_badge-car,
+.icon_badge-cosmetics {
     &:after {
         right: 1px;
     }
 }
-.icon_badge19 {
+.icon_badge-toys {
     &:after {
         right: 1px;
         top: 2px;
