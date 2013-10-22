@@ -45,7 +45,9 @@ $(document).ready(function() {
     $(window).resize(function(event) {
         resize_col();
         baron_init();
-        fixed_tab();
+        if (tab.length > 0) {
+            fixed_tab();
+        }
         //console.log($(window).width());
     });
 
@@ -70,6 +72,7 @@ $(document).ready(function() {
     });
 
 // fixed tabs 
+
     function fixed_tab() {
         var tab_pos = tab.position().top;
         $(window).scroll(function(){
@@ -83,7 +86,10 @@ $(document).ready(function() {
             //console.log($(window).scrollTop());
         });
     }
-    fixed_tab();
+    if (tab.length > 0) {
+        fixed_tab();
+    }
+    
 
 // baron scroller
     function baron_init() {

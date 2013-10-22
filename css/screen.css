@@ -39,7 +39,7 @@ body ::-moz-selection { background: rgba(0, 0, 0, 0.1); }
 
 a { color: #00919e; text-decoration: none; }
 
-.l-layout { margin: 0 auto -96px; position: relative; min-height: 100%; height: auto !important; height: 100%; }
+.l-layout { margin: 0 auto -82px; position: relative; min-height: 100%; height: auto !important; height: 100%; }
 @media only screen and (max-width: 1024px) { .l-layout { background-position: 0 0; } }
 @media only screen and (max-width: 640px) { .l-layout { margin: 0 auto -137px; } }
 
@@ -339,7 +339,7 @@ a { color: #00919e; text-decoration: none; }
 
 .index.is-fixed { overflow: visible; }
 .index.is-fixed .footer, .index.is-fixed .l-layout { position: relative; }
-.index.is-fixed .l-layout { margin: 0 auto -96px; }
+.index.is-fixed .l-layout { margin: 0 auto -82px; }
 
 .step-wrap { margin-bottom: 20px; }
 
