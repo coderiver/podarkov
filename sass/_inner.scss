@@ -884,7 +884,7 @@
     &:after {
         bottom: -20px;
     }
-    @include respond-to(624) {
+    @include respond-to(640) {
         display: none;
     }
 }

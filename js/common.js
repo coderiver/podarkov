@@ -49,6 +49,8 @@ $(document).ready(function() {
             fixed_tab();
         }
         console.log($(window).width());
+        $(".item_search input").val($(window).width());
+        $(".date-title span").text($("body").width());
     });
 
 // Select list
@@ -93,7 +95,11 @@ $(document).ready(function() {
 
 // baron scroller
     function baron_init() {
-        if ($(window).width() >= 640) {
+        if ($(window).width() < 640) {
+            
+            //console.log($(window).width());
+        }
+        else {
             if ($(".js-baron1").length > 0) {
                 // window.dima = baron({
                 //     scroller: '.js-baron1',
@@ -127,40 +133,8 @@ $(document).ready(function() {
                     barOnCls: 'baron'
                 });
             }
-            console.log($(window).width());
-        }
-        else {
-            // if ($(".js-baron1").length > 0) {
-            //     // window.dima = baron({
-            //     //     scroller: '.js-baron1',
-            //     //     bar: '.scroller__bar',
-            //     //     barOnCls: 'baron'
-            //     // });
-            //     var scroll = baron({
-            //         scroller: '.js-baron1',
-            //         bar: '.scroller__bar',
-            //         barOnCls: 'baron'
-            //     });
-            //     scroll.dispose();
-            // }
-            // if ($(".js-baron2").length > 0) {
-            //     var scroll = baron({
-            //         scroller: '.js-baron2',
-            //         bar: '.scroller__bar',
-            //         barOnCls: 'baron'
-            //     });
-            //     scroll.dispose();
-            // }
-            // if ($(".js-baron3").length > 0) {
-            //     var scroll = baron({
-            //         scroller: '.js-baron3',
-            //         bar: '.scroller__bar',
-            //         barOnCls: 'baron'
-            //     });
-            //     scroll.dispose();
-            // }
            
-           console.log($(window).width());
+           //console.log($(window).width());
         }
     }
     baron_init();

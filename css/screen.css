@@ -699,7 +699,7 @@ a { color: #00919e; text-decoration: none; }
 .scroller__bar-wrapper:before, .scroller__bar-wrapper:after { display: none; content: ""; position: absolute; left: -1px; width: 10px; height: 10px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; background: #797979; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=33); opacity: 0.33; }
 .scroller__bar-wrapper:before { top: -20px; }
 .scroller__bar-wrapper:after { bottom: -20px; }
-@media only screen and (max-width: 624px) { .scroller__bar-wrapper { display: none; } }
+@media only screen and (max-width: 640px) { .scroller__bar-wrapper { display: none; } }
 
 .scroller__bar { position: absolute; z-index: 1; width: 8px; border-radius: 3px; background: #797979; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; pointer-events: auto; }
 
