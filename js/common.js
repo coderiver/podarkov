@@ -48,7 +48,7 @@ $(document).ready(function() {
         if (tab.length > 0) {
             fixed_tab();
         }
-        //console.log($(window).width());
+        console.log($(window).width());
     });
 
 // Select list
@@ -95,31 +95,72 @@ $(document).ready(function() {
     function baron_init() {
         if ($(window).width() >= 640) {
             if ($(".js-baron1").length > 0) {
-                window.dima = baron({
+                // window.dima = baron({
+                //     scroller: '.js-baron1',
+                //     bar: '.scroller__bar',
+                //     barOnCls: 'baron'
+                // });
+                var scroll = baron({
                     scroller: '.js-baron1',
                     bar: '.scroller__bar',
                     barOnCls: 'baron'
                 });
             }
             if ($(".js-baron2").length > 0) {
-                window.dima = baron({
+                var scroll = baron({
                     scroller: '.js-baron2',
                     bar: '.scroller__bar',
                     barOnCls: 'baron'
                 });
             }
             if ($(".js-baron3").length > 0) {
-                window.dima = baron({
+                var scroll = baron({
                     scroller: '.js-baron3',
                     bar: '.scroller__bar',
                     barOnCls: 'baron'
                 });
             }
-            console.log(">640");
+            if ($(".js-baron4").length > 0) {
+                var scroll = baron({
+                    scroller: '.js-baron4',
+                    bar: '.scroller__bar',
+                    barOnCls: 'baron'
+                });
+            }
+            console.log($(window).width());
         }
         else {
-           //dima.dispose();
-           console.log("<640");
+            // if ($(".js-baron1").length > 0) {
+            //     // window.dima = baron({
+            //     //     scroller: '.js-baron1',
+            //     //     bar: '.scroller__bar',
+            //     //     barOnCls: 'baron'
+            //     // });
+            //     var scroll = baron({
+            //         scroller: '.js-baron1',
+            //         bar: '.scroller__bar',
+            //         barOnCls: 'baron'
+            //     });
+            //     scroll.dispose();
+            // }
+            // if ($(".js-baron2").length > 0) {
+            //     var scroll = baron({
+            //         scroller: '.js-baron2',
+            //         bar: '.scroller__bar',
+            //         barOnCls: 'baron'
+            //     });
+            //     scroll.dispose();
+            // }
+            // if ($(".js-baron3").length > 0) {
+            //     var scroll = baron({
+            //         scroller: '.js-baron3',
+            //         bar: '.scroller__bar',
+            //         barOnCls: 'baron'
+            //     });
+            //     scroll.dispose();
+            // }
+           
+           console.log($(window).width());
         }
     }
     baron_init();

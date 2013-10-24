@@ -231,6 +231,7 @@ a{
     // }
 }
 .is-with-popup {
+        overflow-y: auto;
     @include respond-to(640) {
         .main-col {
             display: none;
