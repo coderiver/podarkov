@@ -113,7 +113,9 @@
             padding: 0 20px;
         }
         @include respond-to(768) {
-            font-size: 9px;
+            font-size: 12px;
+            font-weight: normal;
+            text-transform: none;
         }
         @include respond-to(480) {
             padding: 0 5px;
@@ -251,6 +253,9 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
+            @include respond-to(480) {
+                width: 30%;
+            }
             // @for $i from 1 through 20 {
             //   .icon_tab#{$i} {@include s(tab#{$i}-act);}
             // }
@@ -279,6 +284,9 @@
     z-index: 100;
     @include respond-to(768) {
         width: 368px;
+    }
+    @include respond-to(480) {
+        width: 320px;  
     }
     .subtab__item {
         float: left;
