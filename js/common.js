@@ -49,8 +49,8 @@ $(document).ready(function() {
             fixed_tab();
         }
         console.log($(window).width());
-        $(".item_search input").val($(window).width());
-        $(".date-title span").text($("body").width());
+        //$(".item_search input").val($(window).width());
+        //$(".date-title span").text($("body").width());
     });
 
 // Select list
