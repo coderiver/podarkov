@@ -80,7 +80,7 @@ a{
     }
     @include respond-to(768) {
     }
-    @include respond-to(640) {
+    @include respond-to(680) {
         margin: 0 auto -137px;
     }
 }
@@ -94,7 +94,7 @@ a{
 .push {
     clear: both; 
     height: 82px;
-    @include respond-to(640) {
+    @include respond-to(680) {
         height: 137px;
     }
 }
@@ -232,7 +232,7 @@ a{
 }
 .is-with-popup {
         overflow-y: auto;
-    @include respond-to(640) {
+    @include respond-to(680) {
         .main-col {
             display: none;
         }
@@ -325,7 +325,7 @@ a{
     @include respond-to(768) {
         width: 60px;
     }
-    @include respond-to(640) {
+    @include respond-to(680) {
         padding: 0;
     }
     @include respond-to(320) {
@@ -344,7 +344,7 @@ a{
             //@include s(vk-s);
         }
     }
-    @include respond-to(640) {
+    @include respond-to(680) {
            display: none;
     }
 }
@@ -353,7 +353,7 @@ a{
     display: inline-block;
     margin-right: 15px;
     vertical-align: middle;
-    // @include respond-to(640) {
+    // @include respond-to(680) {
     //     display: block;
     //     width: 60px;
     //     height: 47px;
@@ -366,7 +366,7 @@ a{
         position: absolute;  
         bottom: -4px;
         right: -8px;
-        // @include respond-to(640) {
+        // @include respond-to(680) {
         //    display: none;
         // }
     }
@@ -377,7 +377,7 @@ a{
         display: block;
         border: 1px solid rgba(0,102,43,.2);
         @include box-shadow(0 1px 0 rgba(255,255,255,.25));
-        @include respond-to(640) {
+        @include respond-to(680) {
             display: none;
         }
     }
@@ -388,7 +388,7 @@ a{
     color: #fff;
     font-size: 12px;
     text-shadow: 0 -1px 0 rgba(0,0,0,.45);
-    @include respond-to(640) {
+    @include respond-to(680) {
         display: none;
     }
 }
@@ -402,7 +402,7 @@ a{
     text-align: center;
     border-left: 1px solid #00662b;
     @include box-shadow(inset 1px 0 0 #4eb672);
-    @include respond-to(640) {
+    @include respond-to(680) {
         display: none;
     }
 }
@@ -411,7 +411,7 @@ a{
     position: relative;
     float: left;
     height: 49px;
-    @include respond-to(640) {
+    @include respond-to(680) {
         float: right;
     }
 }
@@ -426,7 +426,7 @@ a{
             @include s(menu-arr-act);
             margin: -7px 0 0 -5px;
         }
-        @include respond-to(640) {
+        @include respond-to(680) {
             height: 49px;
         }
     }
@@ -442,11 +442,11 @@ a{
     background: none;
     border-left: 1px solid #00662b;
     @include box-shadow(inset 1px 0 0 #4eb672);
-    @include respond-to(640) {
+    @include respond-to(680) {
         height: 49px;
         margin: 0;
     }
-    @include respond-to(640) {
+    @include respond-to(680) {
         border-left: 0;
         @include box-shadow(none);
     }
@@ -457,7 +457,7 @@ a{
         left: 50%;
         margin: -3px 0 0 -5px;
         @include s(menu-arr); 
-        @include respond-to(640) {
+        @include respond-to(680) {
             display: none;
         }
     }
@@ -468,7 +468,7 @@ a{
         left: 50%;
         margin: -12px 0 0 -10px;
         @include s(user-pic);
-        @include respond-to(640) {
+        @include respond-to(680) {
             display: block;
         }
         i {
@@ -521,7 +521,7 @@ a{
     @include respond-to(768) {
         font-size: 14px;
     }
-    @include respond-to(640) {
+    @include respond-to(680) {
         float: none;
         width: 90%;
         margin: 0 auto;
@@ -536,7 +536,7 @@ a{
     @include respond-to(768) {
         font-size: 20px;
     }
-    @include respond-to(640) {
+    @include respond-to(680) {
         font-size: 16px;
     }
     strong {
@@ -545,14 +545,14 @@ a{
         @include respond-to(768) {
             font-size: 24px;
         }
-        @include respond-to(640) {
+        @include respond-to(680) {
             font-size: 16px;
         }
     }
 }
 .login__list {
     margin-bottom: 10%;
-    @include respond-to(640) {
+    @include respond-to(680) {
         margin-bottom: 5%;
     }
     li {
@@ -590,7 +590,7 @@ a{
         @include background-image(linear-gradient(bottom, #375999 0%, #5081ef 100%));
         &:first-child {
             margin-left: 0;
-            @include respond-to(640) {
+            @include respond-to(680) {
                 margin: 0 auto 10px;
             }
         }
@@ -603,7 +603,7 @@ a{
             display: block;
             margin: 0 0 10px 0;
         }
-        @include respond-to(640) {
+        @include respond-to(680) {
             margin: 0 auto;
         }
     }
@@ -652,7 +652,7 @@ a{
         }
         //overflow: visible;
     }
-    @include respond-to(640) {
+    @include respond-to(680) {
         float: none;
         width: 100%;
         position: static;
@@ -1106,12 +1106,12 @@ a{
     background: #3c3c3c url(../img/footer-bg.jpg) 0 0 repeat;
     color: #b8b8b8;
     font-size: 11px;
-    @include respond-to(640) {
+    @include respond-to(680) {
         height: 137px;
     }
     .l-container {
         position: relative;
-        @include respond-to(640) {
+        @include respond-to(680) {
             position: static;
         }
     }
@@ -1120,7 +1120,7 @@ a{
     float: left;
     margin: 3px 4.5% 0 4.5%;
     @include s(footer-logo);
-    @include respond-to(640) {
+    @include respond-to(680) {
         position: absolute;
         top: 31px;
         left: 50%;
@@ -1138,7 +1138,7 @@ a{
     padding: 10px 0;
     padding-left: 4.5%;
     border-left: 1px solid #656565;
-    @include respond-to(640) {
+    @include respond-to(680) {
         padding: 5px 0;
         float: none;
         position: absolute;
@@ -1177,7 +1177,7 @@ a{
     }
 }
 .footer__contacts {
-    @include respond-to(640) {
+    @include respond-to(680) {
         position: absolute;
         bottom: -77px;
         left: 0;
@@ -1194,7 +1194,7 @@ a{
     position: absolute;
     bottom: 10px;
     right: 4%; 
-    @include respond-to(640) {
+    @include respond-to(680) {
         bottom: 5px;
         left: 0;
         width: 100%;

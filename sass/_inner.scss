@@ -33,7 +33,7 @@
     @include box-sizing(border-box);
     @include box-shadow(inset 0 0 0 1px rgba(255,255,255,.95));
     @include background-image(linear-gradient(bottom, #efebe7 0%, #f8efef 88.31%, #f8efef 100%));
-    @include respond-to(640) {
+    @include respond-to(680) {
         border-top: 1px solid #adadad;
         height: 52px;
     }
@@ -48,7 +48,7 @@
     border-bottom:0;
     @include box-shadow(inset 0 0 0 1px rgba(255,255,255,.95));
     text-shadow: 0 1px 0 rgba(255,255,255,.75);
-    @include respond-to(640) {
+    @include respond-to(680) {
         @include box-shadow(none);
     }
     &:hover {
@@ -139,7 +139,7 @@
     }
 }
 .is-fixed-tab {
-    @include respond-to(640) {
+    @include respond-to(680) {
         position: fixed !important;
         top: 0;
         left: 0;
@@ -334,7 +334,7 @@
 .tab-cont {
     //display: none;
     //padding: 3% 3.2% 3%; 
-    @include respond-to(640) {
+    @include respond-to(680) {
         //display: none;
     } 
 }
@@ -395,7 +395,7 @@
     @include respond-to(768) {
         //width: 85%;
     }
-    @include respond-to(640) {
+    @include respond-to(680) {
         //width: 100%;
         float: none;
         margin: 0 auto 20px;
@@ -731,7 +731,7 @@
         //margin: 0 auto 20px;
         //width: 80%;
     } 
-    @include respond-to(640) {
+    @include respond-to(680) {
         //width: 100%;
     }  
     @include respond-to(480) {
@@ -858,7 +858,7 @@
     overflow-y: scroll;
     /*-webkit-overflow-scrolling: touch;*/
     /* uncomment to accelerate scrolling on iOs */
-    @include respond-to(640) {
+    @include respond-to(680) {
         overflow: visible;
     }
 }
@@ -892,7 +892,7 @@
     &:after {
         bottom: -20px;
     }
-    @include respond-to(640) {
+    @include respond-to(680) {
         display: none;
     }
 }

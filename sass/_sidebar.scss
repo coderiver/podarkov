@@ -11,7 +11,7 @@
     width: 257px;
     border-right: 1px solid #aeadad;
     @include box-sizing(border-box);
-    @include respond-to(640) {
+    @include respond-to(680) {
         float: none;
         width: 100%;
         background: #F2EDE9;
@@ -63,7 +63,7 @@
     @include clr;
     text-align: center;
     @include box-sizing(border-box);
-    @include respond-to(640) {
+    @include respond-to(680) {
         @include background-image(linear-gradient(#fff, #f7f5f4));
     }
     .btn {

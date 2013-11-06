@@ -21,7 +21,7 @@ $(document).ready(function() {
         var main_col_width = $(".l-layout").outerWidth() - $(".js-sidebar").outerWidth();
         var main_col_width2 = $(".l-col-wrap").outerWidth() - $(".js-sidebar").outerWidth();
         if (!$("body").hasClass("index")) {
-            if ($(window).width() > 640) {
+            if ($(window).width() > 680) {
                 body.addClass("is-full-width");
             }
             else {
@@ -95,7 +95,7 @@ $(document).ready(function() {
 
 // baron scroller
     function baron_init() {
-        if ($(window).width() < 640) {
+        if ($(window).width() < 680) {
             // if ($(".js-baron1").length > 0) {
             //     var scroll = baron({
             //         scroller: '.js-baron1',

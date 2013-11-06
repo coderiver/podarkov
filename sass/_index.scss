@@ -13,14 +13,14 @@
         background: #1d8542 url(../img/header-bg.jpg) 50% 0 repeat-x;
         border-bottom: 1px solid #00662b;
         @include box-sizing(border-box);
-        @include respond-to(640) {
+        @include respond-to(680) {
             height: auto;
             padding: 0 0 55px;
             @include background-size(auto, 100%);
         }
         .l-container {
             padding: 0 5px;
-            @include respond-to(640) {
+            @include respond-to(680) {
                 padding: 0;
             }
         }
@@ -38,7 +38,7 @@
         @include respond-to(768) {
             width: 100%;
         }
-        @include respond-to(640) {
+        @include respond-to(680) {
             position: relative;
             height: 47px;
             line-height: 38px;
@@ -66,7 +66,7 @@
             @include s(logo);
             @extend %hide-text;
             margin-right: 85px;
-            @include respond-to(640) {
+            @include respond-to(680) {
                 margin-right: 0;
                 @include s(logo-small);
             }
@@ -363,7 +363,7 @@
     float: right;
     width: 50%;
     @include box-sizing(border-box);
-    @include respond-to(640) {
+    @include respond-to(680) {
         float: none;
         width: 100%;
     }
@@ -374,7 +374,7 @@
     overflow: hidden;
     border: 6px solid rgba(13,112,52,.5);
     @include box-shadow(0 1px 0 rgba(255,255,255,.75), inset 0 0 16px rgba(0,0,0,.76));
-    @include respond-to(640) {
+    @include respond-to(680) {
         width: 90%;
         margin: 0 auto 26px;
     }
