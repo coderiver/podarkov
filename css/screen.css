@@ -33,7 +33,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
-body { position: relative; min-width: 260px; min-height: 735px; color: #575757; font-weight: 400; font-family: 'Open Sans', Arial, sans-serif; font-size: 13px; line-height: 1.4; }
+body { position: relative; min-width: 260px; color: #575757; font-weight: 400; font-family: 'Open Sans', Arial, sans-serif; font-size: 13px; line-height: 1.4; }
 body ::selection { background: rgba(0, 0, 0, 0.1); }
 body ::-moz-selection { background: rgba(0, 0, 0, 0.1); }
 

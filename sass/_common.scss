@@ -49,11 +49,11 @@ table {
 body{
     position: relative;
     min-width: 260px;
-    min-height: 735px;
+   // min-height: 735px;
     color: #575757;
     @include font;
     font-size: 13px;
-    line-height: 1.4;
+    line-height: 1.4; 
     ::selection {
         background: rgba(0,0,0,.1);
     }
